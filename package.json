@@ -1,0 +1,19 @@
+{
+  "name": "Ads",
+  "version": "1.0.0",
+  "description": "SoftUni AngularJS Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kgerov/Ads-AngularJS-.git"
+  },
+  "author": "Konstantin Gerov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kgerov/Ads-AngularJS-/issues"
+  },
+  "homepage": "https://github.com/kgerov/Ads-AngularJS-"
+}
