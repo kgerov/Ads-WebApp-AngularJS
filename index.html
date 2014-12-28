@@ -15,16 +15,38 @@
 		<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js" defer></script>
 		<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
 		<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-		<!-- PNoty -->
+		<!-- PNotify -->
 		<script type="text/javascript" src="libs/pnotify.custom.min.js" defer></script>
 		<link rel="stylesheet" type="text/css" href="libs/pnotify.custom.min.css">
 		<!-- Styles -->
 		<link rel="stylesheet" type="text/css" href="styles/main.css">
-		<title>Ads</title>
+		<title>Обяви</title>
 	</head>
-	<body>
+	<body ng-app="adsApp">
 		<div class="navbar navbar-inverse navbar-static-top">
-			<div></div>
+			<div class="container">
+				<a href="#" class="navbar-brand">Обяви</a>
+				<button class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navHeaderCollapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+
+				<div class="collapse navbar-collapse navHeaderCollapse">
+					<ul class="nav navbar-nav navbar-left">
+						<li><a href="">Home</a></li>
+						<li><a href="">My Ads</a></li>
+						<li><a href="">Publish New Ad</a></li>
+						<li><a href="">Edit Profile</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div ng-view>
+			
+		</div>
+		<div>
+			
 		</div>
 	</body>
 </html>
