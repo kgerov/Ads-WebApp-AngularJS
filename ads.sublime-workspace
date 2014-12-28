@@ -1,0 +1,1073 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"ng-clas",
+				"ng-class	AngularJS"
+			],
+			[
+				"opt",
+				"option	Tag"
+			],
+			[
+				"l",
+				"likes"
+			],
+			[
+				"min-",
+				"min-height"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"get",
+				"getSubsFilter"
+			],
+			[
+				"ge",
+				"getSubsFilter"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"border-",
+				"border-radius"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"fo",
+				"font-weight"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"li",
+				"li	Tag"
+			],
+			[
+				"a",
+				"a	Tag"
+			],
+			[
+				"iter",
+				"iterator"
+			],
+			[
+				"fac",
+				"factory	AngularJS"
+			],
+			[
+				"vi",
+				"videoFactory"
+			],
+			[
+				"$s",
+				"$scope	AngularJS"
+			],
+			[
+				"$rou",
+				"$routeProvider	AngularJS"
+			],
+			[
+				"ur",
+				"urlNew"
+			],
+			[
+				"u",
+				"urlNew"
+			],
+			[
+				"dis",
+				"displayPhoto"
+			],
+			[
+				"al",
+				"alt	Attr"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"bord",
+				"border-collapse"
+			],
+			[
+				"o",
+				"option"
+			],
+			[
+				"ca",
+				"categories"
+			],
+			[
+				"cate",
+				"categories"
+			],
+			[
+				"min",
+				"min-price"
+			],
+			[
+				"prod",
+				"products"
+			],
+			[
+				"max",
+				"maxPrice"
+			],
+			[
+				"filter",
+				"filteredProducts"
+			],
+			[
+				"attachDe",
+				"attachDeleteProductHandlers"
+			],
+			[
+				"del",
+				"delete"
+			],
+			[
+				"Succ",
+				"successfully"
+			],
+			[
+				"shw",
+				"showSuccessMessage"
+			],
+			[
+				"getHe",
+				"getHeadersWithSessionToken"
+			],
+			[
+				"new",
+				"newProduct"
+			],
+			[
+				"_",
+				"_ajaxRequester"
+			],
+			[
+				"on",
+				"onClick"
+			],
+			[
+				"att",
+				"attachEditProductHandlers"
+			],
+			[
+				"pro",
+				"product"
+			],
+			[
+				"load",
+				"loadEditProduct"
+			],
+			[
+				"atta",
+				"attachEditHandlres"
+			],
+			[
+				"show",
+				"showConfirmMessage"
+			],
+			[
+				"dele",
+				"deleteProduct"
+			],
+			[
+				"sho",
+				"shouldDelete"
+			],
+			[
+				"can",
+				"canWrite"
+			],
+			[
+				"produ",
+				"Product"
+			],
+			[
+				"user",
+				"userId"
+			],
+			[
+				"p",
+				"password"
+			],
+			[
+				"is",
+				"isLogedIn"
+			],
+			[
+				"de",
+				"delete"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"getU",
+				"getUserName"
+			],
+			[
+				"set",
+				"setItem"
+			],
+			[
+				"se",
+				"setUserName"
+			],
+			[
+				"g",
+				"getUserId"
+			],
+			[
+				"at",
+				"attachLoginHandlers"
+			],
+			[
+				"border",
+				"border-right"
+			],
+			[
+				"make",
+				"makeDeleteRequest"
+			],
+			[
+				"mak",
+				"makeGetRequest"
+			],
+			[
+				"Aja",
+				"ajaxRequester"
+			],
+			[
+				"ma",
+				"makePutRequest"
+			],
+			[
+				"aja",
+				"ajaxRequester"
+			],
+			[
+				"ex",
+				"expected"
+			],
+			[
+				"ec",
+				"expect"
+			],
+			[
+				"gro",
+				"groupedGergamEnglishCheap"
+			],
+			[
+				"grou",
+				"groupBy"
+			],
+			[
+				"av",
+				"averagePrice"
+			],
+			[
+				"pr",
+				"price"
+			],
+			[
+				"sor",
+				"sortedCurrentBooks"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"firs",
+				"firstNonBulgarianMaleStudents"
+			],
+			[
+				"b",
+				"bulgarianStudetns"
+			],
+			[
+				"fir",
+				"firstName"
+			],
+			[
+				"st",
+				"students"
+			],
+			[
+				"las",
+				"lastName"
+			],
+			[
+				"sc",
+				"script	Tag"
+			],
+			[
+				"Sc",
+				"script"
+			],
+			[
+				"def",
+				"deferred"
+			],
+			[
+				"scr",
+				"scripts"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"hide",
+				"hideInputUser"
+			],
+			[
+				"cle",
+				"clearStorage"
+			],
+			[
+				"ses",
+				"sessCounter"
+			],
+			[
+				"to",
+				"totalCounter"
+			],
+			[
+				"lo",
+				"localStorage"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"pare",
+				"parent"
+			],
+			[
+				"re",
+				"refreshList"
+			],
+			[
+				"lis",
+				"listTownsButton"
+			],
+			[
+				"t",
+				"townName"
+			],
+			[
+				"bu",
+				"buttonAdd"
+			],
+			[
+				"add",
+				"add-town-text"
+			],
+			[
+				"tow",
+				"townId"
+			],
+			[
+				"but",
+				"buttonDelete"
+			],
+			[
+				"ei",
+				"editTown"
+			],
+			[
+				"va",
+				"val"
+			],
+			[
+				"country",
+				"countryName"
+			],
+			[
+				"count",
+				"countryId"
+			],
+			[
+				"obj",
+				"objectId"
+			],
+			[
+				"ad",
+				"addCountryToList"
+			],
+			[
+				"q",
+				"questionId"
+			],
+			[
+				"delete",
+				"deleteCountry"
+			],
+			[
+				"mo",
+				"moveSlide"
+			],
+			[
+				"cur",
+				"current"
+			],
+			[
+				"h",
+				"hidden"
+			],
+			[
+				"mvoe",
+				"moveLeft"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"ta",
+				"targetId"
+			],
+			[
+				"dat",
+				"date1"
+			],
+			[
+				"sort",
+				"sortByDateDescAndTimeAscDateObj"
+			],
+			[
+				"tra",
+				"travels"
+			],
+			[
+				"form",
+				"formatTravelsQuery"
+			],
+			[
+				"_tra",
+				"_travels"
+			],
+			[
+				"des",
+				"destination"
+			],
+			[
+				"desti",
+				"destinatins"
+			],
+			[
+				"sta",
+				"startDock"
+			],
+			[
+				"Se",
+				"setLandmark"
+			],
+			[
+				"star",
+				"startDock"
+			],
+			[
+				"inde",
+				"indexOf"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/User/nodejs.sublime-build",
+	"command_palette":
+	{
+		"height": 311.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Insta",
+				"Package Control: Install Package"
+			],
+			[
+				"",
+				"Code Folding: Fold Tag Attributes"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Sass",
+				"Set Syntax: Sass"
+			],
+			[
+				"Package Control: Insa",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 512.0
+	},
+	"console":
+	{
+		"height": 260.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/OnCode/JS Apps/08.TestPrep"
+	],
+	"file_history":
+	[
+		"/D/Downloads/bo.html",
+		"/D/OnCode/SoftUni/10.AngularJS/SPA-with-AngularJS/2. Controllers and Markup/5. Validation/form.html",
+		"/C/xampp/htdocs/test/VideoSystem/app/app.js",
+		"/C/xampp/htdocs/test/VideoSystem/app/filters/trustedUrl.js",
+		"/C/xampp/htdocs/test/VideoSystem/app/partials/video.html",
+		"/C/xampp/htdocs/test/VideoSystem/app/partials/add-video.html",
+		"/C/xampp/htdocs/test/VideoSystem/app/data/data.json",
+		"/C/xampp/htdocs/test/VideoSystem/app/factories/videoFactory.js",
+		"/C/xampp/htdocs/test/VideoSystem/app/controllers/VideoController.js",
+		"/C/xampp/htdocs/test/VideoSystem/styles/main.css",
+		"/C/xampp/htdocs/test/VideoSystem/app/controllers/AddVideoController.js",
+		"/C/xampp/htdocs/test/VideoSystem/index.html",
+		"/D/OnCode/SoftUni/10.AngularJS/SPA-with-AngularJS/2. Controllers and Markup/4. Filters/1. Using Built-In Fitlers/scripts/controllers/news-controller.js",
+		"/D/OnCode/SoftUni/10.AngularJS/SPA-with-AngularJS/2. Controllers and Markup/4. Filters/1. Using Built-In Fitlers/news.html",
+		"/D/OnCode/HTML/08. CSS - Responsive/01. Unresponsive-Homework/styles/01.Unresponsive-Homework.css",
+		"/C/xampp/htdocs/test/ads/styles/main.css",
+		"/C/xampp/htdocs/test/ads/index.html",
+		"/D/OnCode/JS Apps/10.JSAppsExam/scripts/controller.js",
+		"/C/xampp/htdocs/test/ads/node_modules/noty/js/noty/jquery.noty.js",
+		"/D/OnCode/AngularJS/01.Introduction/03.TigerPage/index.html",
+		"/D/OnCode/AngularJS/01.Introduction/03.TigerPage/styles/main.css",
+		"/D/OnCode/AngularJS/01.Introduction/03.TigerPage/scripts/controller/tiger.js",
+		"/D/OnCode/AngularJS/01.Introduction/03.TigerPage/scripts/app.js",
+		"/D/OnCode/AngularJS/01.Introduction/02.ImageBind/styles/main.css",
+		"/D/OnCode/AngularJS/01.Introduction/02.ImageBind/index.html",
+		"/D/OnCode/AngularJS/01.Introduction/02.ImageBind/scripts/controller/image.js",
+		"/D/OnCode/AngularJS/01.Introduction/02.ImageBind/scripts/factory.js",
+		"/D/OnCode/AngularJS/01.Introduction/02.ImageBind/scripts/app.js",
+		"/D/OnCode/JS Apps/06.SPAApplications/scripts/view.js",
+		"/D/OnCode/JS Apps/06.SPAApplications/scripts/requester.js",
+		"/D/OnCode/JS Apps/06.SPAApplications/scripts/main.js",
+		"/D/OnCode/JS Apps/06.SPAApplications/scripts/data-persister.js",
+		"/D/OnCode/JS Apps/06.SPAApplications/scripts/controller.js",
+		"/D/OnCode/AngularJS/01.Introduction/01.StudentPage/index.html",
+		"/D/OnCode/AngularJS/01.Introduction/01.StudentPage/styles/main.css",
+		"/D/OnCode/AngularJS/01.Introduction/01.StudentPage/scripts/controller/students.js",
+		"/D/OnCode/AngularJS/01.Introduction/01.StudentPage/scripts/app.js",
+		"/D/OnCode/AngularJS/01.Introduction/01.StudentPage/scripts/factory.js",
+		"/D/OnCode/AngularJS/01.Introduction/01.StudentPage/scripts/app.ks",
+		"/D/Downloads/angular-seed-master/angular-seed-master/app/index.html",
+		"/C/xampp/htdocs/test/JSApps/index.html",
+		"/C/xampp/htdocs/test/JSApps/templates/products.html",
+		"/C/xampp/htdocs/test/JSApps/scripts/controller.js",
+		"/C/xampp/htdocs/test/TheExam/scripts/ajax-requester.js",
+		"/C/xampp/htdocs/test/TheExam/scripts/data.js",
+		"/C/xampp/htdocs/test/TheExam/index.html",
+		"/C/xampp/htdocs/test/TheExam/scripts/app.js",
+		"/C/xampp/htdocs/test/TheExam/scripts/controller.js",
+		"/C/xampp/htdocs/test/TheExam/templates/products.html",
+		"/D/OnCode/JS Apps/07.UnderscoreJS/02.BookStore/scripts/main.js",
+		"/D/OnCode/JS Apps/07.UnderscoreJS/01.StudentsCollection/scripts/main.js",
+		"/C/xampp/htdocs/test/TheExam/templates/edit.html",
+		"/C/xampp/htdocs/test/TheExam/templates/delete.html",
+		"/C/xampp/htdocs/test/TheExam/templates/addproducts.html",
+		"/C/xampp/htdocs/test/TestPrep/templates/bookmarks.html",
+		"/C/xampp/htdocs/test/TheExam/templates/home.html",
+		"/C/xampp/htdocs/test/TheExam/templates/register.html",
+		"/C/xampp/htdocs/test/TheExam/templates/login.html",
+		"/C/xampp/htdocs/test/TheExam/templates/welcome.html",
+		"/C/xampp/htdocs/test/TheExam/templates/bookmarks.html",
+		"/C/xampp/htdocs/test/TestPrep/index.html",
+		"/C/xampp/htdocs/test/TestPrep/scripts/ajax-requester.js",
+		"/C/xampp/htdocs/test/TestPrep/scripts/data.js",
+		"/C/xampp/htdocs/test/TestPrep/scripts/controller.js",
+		"/C/xampp/htdocs/test/TestPrep/scripts/app.js",
+		"/C/xampp/htdocs/test/TestPrep/styles/main.css",
+		"/C/xampp/htdocs/test/TestPrep/templates/register.html",
+		"/C/xampp/htdocs/test/TestPrep/templates/login.html",
+		"/C/xampp/htdocs/test/TestPrep/templates/home.html",
+		"/D/OnCode/JS Apps/08.TestPrep/templates/bookmarks.html",
+		"/D/OnCode/JS Apps/08.TestPrep/templates/register.html",
+		"/D/OnCode/JS Apps/08.TestPrep/templates/login.html",
+		"/D/OnCode/JS Apps/08.TestPrep/templates/home.html",
+		"/D/OnCode/JS Apps/08.TestPrep/index.html",
+		"/D/OnCode/JS Apps/08.TestPrep/scripts/ajax-requester.js",
+		"/D/OnCode/JS Apps/08.TestPrep/scripts/data.js",
+		"/D/OnCode/JS Apps/08.TestPrep/scripts/controller.js",
+		"/D/OnCode/JS Apps/08.TestPrep/scripts/app.js",
+		"/D/OnCode/JS Apps/08.TestPrep/styles/main.css",
+		"/D/OnCode/JS Apps/08.TestPrep/node_modules/jquery/dist/cdn/jquery-2.1.1.min.js",
+		"/D/Downloads/Homework-Underscore.js-33543/Underscore.js/students-collection.js",
+		"/D/Downloads/Homework-Underscore.js-33543/Underscore.js/book-store.js",
+		"/D/Downloads/Homework-SPA приложения и архитектури-33435/SPA HW/scripts/requester.js",
+		"/D/Downloads/Homework-SPA приложения и архитектури-33435/SPA HW/scripts/data.js",
+		"/D/Downloads/Homework-SPA приложения и архитектури-33435/SPA HW/scripts/controller.js",
+		"/D/Downloads/Homework-SPA приложения и архитектури-33435/SPA HW/scripts/app.js",
+		"/D/Downloads/Homework-SPA приложения и архитектури-33435/SPA HW/index.html",
+		"/D/Downloads/Homework-SPA приложения и архитектури-33491/SPA-Applications-and-Applications-Architecture/scripts/views.js",
+		"/D/Downloads/Homework-SPA приложения и архитектури-33491/SPA-Applications-and-Applications-Architecture/scripts/requester.js",
+		"/D/Downloads/Homework-SPA приложения и архитектури-33491/SPA-Applications-and-Applications-Architecture/scripts/main.js",
+		"/D/Downloads/Homework-SPA приложения и архитектури-33491/SPA-Applications-and-Applications-Architecture/scripts/data.js",
+		"/D/Downloads/Homework-SPA приложения и архитектури-33491/SPA-Applications-and-Applications-Architecture/scripts/controller.js",
+		"/D/Downloads/Homework-SPA приложения и архитектури-33491/SPA-Applications-and-Applications-Architecture/index.html",
+		"/D/Downloads/Homework-SPA приложения и архитектури-33491/SPA-Applications-and-Applications-Architecture/templates/books.html",
+		"/D/OnCode/SoftUni/9. JS Apps/Demos/JavaScript-Applications/6. Unit-Testing-in-JavaScript/1. running tests/running-tests.html",
+		"/D/OnCode/SoftUni/9. JS Apps/Demos/JavaScript-Applications/6. Unit-Testing-in-JavaScript/1. running tests/sum.js",
+		"/D/OnCode/SoftUni/9. JS Apps/Demos/JavaScript-Applications/6. Unit-Testing-in-JavaScript/1. running tests/sum.tests.js",
+		"/C/Program Files (x86)/nodejs/node_modules/npm/bin/npm-cli.js",
+		"/D/OnCode/JS Apps/07.UnderscoreJS/index.html",
+		"/D/OnCode/JS Apps/07.UnderscoreJS/scripts/main.js",
+		"/D/OnCode/JS Apps/07.UnderscoreJS/styles/main.css",
+		"/D/OnCode/JS Apps/06.SPAApplications/index.html",
+		"/D/Downloads/q-1/q-1/q.js",
+		"/D/Downloads/Homework-Достъп до отдалечени данни-32912/script/book-script.js",
+		"/D/Downloads/Homework-Съхранение на данни (Cookies и Web Storages)-32332/Cookies и Web Storages/new  1.js",
+		"/D/Downloads/Homework-Съхранение на данни (Cookies и Web Storages)-32332/Cookies и Web Storages/new  3.js",
+		"/D/Downloads/Homework-Съхранение на данни (Cookies и Web Storages)-32525/Homework/PollSystem/PollSystem/pollSystem.html",
+		"/D/Downloads/Homework-Съхранение на данни (Cookies и Web Storages)-32525/Homework/PollSystem/PollSystem/pollSystem.js",
+		"/D/OnCode/JS Apps/04.WebStorages/02.Poll/styles/poll.css",
+		"/D/OnCode/JS Apps/04.WebStorages/02.Poll/index.html",
+		"/D/OnCode/JS Apps/04.WebStorages/02.Poll/scripts/greet.js",
+		"/D/OnCode/JS Apps/04.WebStorages/01.GreetingSystem/styles/greeting.css",
+		"/D/OnCode/JS Apps/04.WebStorages/01.GreetingSystem/scripts/greet.js",
+		"/D/OnCode/JS Apps/04.WebStorages/01.GreetingSystem/index.html",
+		"/D/OnCode/HTML/08. CSS - Responsive/02. FlowersHome/styles/02.FlowersHome.css",
+		"/D/OnCode/JS Apps/02. JQueryPlugins/02. TextMessage/activate.js",
+		"/D/OnCode/JS Apps/04.WebStorages/01.GreetingSystem",
+		"/D/Downloads/Homework-BaaS и Parse.com-31696/data-base-functions.js",
+		"/D/OnCode/JS Apps/03.BaaSandParse/scripts/main.js",
+		"/D/Downloads/Homework-BaaS и Parse.com-31370/jQuery REST/jquery.noty.packaged.min.js",
+		"/D/OnCode/JS Apps/03.BaaSandParse/index.html",
+		"/D/OnCode/JS Apps/03.BaaSandParse/styles/find.css",
+		"/D/OnCode/JS Apps/03.BaaSandParse/scripts/parse.js",
+		"/D/OnCode/JS Apps/02. JQueryPlugins/02. TextMessage/message-box.js",
+		"/D/OnCode/JS Apps/03.BaaSandParse/scripts/ss.js",
+		"/C/Users/Dimitar/AppData/Local/Temp/Rar$DIa0.866/message-box.js",
+		"/D/OnCode/JS Apps/02. JQueryPlugins/02. TextMessage/index.html",
+		"/D/OnCode/JS Apps/01.JQueryOverview/04.Slideshow/change-slide.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"r",
+			">",
+			"form",
+			"row",
+			";\n",
+			"6",
+			" \">",
+			"brand",
+			"src",
+			"				\n",
+			"();",
+			"videoFactory",
+			"();\n",
+			"app",
+			"noty",
+			"\n        ",
+			" )",
+			");\n",
+			"						\n",
+			"Bookmark",
+			"});\n",
+			" \n",
+			"none",
+			"Greet",
+			"loadHome",
+			"data",
+			"var",
+			"		\n",
+			"\n})();",
+			"Error",
+			"','",
+			"));\n",
+			"	\n",
+			"dataPersister",
+			"');\n",
+			"addCoun",
+			"().",
+			"');\n",
+			"('');",
+			"\n		",
+			"if",
+			"});\n",
+			"BuildingEstate",
+			"                \n",
+			"processFilterTravelsCommand",
+			"formatTravelsQuery",
+			" \n",
+			"parseDate",
+			"'';\n",
+			"();    ",
+			";\n",
+			"localeCompare",
+			"})();\n",
+			"Section",
+			";\n",
+			"Container",
+			"canvas",
+			"	\n",
+			"			\n",
+			"Point3",
+			"Triangle",
+			"}\n",
+			"true",
+			"isClass",
+			"\"->\");\n",
+			"->$",
+			"\n		",
+			"Bedroom",
+			"ReservationSystem",
+			"			\n",
+			"cisty",
+			"();\n",
+			">\";\n",
+			"adsfaafd",
+			"string",
+			"summary",
+			"month",
+			"author",
+			"article",
+			"();\n",
+			"maxHorizontal",
+			"subject",
+			"mysql_fetch_assoc",
+			"topPictures",
+			"replace",
+			"\">",
+			"Categories",
+			"camteg",
+			";\n",
+			"));",
+			"left",
+			");\n",
+			"semName",
+			"date",
+			"php",
+			"];\n",
+			"']);\n",
+			"stcart",
+			"submit",
+			"pattern",
+			"/	",
+			"pieces",
+			"condition",
+			"lname",
+			"Name",
+			"combo",
+			"Email",
+			"// ",
+			"Lastnaeleme",
+			"Lastname",
+			"button",
+			"true",
+			"window",
+			"window.progLangID",
+			"progLangID",
+			"boxCounter",
+			"pernichanin",
+			"american",
+			"Mercedes",
+			"results",
+			"teamates",
+			"Volvo",
+			"seconds",
+			"condition",
+			"name",
+			"firstname",
+			"phone",
+			"city"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"Product",
+			"onPageLoad",
+			"Element",
+			"downloads",
+			"artists",
+			"genre",
+			"name",
+			"localStorage",
+			"progLangID",
+			"window.progLangID",
+			"localStorage.results",
+			"localStorage.teamates",
+			"#second",
+			"lastname",
+			"matchesPlayedWith",
+			"i",
+			"tr",
+			"lastname",
+			"firstname",
+			"lname",
+			"fname",
+			"answer",
+			"question",
+			"filez",
+			"Profiles",
+			"filez",
+			"span>",
+			"span",
+			"nouns",
+			"div"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.534375,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 73.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.xdebug":
+	{
+		"height": 118.0
+	},
+	"project": "ads.sublime-project",
+	"replace":
+	{
+		"height": 102.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"D:\\OnCode\\SoftUni\\6. PHP\\5. PHP-Sample-Exam\\Solutions-My\\02.EmailCensorship.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+		"xdebug":
+		{
+			"hide_conflict": false,
+			"restore_index":
+			{
+				"17":
+				{
+					"group": 0,
+					"index": 0
+				},
+				"26":
+				{
+					"group": 0,
+					"index": 1
+				}
+			},
+			"restore_layout":
+			{
+				"cells":
+				[
+					[
+						0,
+						0,
+						1,
+						1
+					],
+					[
+						1,
+						0,
+						2,
+						1
+					]
+				],
+				"cols":
+				[
+					0.0,
+					0.768993923971,
+					1.0
+				],
+				"rows":
+				[
+					0.0,
+					1.0
+				]
+			}
+		}
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 242.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+		"max_columns": 2
+	}
+}
