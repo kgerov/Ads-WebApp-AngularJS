@@ -1,4 +1,4 @@
-var adsApp = angular.module('adsApp', ['ngRoute']);
+var adsApp = angular.module('adsApp', ['ngRoute', 'ngResource', 'ngStorage']);
 
 adsApp.config(function($routeProvider) {
 	$routeProvider
