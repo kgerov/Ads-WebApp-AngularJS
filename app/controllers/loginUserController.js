@@ -5,7 +5,7 @@ adsApp.controller('loginUserController', ['$scope', 'authService', '$http', func
 			'username': user.Name,
 			'password': user.Pass
 		};
-		authService.createUser(jsonUser);
+		authService.loginUser(jsonUser);
 		// authService.createUser(jsonUser).$promise
 		// 	.then(function (data) {
 		// 		console.log("success");

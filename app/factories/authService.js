@@ -1,12 +1,20 @@
-adsApp.factory('authService', ['$resource', '$localStorage', function($resource, $localStorage){
+adsApp.factory('authService', ['$resource', '$localStorage', '$http', function($resource, $localStorage, $http){
 	var resource = $resource(
 		'http://softuni-ads.azurewebsites.net/api/user/login'
 	);
 
-	function createUser (user) {
+	var regResource = $resource('http://softuni-ads.azurewebsites.net/api/user/register');
+
+	function loginUser (user) {
 		return resource.save(user, function (data) {
 			$localStorage.isLoggedIn = true;
 			$localStorage.currUser = data.username;
+			$http.defaults.headers.common['Authorization'] = 'Bearer ' + data.access_token;
+			if (data.isAdmin) {
+				$localStorage.isAdmin = true;
+			} else {
+				$localStorage.isAdmin = false;
+			}
 		});
 	}
 
@@ -18,14 +26,34 @@ adsApp.factory('authService', ['$resource', '$localStorage', function($resource,
 		return $localStorage.currUser;
 	}
 
+	function isAdmin () {
+		return $localStorage.isAdmin;
+	}
+
 	function logoutUser () {
 		$localStorage.$reset();
+		$http.defaults.headers.common['Authorization'] = '';
+	}
+
+	function registerUser (user) {
+		return regResource.save(user, function (data) {
+			$localStorage.isLoggedIn = true;
+			$localStorage.currUser = data.username;
+			$http.defaults.headers.common['Authorization'] = 'Bearer ' + data.access_token;
+			if (data.isAdmin) {
+				$localStorage.isAdmin = true;
+			} else {
+				$localStorage.isAdmin = false;
+			}
+		});
 	}
 
 	return {
-		createUser: createUser,
+		loginUser: loginUser,
 		isLoggedIn: isLoggedIn,
 		getCurrUserName: getCurrUserName,
-		logoutUser: logoutUser
+		logoutUser: logoutUser,
+		isAdmin: isAdmin,
+		registerUser: registerUser
 	};
 }])
