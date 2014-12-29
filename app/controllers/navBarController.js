@@ -6,6 +6,5 @@ adsApp.controller('navBarController', ['$scope', 'authService', function($scope,
 
 	$scope.$watch(authService.isLoggedIn, function (isLoggedIn) {
 		$scope.user = authService.getCurrUserName();
-		console.log("");
 	});
 }]);
