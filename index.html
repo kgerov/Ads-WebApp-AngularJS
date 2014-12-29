@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="adsApp">
 	<head>
 		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- Angular JS -->
@@ -9,8 +9,15 @@
 		<script type="text/javascript" src="libs/underscore-min.js" defer></script>
 		<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js" defer></script>
 		<script type="text/javascript" src="node_modules/noty/js/noty/packaged/jquery.noty.packaged.min.js" defer></script>
+
 		<!-- App scripts -->
 		<script type="text/javascript" src="app/app.js" defer></script>
+		<!-- Controllers -->
+		<script type="text/javascript" src="app/controllers/adsListController.js" defer></script>
+		<script type="text/javascript" src="app/controllers/navBarController.js" defer></script>
+		<script type="text/javascript" src="app/controllers/loginUserController.js" defer></script>
+		<script type="text/javascript" src="app/controllers/registerUserController.js" defer></script>
+
 		<!-- Bootstrap -->
 		<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js" defer></script>
 		<link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
@@ -22,8 +29,8 @@
 		<link rel="stylesheet" type="text/css" href="styles/main.css">
 		<title>Обяви</title>
 	</head>
-	<body ng-app="adsApp">
-		<div class="navbar navbar-inverse navbar-static-top">
+	<body>
+		<div class="navbar navbar-inverse navbar-static-top" ng-controller="navBarController">
 			<div class="container">
 				<a href="#" class="navbar-brand">Обяви</a>
 				<button class="navbar-toggle pull-left" data-toggle="collapse" data-target=".navHeaderCollapse">
@@ -42,9 +49,7 @@
 				</div>
 			</div>
 		</div>
-		<!-- <div ng-view>
-			
-		</div> -->
+		<div ng-view></div>
 		<div class="navbar navbar-default navbar-fixed-bottom">
 			<div class="container">
 				<p class="navbar-text pull-left">Created by Konstantin</p>
