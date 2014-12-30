@@ -1,7 +1,18 @@
-<div>
-	<form name="loginForm">
-		<input type="text" ng-model="user.Name">
-		<input type="text" ng-model="user.Pass">
-		<button ng-click="loginUser(user)">Submit</button>
-	</form>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-centered">
+			<form name="loginForm">
+				<h2>Login</h2>
+				<input type="text"  class="form-control" name="inputName" ng-model="user.Name" placeholder="Username" required="">
+				<input type="password" class="form-control"  name="inputPass" ng-model="user.Pass"  placeholder="Password" required="">
+				<button class="btn btn-primary pull-right" type="submit" ng-click="loginUser(user)" value="Save" ng-disabled="loginForm.$invalid">Submit</button>
+			</form>
+		</div>
+	</div>
 </div>
+
+<!-- <div class="form-group has-feedback" ng-class="{ 'has-error' : (loginForm.inputName.$error.required && loginForm.inputName.$dirty), 'has-success' : loginForm.inputName.$valid}">
+	<input type="text"  class="form-control" name="inputName" ng-model="user.Name" placeholder="Username" required=""  aria-describedby="inputSuccess2Status">
+	<div ng-if="loginForm.inputName.$valid" ng-include src="'app/partials/success.html'"></div>
+	<div ng-if="loginForm.inputName.$error.required && loginForm.inputName.$dirty" ng-include src="'app/partials/error.html'"></div>
+</div> -->

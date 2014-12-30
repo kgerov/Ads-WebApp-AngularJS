@@ -1,3 +1,16 @@
 .footer-fix {
 	border-bottom: 0;
 }
+
+form input {
+	margin-bottom: 2%;
+}
+
+form h2 {
+	margin-bottom: 4%;
+}
+
+.col-centered {
+	float: none;
+	margin: 0 auto;
+}
