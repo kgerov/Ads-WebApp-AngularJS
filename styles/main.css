@@ -24,3 +24,19 @@ form h2 {
 .ad-box img {
   max-width: 200px;
 }
+
+.filter-ads input[type="radio"] {
+    display:none;
+}
+
+.filter-ads label {
+    display:block;
+    background-color:#ddd;
+    padding:4px 11px;
+    font-family:Arial;
+    font-size:16px;
+}
+
+.filter-ads input[type="radio"]:checked + label {
+    background-color:#bbb;
+}
