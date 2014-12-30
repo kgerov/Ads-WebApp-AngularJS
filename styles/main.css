@@ -14,3 +14,13 @@ form h2 {
 	float: none;
 	margin: 0 auto;
 }
+
+.align-ad {
+  display: inline-block;
+  vertical-align: middle;
+  float: none;
+}
+
+.ad-box img {
+  max-width: 200px;
+}

@@ -1,0 +1,83 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files (x86)\\nodejs\\\\node.exe',
+1 verbose cli   'C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'angular-utils-pagination' ]
+2 info using npm@1.4.14
+3 info using node@v0.10.29
+4 verbose node symlink C:\Program Files (x86)\nodejs\\node.exe
+5 warn package.json Ads@1.0.0 No README data
+6 verbose readDependencies using package.json deps
+7 verbose cache add [ 'angular-utils-pagination', null ]
+8 verbose cache add name=undefined spec="angular-utils-pagination" args=["angular-utils-pagination",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'angular-utils-pagination',
+9 verbose parsed url   path: 'angular-utils-pagination',
+9 verbose parsed url   href: 'angular-utils-pagination' }
+10 silly lockFile e74ea829-angular-utils-pagination angular-utils-pagination
+11 verbose lock angular-utils-pagination C:\Users\Dimitar\AppData\Roaming\npm-cache\e74ea829-angular-utils-pagination.lock
+12 silly lockFile e74ea829-angular-utils-pagination angular-utils-pagination
+13 silly lockFile e74ea829-angular-utils-pagination angular-utils-pagination
+14 verbose addNamed [ 'angular-utils-pagination', '' ]
+15 verbose addNamed [ null, '*' ]
+16 silly lockFile b56f8e6d-angular-utils-pagination angular-utils-pagination@
+17 verbose lock angular-utils-pagination@ C:\Users\Dimitar\AppData\Roaming\npm-cache\b56f8e6d-angular-utils-pagination.lock
+18 silly addNameRange { name: 'angular-utils-pagination', range: '*', hasData: false }
+19 verbose url raw angular-utils-pagination
+20 verbose url resolving [ 'http://registry.npmjs.org/', './angular-utils-pagination' ]
+21 verbose url resolved http://registry.npmjs.org/angular-utils-pagination
+22 info trying registry request attempt 1 at 15:10:53
+23 http GET http://registry.npmjs.org/angular-utils-pagination
+24 http 404 http://registry.npmjs.org/angular-utils-pagination
+25 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+25 verbose headers   'content-type': 'application/json',
+25 verbose headers   'cache-control': 'max-age=0',
+25 verbose headers   'content-length': '52',
+25 verbose headers   'accept-ranges': 'bytes',
+25 verbose headers   date: 'Tue, 30 Dec 2014 13:10:48 GMT',
+25 verbose headers   via: '1.1 varnish',
+25 verbose headers   age: '0',
+25 verbose headers   connection: 'keep-alive',
+25 verbose headers   'x-served-by': 'cache-lcy1135-LCY',
+25 verbose headers   'x-cache': 'MISS',
+25 verbose headers   'x-cache-hits': '0',
+25 verbose headers   'x-timer': 'S1419945048.152112,VS0,VE161' }
+26 silly registry.get cb [ 404,
+26 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+26 silly registry.get     'content-type': 'application/json',
+26 silly registry.get     'cache-control': 'max-age=0',
+26 silly registry.get     'content-length': '52',
+26 silly registry.get     'accept-ranges': 'bytes',
+26 silly registry.get     date: 'Tue, 30 Dec 2014 13:10:48 GMT',
+26 silly registry.get     via: '1.1 varnish',
+26 silly registry.get     age: '0',
+26 silly registry.get     connection: 'keep-alive',
+26 silly registry.get     'x-served-by': 'cache-lcy1135-LCY',
+26 silly registry.get     'x-cache': 'MISS',
+26 silly registry.get     'x-cache-hits': '0',
+26 silly registry.get     'x-timer': 'S1419945048.152112,VS0,VE161' } ]
+27 silly lockFile b56f8e6d-angular-utils-pagination angular-utils-pagination@
+28 silly lockFile b56f8e6d-angular-utils-pagination angular-utils-pagination@
+29 error 404 404 Not Found: angular-utils-pagination
+29 error 404
+29 error 404 'angular-utils-pagination' is not in the npm registry.
+29 error 404 You should bug the author to publish it
+29 error 404 It was specified as a dependency of 'Ads'
+29 error 404
+29 error 404 Note that you can also install from a
+29 error 404 tarball, folder, or http url, or git url.
+30 error System Windows_NT 6.1.7601
+31 error command "C:\\Program Files (x86)\\nodejs\\\\node.exe" "C:\\Program Files (x86)\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "angular-utils-pagination"
+32 error cwd C:\xampp\htdocs\test\ads
+33 error node -v v0.10.29
+34 error npm -v 1.4.14
+35 error code E404
+36 verbose exit [ 1, true ]

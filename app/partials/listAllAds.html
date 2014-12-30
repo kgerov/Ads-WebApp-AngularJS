@@ -1,3 +1,63 @@
-<div class="a">
-	<p>a</p>
+<!-- <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="my-controller">
+          <h1>Tasty Paginated Menu</h1>
+          <br>
+          <div class="panel panel-default">
+            <div class="panel-body">
+              <ul>
+                <li dir-paginate="ad in ads | itemsPerPage: usersPerPage" total-items="adsCount">{{ ad.title }}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="other-controller">
+          <div class="text-center">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+ -->
+<div class="container">
+	<div class="row">
+		<div class="col-md-10">
+			<div class="col-md-10 ad-box" dir-paginate="ad in ads | itemsPerPage: usersPerPage" total-items="adsCount">
+				<div class="row">
+					<div class="col-md-3 align-ad">
+						<img ng-src="{{ad.imageDataUrl}}" alt="">
+					</div>
+					<div class="col-md-8 align-ad">
+						<div class="row">
+							<div class="col-md-12 text-center">
+								<h3>{{ad.title}}</h3>
+							</div>
+							<div class="col-md-12">
+								<p>{{ad.text}}</p>
+							</div>
+							<div class="col-md-12">
+								<ul>
+									<li>{{ad.ownerName}}</li>
+									<li>{{ad.ownerEmail}}</li>
+									<li>{{ad.ownerPhone}}</li>
+									<li>{{ad.date | date}}</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-2">
+			
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-centered text-center">
+			<dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="libs/dirPagination.tpl.html"></dir-pagination-controls>
+          </div>
+		</div>
+	</div>
 </div>
