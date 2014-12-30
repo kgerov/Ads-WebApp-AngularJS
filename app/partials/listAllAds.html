@@ -1,33 +1,10 @@
-<!-- <div class="container">
-    <div class="row">
-      <div class="col-lg-8">
-        <div class="my-controller">
-          <h1>Tasty Paginated Menu</h1>
-          <br>
-          <div class="panel panel-default">
-            <div class="panel-body">
-              <ul>
-                <li dir-paginate="ad in ads | itemsPerPage: usersPerPage" total-items="adsCount">{{ ad.title }}</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="other-controller">
-          <div class="text-center">
-          
-        </div>
-      </div>
-    </div>
-  </div>
- -->
 <div class="container">
 	<div class="row">
 		<div class="col-md-10">
 			<div class="col-md-10 ad-box" dir-paginate="ad in ads | itemsPerPage: usersPerPage" total-items="adsCount">
 				<div class="row">
 					<div class="col-md-3 align-ad">
-						<img ng-src="{{ad.imageDataUrl}}" alt="">
+						<img ng-src="{{ad.imageDataUrl | validImg }}" alt="" onerror="this.onerror=null;this.src='https://cdn0.iconfinder.com/data/icons/very-basic-android-l-lollipop-icon-pack/24/cancel-2-128.png';">
 					</div>
 					<div class="col-md-8 align-ad">
 						<div class="row">

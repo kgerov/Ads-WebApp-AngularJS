@@ -4,8 +4,6 @@ adsApp.controller('adsListController', ['$scope', 'adsFactory', 'pageSize', func
     $scope.usersPerPage = pageSize;
     getPageContent(1);
 
-    $scope.defailtImg = 'images/no_image.png';
-	
   	$scope.pageChangeHandler = function(num) {
     	getPageContent(num);
   	};
@@ -13,9 +11,7 @@ adsApp.controller('adsListController', ['$scope', 'adsFactory', 'pageSize', func
   	function getPageContent (pageNumber) {
   		adsFactory.getAdsFromPage(pageNumber).$promise
 			.then(function (data) {
-				var sort = jQuery.extend({}, data.ads);
-				sort[0].imageDataUrl = 'https://cdn0.iconfinder.com/data/icons/very-basic-android-l-lollipop-icon-pack/24/cancel-2-128.png';
-				$scope.ads = sort;
+				$scope.ads = data.ads;
 				$scope.adsCount = data.numItems;
 			}, function (error) {
 

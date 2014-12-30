@@ -2,7 +2,8 @@ var adsApp = angular.module('adsApp', ['ngRoute',
 	'ngResource',
 	'ngStorage', 
 	'ngTouch', 
-	'angularUtils.directives.dirPagination']);
+	'angularUtils.directives.dirPagination', 
+	'validImgFilter']);
 
 adsApp.config(function($routeProvider) {
 	$routeProvider
@@ -25,13 +26,3 @@ adsApp.config(function($routeProvider) {
 });
 
 adsApp.constant("pageSize", 3);
-
-adsApp.filter('subtitles', function () {
-	return function (bool) {
-		if (bool) {
-			return "Yes";
-		} else {
-			return "No";
-		}
-	}
-});
