@@ -13,6 +13,7 @@ adsApp.controller('adsListController', ['$scope', 'adsFactory', 'pageSize', func
 			.then(function (data) {
 				$scope.ads = data.ads;
 				$scope.adsCount = data.numItems;
+                          $('html, body').animate({scrollTop : 0},100);
 			}, function (error) {
 
 			});

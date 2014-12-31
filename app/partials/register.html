@@ -1,0 +1,68 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-centered">
+			<form name="registerForm">
+				<h2>Register</h2>
+				<!-- Username -->
+				<div class="form-group has-feedback" ng-class="{ 'has-error' : (loginForm.inputName.$error.required && (touchUsername || formSubmitted)), 'has-success' : loginForm.inputName.$valid && (touchUsername || formSubmitted)}">
+					<input type="text"  class="form-control" name="inputName" ng-model="user.Name" placeholder="Username" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchUsername=true">
+					<div ng-show="touchUsername || formSubmitted">
+						<div ng-if="loginForm.inputName.$valid" ng-include src="'app/partials/success.html'"></div>
+						<div ng-if="loginForm.inputName.$error.required" ng-include src="'app/partials/error.html'"></div>
+					</div>
+				</div>
+				<!-- Password -->
+				<div class="form-group has-feedback" ng-class="{ 'has-error' : (loginForm.inputPass.$error.required && (fieldTouched || formSubmitted)), 'has-success' : loginForm.inputPass.$valid && (fieldTouched || formSubmitted)}">
+					<input type="password"  class="form-control" name="inputPass" ng-model="user.Pass" placeholder="Password" required=""  aria-describedby="inputSuccess2Status" ng-blur="fieldTouched=true">
+					<div ng-show="fieldTouched || formSubmitted">
+						<div ng-if="loginForm.inputPass.$valid" ng-include src="'app/partials/success.html'"></div>
+						<div ng-if="loginForm.inputPass.$error.required" ng-include src="'app/partials/error.html'"></div>
+					</div>
+				</div>
+				<!-- Confirm Password -->
+				<div class="form-group has-feedback" ng-class="{ 'has-error' : (loginForm.inputName.$error.required && (fieldTouched || formSubmitted)), 'has-success' : loginForm.inputName.$valid && (fieldTouched || formSubmitted)}">
+					<input type="text"  class="form-control" name="inputName" ng-model="user.Name" placeholder="Username" required=""  aria-describedby="inputSuccess2Status" ng-blur="fieldTouched=true" data-match="user.Pass">
+					<div ng-show="fieldTouched || formSubmitted">
+						<div ng-if="loginForm.inputName.$valid" ng-include src="'app/partials/success.html'"></div>
+						<div ng-if="loginForm.inputName.$error.required" ng-include src="'app/partials/error.html'"></div>
+					</div>
+				</div>
+				<!-- Name -->
+				<div class="form-group has-feedback" ng-class="{ 'has-error' : (loginForm.inputName.$error.required && (fieldTouched || formSubmitted)), 'has-success' : loginForm.inputName.$valid && (fieldTouched || formSubmitted)}">
+					<input type="text"  class="form-control" name="inputName" ng-model="user.Name" placeholder="Username" required=""  aria-describedby="inputSuccess2Status" ng-blur="fieldTouched=true">
+					<div ng-show="fieldTouched || formSubmitted">
+						<div ng-if="loginForm.inputName.$valid" ng-include src="'app/partials/success.html'"></div>
+						<div ng-if="loginForm.inputName.$error.required" ng-include src="'app/partials/error.html'"></div>
+					</div>
+				</div>
+				<!-- Email -->
+				<div class="form-group has-feedback" ng-class="{ 'has-error' : (loginForm.inputName.$error.required && (fieldTouched || formSubmitted)), 'has-success' : loginForm.inputName.$valid && (fieldTouched || formSubmitted)}">
+					<input type="text"  class="form-control" name="inputName" ng-model="user.Name" placeholder="Username" required=""  aria-describedby="inputSuccess2Status" ng-blur="fieldTouched=true">
+					<div ng-show="fieldTouched || formSubmitted">
+						<div ng-if="loginForm.inputName.$valid" ng-include src="'app/partials/success.html'"></div>
+						<div ng-if="loginForm.inputName.$error.required" ng-include src="'app/partials/error.html'"></div>
+					</div>
+				</div>
+				<!-- Phone -->
+				<div class="form-group has-feedback" ng-class="{ 'has-error' : (loginForm.inputName.$error.required && (fieldTouched || formSubmitted)), 'has-success' : loginForm.inputName.$valid && (fieldTouched || formSubmitted)}">
+					<input type="text"  class="form-control" name="inputName" ng-model="user.Name" placeholder="Username" required=""  aria-describedby="inputSuccess2Status" ng-blur="fieldTouched=true">
+					<div ng-show="fieldTouched || formSubmitted">
+						<div ng-if="loginForm.inputName.$valid" ng-include src="'app/partials/success.html'"></div>
+						<div ng-if="loginForm.inputName.$error.required" ng-include src="'app/partials/error.html'"></div>
+					</div>
+				</div>
+				<!-- Town -->
+				<div class="form-group has-feedback" ng-class="{ 'has-error' : (loginForm.inputName.$error.required && (fieldTouched || formSubmitted)), 'has-success' : loginForm.inputName.$valid && (fieldTouched || formSubmitted)}">
+					<input type="text"  class="form-control" name="inputName" ng-model="user.Name" placeholder="Username" required=""  aria-describedby="inputSuccess2Status" ng-blur="fieldTouched=true">
+					<div ng-show="fieldTouched || formSubmitted">
+						<div ng-if="loginForm.inputName.$valid" ng-include src="'app/partials/success.html'"></div>
+						<div ng-if="loginForm.inputName.$error.required" ng-include src="'app/partials/error.html'"></div>
+					</div>
+				</div>
+				<div class="text-center">
+					<button class="btn btn-lg btn-primary register-button" type="submit" ng-click="registerUser(user, RegisterForm.$valid)" value="Save">Rigister</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

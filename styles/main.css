@@ -1,6 +1,19 @@
+/*Main*/
+
+body {
+    padding-bottom: 10%;
+}
+
 .footer-fix {
 	border-bottom: 0;
 }
+
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+
+/*Forms*/
 
 form input {
 	margin-bottom: 2%;
@@ -10,11 +23,11 @@ form h2 {
 	margin-bottom: 4%;
 }
 
-.col-centered {
-	float: none;
-	margin: 0 auto;
+.btn-lg {
+  width: 30%;
 }
 
+/*Ad display*/
 .align-ad {
   display: inline-block;
   vertical-align: middle;

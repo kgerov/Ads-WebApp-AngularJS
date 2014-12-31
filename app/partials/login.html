@@ -1,18 +1,24 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-6 col-centered">
-			<form name="loginForm">
+			<form name="loginForm" novalidate>
 				<h2>Login</h2>
-				<input type="text"  class="form-control" name="inputName" ng-model="user.Name" placeholder="Username" required="">
-				<input type="password" class="form-control"  name="inputPass" ng-model="user.Pass"  placeholder="Password" required="">
-				<button class="btn btn-primary pull-right" type="submit" ng-click="loginUser(user)" value="Save" ng-disabled="loginForm.$invalid">Submita</button>
+				<!-- Username -->
+				<div class="form-group has-feedback" ng-class="{ 'has-error' : (loginForm.inputName.$error.required && (fieldTouched || formSubmitted))}">
+					<input type="text"  class="form-control" name="inputName" ng-model="user.Name" placeholder="Username" required=""  aria-describedby="inputSuccess2Status" ng-blur="fieldTouched=true">
+					<div ng-show="fieldTouched || formSubmitted">
+						<div ng-if="loginForm.inputName.$error.required" ng-include src="'app/partials/error.html'"></div>
+					</div>
+				</div>
+				<!-- Password -->
+				<div class="form-group has-feedback" ng-class="{ 'has-error' : (loginForm.inputPass.$error.required && (fieldPassTouched || formSubmitted))}">
+					<input type="password"  class="form-control" name="inputPass" ng-model="user.Pass" placeholder="Password" required=""  aria-describedby="inputSuccess2Status" ng-blur="fieldPassTouched=true">
+					<div ng-show="fieldPassTouched || formSubmitted">
+						<div ng-if="loginForm.inputPass.$error.required" ng-include src="'app/partials/error.html'"></div>
+					</div>
+				</div>
+				<button class="btn btn-primary pull-right" type="submit" ng-click="loginUser(user, loginForm.$valid)" value="Save" >Login</button>
 			</form>
 		</div>
 	</div>
 </div>
-
-<!-- <div class="form-group has-feedback" ng-class="{ 'has-error' : (loginForm.inputName.$error.required && loginForm.inputName.$dirty), 'has-success' : loginForm.inputName.$valid}">
-	<input type="text"  class="form-control" name="inputName" ng-model="user.Name" placeholder="Username" required=""  aria-describedby="inputSuccess2Status">
-	<div ng-if="loginForm.inputName.$valid" ng-include src="'app/partials/success.html'"></div>
-	<div ng-if="loginForm.inputName.$error.required && loginForm.inputName.$dirty" ng-include src="'app/partials/error.html'"></div>
-</div> -->
