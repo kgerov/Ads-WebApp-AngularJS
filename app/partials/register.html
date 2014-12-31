@@ -5,7 +5,7 @@
 				<h2>Register</h2>
 				<!-- Username -->
 				<div class="form-group has-feedback" ng-class="{ 'has-error' : (registerForm.inputUsername.$error.required && (touchUsername || formSubmitted)), 'has-success' : registerForm.inputUsername.$valid && (touchUsername || formSubmitted)}">
-					<input type="text"  class="form-control" name="inputUsername" ng-model="user.Name" placeholder="Username" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchUsername=true">
+					<input type="text"  class="form-control" name="inputUsername" ng-model="user.Username" placeholder="Username" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchUsername=true">
 					<div ng-show="touchUsername || formSubmitted">
 						<div ng-if="registerForm.inputUsername.$valid" ng-include src="'app/partials/success.html'"></div>
 						<div ng-if="registerForm.inputUsername.$error.required" ng-include src="'app/partials/error.html'"></div>
@@ -29,39 +29,36 @@
 					</div>
 				</div>
 				<!-- Name -->
-				<div class="form-group has-feedback" ng-class="{ 'has-error' : (registerForm.inputName.$error.required && (fieldTouched || formSubmitted)), 'has-success' : registerForm.inputName.$valid && (fieldTouched || formSubmitted)}">
-					<input type="text"  class="form-control" name="inputName" ng-model="user.Name" placeholder="Username" required=""  aria-describedby="inputSuccess2Status" ng-blur="fieldTouched=true">
-					<div ng-show="fieldTouched || formSubmitted">
+				<div class="form-group has-feedback" ng-class="{ 'has-error' : (registerForm.inputName.$error.required && (touchName || formSubmitted)), 'has-success' : registerForm.inputName.$valid && (touchName || formSubmitted)}">
+					<input type="text"  class="form-control" name="inputName" ng-model="user.Name" placeholder="Name" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchName=true">
+					<div ng-show="touchName || formSubmitted">
 						<div ng-if="registerForm.inputName.$valid" ng-include src="'app/partials/success.html'"></div>
 						<div ng-if="registerForm.inputName.$error.required" ng-include src="'app/partials/error.html'"></div>
 					</div>
 				</div>
 				<!-- Email -->
-				<div class="form-group has-feedback" ng-class="{ 'has-error' : (registerForm.inputName.$error.required && (fieldTouched || formSubmitted)), 'has-success' : registerForm.inputName.$valid && (fieldTouched || formSubmitted)}">
-					<input type="text"  class="form-control" name="inputName" ng-model="user.Name" placeholder="Username" required=""  aria-describedby="inputSuccess2Status" ng-blur="fieldTouched=true">
-					<div ng-show="fieldTouched || formSubmitted">
-						<div ng-if="registerForm.inputName.$valid" ng-include src="'app/partials/success.html'"></div>
-						<div ng-if="registerForm.inputName.$error.required" ng-include src="'app/partials/error.html'"></div>
+				<div class="form-group has-feedback" ng-class="{ 'has-error' : (registerForm.inputEmail.$error.required && (touchEmail || formSubmitted)), 'has-success' : registerForm.inputEmail.$valid && (touchEmail || formSubmitted)}">
+					<input type="email"  class="form-control" name="inputEmail" ng-model="user.Email" placeholder="Email" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchEmail=true">
+					<div ng-show="touchEmail || formSubmitted">
+						<div ng-if="registerForm.inputEmail.$valid" ng-include src="'app/partials/success.html'"></div>
+						<div ng-if="registerForm.inputEmail.$error.required" ng-include src="'app/partials/error.html'"></div>
 					</div>
 				</div>
 				<!-- Phone -->
-				<div class="form-group has-feedback" ng-class="{ 'has-error' : (registerForm.inputName.$error.required && (fieldTouched || formSubmitted)), 'has-success' : registerForm.inputName.$valid && (fieldTouched || formSubmitted)}">
-					<input type="text"  class="form-control" name="inputName" ng-model="user.Name" placeholder="Username" required=""  aria-describedby="inputSuccess2Status" ng-blur="fieldTouched=true">
-					<div ng-show="fieldTouched || formSubmitted">
-						<div ng-if="registerForm.inputName.$valid" ng-include src="'app/partials/success.html'"></div>
-						<div ng-if="registerForm.inputName.$error.required" ng-include src="'app/partials/error.html'"></div>
+				<div class="form-group has-feedback" ng-class="{ 'has-error' : (registerForm.inputPhone.$error.required && (touchPhone || formSubmitted)), 'has-success' : registerForm.inputPhone.$valid && (touchPhone || formSubmitted)}">
+					<input type="text"  class="form-control" name="inputPhone" ng-model="user.Phone" placeholder="Phone" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchPhone=true">
+					<div ng-show="touchPhone || formSubmitted">
+						<div ng-if="registerForm.inputPhone.$valid" ng-include src="'app/partials/success.html'"></div>
+						<div ng-if="registerForm.inputPhone.$error.required" ng-include src="'app/partials/error.html'"></div>
 					</div>
 				</div>
 				<!-- Town -->
-				<div class="form-group has-feedback" ng-class="{ 'has-error' : (registerForm.inputName.$error.required && (fieldTouched || formSubmitted)), 'has-success' : registerForm.inputName.$valid && (fieldTouched || formSubmitted)}">
-					<input type="text"  class="form-control" name="inputName" ng-model="user.Name" placeholder="Username" required=""  aria-describedby="inputSuccess2Status" ng-blur="fieldTouched=true">
-					<div ng-show="fieldTouched || formSubmitted">
-						<div ng-if="registerForm.inputName.$valid" ng-include src="'app/partials/success.html'"></div>
-						<div ng-if="registerForm.inputName.$error.required" ng-include src="'app/partials/error.html'"></div>
-					</div>
-				</div>
+				<select ng-model="user.Town" class="form-control">
+					<option style="display:none;" value="">Chose Town</option>
+					<option ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
+				</select>
 				<div class="text-center">
-					<button class="btn btn-lg btn-primary register-button" type="submit" ng-click="registerUser(user, RegisterForm.$valid)" value="Save">Register</button>
+					<button class="btn btn-lg btn-primary register-button" type="submit" ng-click="registerUser(user, registerForm.$valid)" value="Save">Register</button>
 				</div>
 			</form>
 		</div>

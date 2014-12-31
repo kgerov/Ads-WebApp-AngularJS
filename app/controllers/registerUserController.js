@@ -1,4 +1,4 @@
-adsApp.controller('registerUserController', ['$scope', function($scope){
+adsApp.controller('registerUserController', ['$scope', 'townFactory', 'authService', '$location', '$http', function($scope, townFactory, authService, $location, $http ){
 	$scope.touchUsername = false;
 	$scope.touchPass = false;
 	$scope.touchPassConfirm = false;
@@ -8,11 +8,40 @@ adsApp.controller('registerUserController', ['$scope', function($scope){
 	$scope.touchTown = false;
 
 	$scope.formSubmitted = false;
+	$scope.towns = [];
+
+	init();
 
 	$scope.registerUser = function (user, valid) {
 		$scope.formSubmitted = true;
+		console.log(valid);
 		if (valid) {
-			console.log(user);
+			var jsonUser = {
+				'username': user.Username,
+				'password': user.Pass,
+				'confirmPassword': user.PassConfirm,
+				'name': user.Name,
+				'email': user.Email,
+				'phone': user.Phone,
+				'townId ': user.Town || null
+			};
+			console.log(jsonUser);
+
+			authService.registerUser(jsonUser).$promise
+				.then(function () {
+					$location.path('/');	
+				}, function () {
+					
+				});
 		}
+	}
+
+	function init () {
+		townFactory.getAllTowns().$promise
+			.then(function (data) {
+				$scope.towns = data;
+			}, function (error) {
+				
+			});
 	}
 }]);

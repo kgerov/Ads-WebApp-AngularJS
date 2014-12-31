@@ -19,7 +19,7 @@ body {
 
 /*Forms*/
 
-form input {
+form input, form select {
 	margin-bottom: 2%;
 }
 
