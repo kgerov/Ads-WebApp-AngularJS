@@ -2,7 +2,7 @@
 	<div class="row">
 		<div class="col-md-6 col-centered">
 			<form name="registerForm">
-				<h2>Registera</h2>
+				<h2>Register</h2>
 				<!-- Username -->
 				<div class="form-group has-feedback" ng-class="{ 'has-error' : (loginForm.inputName.$error.required && (touchUsername || formSubmitted)), 'has-success' : loginForm.inputName.$valid && (touchUsername || formSubmitted)}">
 					<input type="text"  class="form-control" name="inputName" ng-model="user.Name" placeholder="Username" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchUsername=true">
