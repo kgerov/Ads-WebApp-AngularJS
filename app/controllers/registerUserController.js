@@ -6,4 +6,13 @@ adsApp.controller('registerUserController', ['$scope', function($scope){
 	$scope.touchEmail = false;
 	$scope.touchName = false;
 	$scope.touchTown = false;
+
+	$scope.formSubmitted = false;
+
+	$scope.registerUser = function (user, valid) {
+		$scope.formSubmitted = true;
+		if (valid) {
+			console.log(user);
+		}
+	}
 }]);
