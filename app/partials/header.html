@@ -12,9 +12,9 @@
 				<div ng-show="isLoggedIn && (!isAdmin)">
 					<ul class="nav navbar-nav navbar-left">
 							<li><a href="#/{{username}}/home">Home</a></li>
-							<li><a href="">My Ads</a></li>
-							<li><a href="">Publish New Ad</a></li>
-							<li><a href="">Edit Profile</a></li>
+							<li><a href="#/{{username}}/ads">My Ads</a></li>
+							<li><a href="#/{{username}}/publish">Publish New Ad</a></li>
+							<li><a href="#/{{username}}/profile">Edit Profile</a></li>
 					</ul>
 				</div>
 				<div ng-show="isLoggedIn && isAdmin">
@@ -27,7 +27,7 @@
 				</div>
 				<div ng-show="isLoggedIn">
 					<ul class="nav navbar-nav navbar-right">
-							<li><a href="">Hello, {{username}}</a></li>
+							<li><a href="#/{{username}}/home">Hello, {{username}}</a></li>
 							<li><a href="" ng-click="logout()">Logout</a></li>
 					</ul>
 				</div>

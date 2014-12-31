@@ -29,7 +29,7 @@ adsApp.controller('registerUserController', ['$scope', 'townFactory', 'authServi
 
 			authService.registerUser(jsonUser).$promise
 				.then(function () {
-					$location.path('/');	
+					$location.path('/' + authService.getCurrUserName() + '/home');	
 				}, function () {
 					
 				});

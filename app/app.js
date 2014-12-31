@@ -33,10 +33,15 @@ adsApp.config(function($routeProvider) {
 			controller: 'userAdsController',
 			templateUrl: 'app/partials/listUserAds.html'
 		})
-		.when('/:user/ads/publish',
+		.when('/:user/publish',
 		{
 			controller: 'newAdController',
 			templateUrl: 'app/partials/publishNewAd.html'
+		})
+		.when('/:user/profile',
+		{
+			controller: 'userProfileEditorController',
+			templateUrl: 'app/partials/userProfile.html'
 		})
 		.otherwise({redirectTo: '/'});
 });
