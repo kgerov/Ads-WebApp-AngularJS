@@ -13,7 +13,7 @@ adsApp.controller('loginUserController', ['$scope', 'authService', '$http', '$lo
 
 			authService.loginUser(jsonUser).$promise
 				.then(function () {
-					$location.path('/');	
+					$location.path('/' + authService.getCurrUserName() + '/home');	
 				}, function () {
 					
 				});

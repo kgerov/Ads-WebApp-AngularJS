@@ -23,6 +23,21 @@ adsApp.config(function($routeProvider) {
 			controller: 'registerUserController',
 			templateUrl: 'app/partials/register.html'
 		})
+		.when('/:user/home',
+		{
+			controller: 'adsListController',
+			templateUrl: 'app/partials/listAllAds.html'
+		})
+		.when('/:user/ads',
+		{
+			controller: 'userAdsController',
+			templateUrl: 'app/partials/listUserAds.html'
+		})
+		.when('/:user/ads/publish',
+		{
+			controller: 'newAdController',
+			templateUrl: 'app/partials/publishNewAd.html'
+		})
 		.otherwise({redirectTo: '/'});
 });
 
