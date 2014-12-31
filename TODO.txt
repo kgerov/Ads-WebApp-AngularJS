@@ -3,3 +3,4 @@ TODO LIST:
 2. authService remove repeating code
 3. Hello in different languages
 4. Registration form messages for invalid fields (email + phone ngPattern)
+5. ESCAPING!
