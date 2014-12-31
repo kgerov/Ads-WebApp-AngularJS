@@ -4,3 +4,7 @@ TODO LIST:
 3. Hello in different languages
 4. Registration form messages for invalid fields (email + phone ngPattern)
 5. ESCAPING!
+6. Category Filter (show how many are in the category)
+7. Null infomration in AD
+8. When "NO ads" display message
+9. Fix bug with filters. When on last page and you click a filter, you aren't on the first page (if there is more than one page)

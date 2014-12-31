@@ -4,7 +4,9 @@
 			<div class="col-md-10 ad-box" dir-paginate="ad in ads | itemsPerPage: usersPerPage" total-items="adsCount">
 				<div class="row">
 					<div class="col-md-3 align-ad">
-						<img ng-src="{{ad.imageDataUrl | validImg }}" alt="" onerror="this.onerror=null;this.src='https://cdn0.iconfinder.com/data/icons/very-basic-android-l-lollipop-icon-pack/24/cancel-2-128.png';">
+						<div class="text-center">
+							<img ng-src="{{ad.imageDataUrl | validImg }}" alt="" onerror="this.onerror=null;this.src='https://cdn0.iconfinder.com/data/icons/very-basic-android-l-lollipop-icon-pack/24/cancel-2-128.png';">
+						</div>
 					</div>
 					<div class="col-md-8 align-ad">
 						<div class="row">
@@ -31,21 +33,19 @@
 			<div>
 				<div><h3>Categories</h3></div>
 				<div>
-					<input type="radio" id="all-cat" name="categoryFilterRadio" value="all" checked>
+					<input type="radio" id="all-cat" ng-model="filterAds.categoryFilterRadio" value="all-cat" ng-change='filterChange()'>
 					<label for="all-cat">All</label>
-					<div ng-repeat="cat in categories">
-						<input type="radio" id="{{'c' + cat.id}}" name="categoryFilterRadio" value="{{cat.name}}">
-						<label for="{{'c' + cat.id}}">{{cat.name}}</label>
-					</div>
+					<input ng-repeat-start="cat in categories" type="radio" id="{{'c' + cat.id}}" ng-model="filterAds.categoryFilterRadio" value="{{'c' + cat.id}}" ng-change='filterChange()'>
+					<label ng-repeat-end for="{{'c' + cat.id}}">{{cat.name}}</label>
 				</div>
 			</div>
 			<div>
 				<div><h3>Towns</h3></div>
 				<div>
-					<input type="radio" id="all-towns" name="townFilterRadio" value="all" checked>
+					<input type="radio" id="all-towns" ng-model="filterAds.townFilterRadio" value="all-town" ng-change='filterChange()'>
 					<label for="all-towns">All</label>
 					<div ng-repeat="town in towns">
-						<input type="radio" id="{{'t' + town.id}}" name="townFilterRadio" value="{{town.name}}">
+						<input type="radio" id="{{'t' + town.id}}" ng-model="filterAds.townFilterRadio" value="{{'t' + town.id }}" ng-change='filterChange()'>
 						<label for="{{'t' + town.id}}">{{town.name}}</label>
 					</div>
 				</div>
@@ -54,7 +54,7 @@
 	</div>
 	<div class="row">
 		<div class="col-md-6 col-centered text-center">
-			<dir-pagination-controls boundary-links="true" on-page-change="pageChangeHandler(newPageNumber)" template-url="libs/dirPagination.tpl.html"></dir-pagination-controls>
+			<dir-pagination-controls boundary-links="true" id="goToPageOne" on-page-change="pageChangeHandler(newPageNumber, filterAds)" template-url="libs/dirPagination.tpl.html"></dir-pagination-controls>
           </div>
 		</div>
 	</div>
