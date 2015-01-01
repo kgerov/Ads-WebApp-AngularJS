@@ -38,6 +38,10 @@ form #remove-img {
   display: none;
 }
 
+form textarea {
+  resize: vertical;
+}
+
 .btn-lg {
   width: 30%;
 }

@@ -1,32 +1,45 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-6 col-centered">
-			<form name="registerForm" novalidate>
+			<form name="newAdForm" novalidate>
 				<h2>Publish New Ad</h2>
-				<div class="form-group has-feedback" ng-class="{ 'has-error' : (registerForm.inputUsername.$error.required && (touchUsername || formSubmitted)), 'has-success' : registerForm.inputUsername.$valid && (touchUsername || formSubmitted)}">
-					<input type="text"  class="form-control" name="inputUsername" ng-model="user.Username" placeholder="Username" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchUsername=true">
-					<div ng-show="touchUsername || formSubmitted">
-						<div ng-if="registerForm.inputUsername.$valid" ng-include src="'app/partials/success.html'"></div>
-						<div ng-if="registerForm.inputUsername.$error.required" ng-include src="'app/partials/error.html'"></div>
+                <!-- Title -->
+				<div class="form-group has-feedback" ng-class="{ 'has-error' : (newAdForm.inputAdTitle.$error.required && (touchTitle || formSubmitted)), 'has-success' : newAdForm.inputAdTitle.$valid && (touchTitle || formSubmitted)}">
+					<input type="text"  class="form-control" name="inputAdTitle" ng-model="ad.Title" placeholder="Title" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchTitle=true">
+					<div ng-show="touchTitle || formSubmitted">
+						<div ng-if="newAdForm.inputAdTitle.$valid" ng-include src="'app/partials/success.html'"></div>
+						<div ng-if="newAdForm.inputAdTitle.$error.required" ng-include src="'app/partials/error.html'"></div>
 					</div>
 				</div>
-
-				<select ng-model="user.Category" class="form-control">
+                <!-- Description -->
+                <div class="form-group has-feedback" ng-class="{ 'has-error' : (newAdForm.inputAdDescription.$error.required && (touchDesciption || formSubmitted)), 'has-success' : newAdForm.inputAdDescription.$valid && (touchDesciption || formSubmitted)}">
+                <textarea class="form-control" rows="3" name="inputAdDescription" ng-model="ad.Description" placeholder="Description" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchDesciption=true"></textarea>
+                    <div ng-show="touchDesciption || formSubmitted">
+                        <div ng-if="newAdForm.inputAdDescription.$valid" ng-include src="'app/partials/success.html'"></div>
+                        <div ng-if="newAdForm.inputAdDescription.$error.required" ng-include src="'app/partials/error.html'"></div>
+                    </div>
+                </div>
+                <!-- Image -->
+                <div>
+                    <input type='file' id="ad-pic-upload" accept="image/*" fileread="ad.Img" />
+                    <div class="text-center">
+                        <img id="preview-pic" src="http://img4.wikia.nocookie.net/__cb20130819001030/lego/images/a/ac/No-Image-Basic.png" alt="" />
+                        <button id="remove-img" type="button" class="btn btn-danger">Remove</button>
+                    </div>
+                </div>
+                <!-- Category -->
+				<select ng-model="ad.Category" class="form-control">
 					<option style="display:none;" value="">Chose a Category</option>
 					<option ng-repeat="cat in categories" value="{{cat.id}}">{{cat.name}}</option>
 				</select>
-				<select ng-model="user.Town" class="form-control">
+                <!-- Town -->
+				<select ng-model="ad.Town" class="form-control">
 					<option style="display:none;" value="">Chose a Town</option>
 					<option ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
 				</select>
-                
-                <input type='file' id="ad-pic-upload" accept="image/*" />
-                <div class="text-center">
-                    <img id="preview-pic" src="http://img4.wikia.nocookie.net/__cb20130819001030/lego/images/a/ac/No-Image-Basic.png" alt="" />
-                    <button id="remove-img" type="button" class="btn btn-danger">Remove</button>
-                </div>
+
 				<div class="text-center">
-					<button class="btn btn-lg btn-primary register-button" type="submit" ng-click="registerUser(user, registerForm.$valid)" value="Save">Publish</button>
+					<button class="btn btn-lg btn-primary register-button" type="submit" ng-click="uploadAd(ad, newAdForm.$valid)" value="Save">Publish</button>
 				</div>
 			</form>
 		</div>

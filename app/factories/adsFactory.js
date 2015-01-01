@@ -6,7 +6,11 @@ adsApp.factory('adsFactory', ['$resource', '$http', 'pageSize', function($resour
 		return resource.get({ size: pageSize, pageNum: desiredPage, cityid: townId, catid: catId });
 	}
 
+	function publishNewAd (ad) {
+		return resource.save(ad);
+	}
 	return {
-		getAdsFromPage: getAdsFromPage
+		getAdsFromPage: getAdsFromPage, 
+		publishNewAd: publishNewAd
 	};
 }])
