@@ -12,3 +12,4 @@ TODO LIST:
 10. Click logo on home page of user and his name is removed from the header
 11. Proper logout, look at forum + routing for logout
 12. Error and success messages
+13. Clean unused libraries
