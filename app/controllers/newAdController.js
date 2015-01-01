@@ -1,4 +1,4 @@
-adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory', '$http', 'adsFactory', '$location', function($scope, categoryFactory, townFactory, $http, adsFactory, $location) {
+adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory', '$http', 'adsFactory', '$location', 'authService', function($scope, categoryFactory, townFactory, $http, adsFactory, $location, authService) {
     $scope.formSubmitted = false;
     $scope.touchTitle = false;
     $scope.touchDesciption = false;
@@ -31,14 +31,16 @@ adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory'
                 'title': ad.Title,
                 'text': ad.Description,
                 'categoryid': ad.Category,
-                'townid': ad.Town
+                'townid': ad.Town,
+                'imageDataUrl': ad.Img
             };
 
             adsFactory.publishNewAd(adJson).$promise
                 .then(function (data) {
-                    console.log('succcess');
+                    adsNoty(true, 'Ad submitted for approval. When approved, it will become public');
+                    $location.path('/' + authService.getCurrUserName() + '/ads');
                 }, function (error) {
-                    
+                    adsNoty(false, 'Error occured, please try again');
                 });
         }
     }

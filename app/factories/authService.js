@@ -46,6 +46,8 @@
 			} else {
 				$localStorage.isAdmin = false;
 			}
+		}, function (error) {
+			
 		});
 	}
 

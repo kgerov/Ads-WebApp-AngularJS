@@ -14,7 +14,6 @@ adsApp.controller('registerUserController', ['$scope', 'townFactory', 'authServi
 
 	$scope.registerUser = function (user, valid) {
 		$scope.formSubmitted = true;
-		console.log(valid);
 		if (valid) {
 			var jsonUser = {
 				'username': user.Username,
@@ -25,13 +24,17 @@ adsApp.controller('registerUserController', ['$scope', 'townFactory', 'authServi
 				'phone': user.Phone,
 				'townId ': user.Town || null
 			};
-			console.log(jsonUser);
 
 			authService.registerUser(jsonUser).$promise
 				.then(function () {
+					adsNoty(true, 'Acount created successfuly. Welcome.')
 					$location.path('/' + authService.getCurrUserName() + '/home');	
-				}, function () {
-					
+				}, function (error) {
+					var message = 'Invalid registration: ';
+					for (item in error.data.modelState) {
+					    message += error.data.modelState[item].join(', ');
+					}
+					adsNoty(false, message);
 				});
 		}
 	}
