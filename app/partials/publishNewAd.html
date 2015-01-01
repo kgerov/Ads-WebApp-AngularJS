@@ -1,1 +1,31 @@
-<h1>Publish New Ad</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-centered">
+			<form name="registerForm" novalidate>
+				<h2>Publish New Ad</h2>
+				<!-- Username -->
+				<div class="form-group has-feedback" ng-class="{ 'has-error' : (registerForm.inputUsername.$error.required && (touchUsername || formSubmitted)), 'has-success' : registerForm.inputUsername.$valid && (touchUsername || formSubmitted)}">
+					<input type="text"  class="form-control" name="inputUsername" ng-model="user.Username" placeholder="Username" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchUsername=true">
+					<div ng-show="touchUsername || formSubmitted">
+						<div ng-if="registerForm.inputUsername.$valid" ng-include src="'app/partials/success.html'"></div>
+						<div ng-if="registerForm.inputUsername.$error.required" ng-include src="'app/partials/error.html'"></div>
+					</div>
+				</div>
+				
+				<!-- Category -->
+				<select ng-model="user.Category" class="form-control">
+					<option style="display:none;" value="">Chose a Category</option>
+					<option ng-repeat="cat in categories" value="{{cat.id}}">{{cat.name}}</option>
+				</select>
+				<!-- Town -->
+				<select ng-model="user.Town" class="form-control">
+					<option style="display:none;" value="">Chose a Town</option>
+					<option ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
+				</select>
+				<div class="text-center">
+					<button class="btn btn-lg btn-primary register-button" type="submit" ng-click="registerUser(user, registerForm.$valid)" value="Save">Publish</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
