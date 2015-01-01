@@ -3,6 +3,8 @@ adsApp.controller('loginUserController', ['$scope', 'authService', '$http', '$lo
 	$scope.fieldPassTouched = false;
 	$scope.formSubmitted = false;
 
+	
+
 	$scope.loginUser = function (user, valid) {
 		$scope.formSubmitted = true;
 		if (valid) {
@@ -13,11 +15,11 @@ adsApp.controller('loginUserController', ['$scope', 'authService', '$http', '$lo
 
 			authService.loginUser(jsonUser).$promise
 				.then(function () {
-					$location.path('/' + authService.getCurrUserName() + '/home');	
+					adsNoty(true, 'Successfully logged in.')
+					$location.path('/' + authService.getCurrUserName() + '/home');
 				}, function () {
-					
+					adsNoty(false, 'The user name or password is incorrect.');
 				});
 		}
 	}
-
 }]);

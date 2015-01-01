@@ -1,4 +1,4 @@
-adsApp.factory('authService', ['$resource', '$localStorage', '$http', function($resource, $localStorage, $http){
+ adsApp.factory('authService', ['$resource', '$localStorage', '$http', function($resource, $localStorage, $http){
 	var resource = $resource(
 		'http://softuni-ads.azurewebsites.net/api/user/login'
 	);
@@ -15,6 +15,7 @@ adsApp.factory('authService', ['$resource', '$localStorage', '$http', function($
 			} else {
 				$localStorage.isAdmin = false;
 			}
+		}, function (error) {
 		});
 	}
 
