@@ -13,3 +13,5 @@ TODO LIST:
 11. Proper logout, look at forum + routing for logout
 12. Error and success messages
 13. Clean unused libraries
+
+XMLHttpRequest cannot load http://softuni-ads.azurewebsites.net/user/ads. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'http://localhost:82' is therefore not allowed access. 
