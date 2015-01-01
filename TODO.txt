@@ -13,3 +13,4 @@ TODO LIST:
 11. Proper logout, look at forum + routing for logout
 12. Error and success messages
 13. Clean unused libraries
+14. Order Partial html folder

@@ -1,1 +1,69 @@
-<h1>User Profile Edit</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-centered">
+			<form name="registerForm" novalidate>
+				<h2>Edit Profile</h2>
+				<!-- Name -->
+				<div class="form-group has-feedback" ng-class="{ 'has-error' : (registerForm.inputName.$error.required && (touchName || formSubmitted)), 'has-success' : registerForm.inputName.$valid && (touchName || formSubmitted)}">
+					<input type="text"  class="form-control" name="inputName" ng-model="user.Name" placeholder="Name" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchName=true">
+					<div ng-show="touchName || formSubmitted">
+						<div ng-if="registerForm.inputName.$valid" ng-include src="'app/partials/success.html'"></div>
+						<div ng-if="registerForm.inputName.$error.required" ng-include src="'app/partials/error.html'"></div>
+					</div>
+				</div>
+				<!-- Email -->
+				<div class="form-group has-feedback" ng-class="{ 'has-error' : (registerForm.inputEmail.$error.required && (touchEmail || formSubmitted)), 'has-success' : registerForm.inputEmail.$valid && (touchEmail || formSubmitted)}">
+					<input type="email"  class="form-control" name="inputEmail" ng-model="user.Email" placeholder="Email" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchEmail=true">
+					<div ng-show="touchEmail || formSubmitted">
+						<div ng-if="registerForm.inputEmail.$valid" ng-include src="'app/partials/success.html'"></div>
+						<div ng-if="registerForm.inputEmail.$error.required" ng-include src="'app/partials/error.html'"></div>
+					</div>
+				</div>
+				<!-- Phone -->
+				<div class="form-group has-feedback" ng-class="{ 'has-error' : (registerForm.inputPhone.$error.required && (touchPhone || formSubmitted)), 'has-success' : registerForm.inputPhone.$valid && (touchPhone || formSubmitted)}">
+					<input type="text"  class="form-control" name="inputPhone" ng-model="user.Phone" placeholder="Phone" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchPhone=true">
+					<div ng-show="touchPhone || formSubmitted">
+						<div ng-if="registerForm.inputPhone.$valid" ng-include src="'app/partials/success.html'"></div>
+						<div ng-if="registerForm.inputPhone.$error.required" ng-include src="'app/partials/error.html'"></div>
+					</div>
+				</div>
+				<!-- Town -->
+				<select ng-model="user.Town" class="form-control">
+					<option style="display:none;" value="">Chose a Town</option>
+					<option ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
+				</select>
+				<div class="text-center">
+					<button class="btn btn-lg btn-primary register-button" type="submit" ng-click="registerUser(user, registerForm.$valid)" value="Save">Register</button>
+				</div>
+			</form>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-centered">
+			<form name="registerForm" novalidate>
+				<h2>Change Password</h2>
+				<!-- Password -->
+				<div class="form-group has-feedback" ng-class="{ 'has-error' : (registerForm.inputPass.$error.required && (touchPass || formSubmitted)), 'has-success' : registerForm.inputPass.$valid && (touchPass || formSubmitted)}">
+					<input type="password"  class="form-control" name="inputPass" ng-model="user.Pass" placeholder="Password" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchPass=true">
+					<div ng-show="touchPass || formSubmitted">
+						<div ng-if="registerForm.inputPass.$valid" ng-include src="'app/partials/success.html'"></div>
+						<div ng-if="registerForm.inputPass.$error.required" ng-include src="'app/partials/error.html'"></div>
+					</div>
+				</div>
+				<!-- Confirm Password -->
+				<div class="form-group has-feedback" ng-class="{ 'has-error' : (registerForm.inputPassConfirm.$error.required && (touchPassConfirm || formSubmitted)), 'has-success' : registerForm.inputPassConfirm.$valid && (touchPassConfirm || formSubmitted)}">
+					<input type="password"  class="form-control" name="inputPassConfirm" ng-model="user.PassConfirm" placeholder="Confirm Pasword" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchPassConfirm=true" data-match="user.Pass">
+					<div ng-show="touchPassConfirm || formSubmitted">
+						<div ng-if="registerForm.inputPassConfirm.$valid" ng-include src="'app/partials/success.html'"></div>
+						<div ng-if="registerForm.inputPassConfirm.$error.required" ng-include src="'app/partials/error.html'"></div>
+						<div ng-if="registerForm.inputPassConfirm.$error.match" ng-include src="'app/partials/error.html'"></div>
+					</div>
+				</div>
+				
+				<div class="text-center">
+					<button class="btn btn-lg btn-primary register-button" type="submit" ng-click="registerUser(user, registerForm.$valid)" value="Save">Register</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>

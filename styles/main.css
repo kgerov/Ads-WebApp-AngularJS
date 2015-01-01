@@ -42,6 +42,10 @@ form textarea {
   resize: vertical;
 }
 
+form {
+  margin-bottom: 10%;
+}
+
 .btn-lg {
   width: 30%;
 }
