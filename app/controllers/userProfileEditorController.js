@@ -1,5 +1,5 @@
-adsApp.controller('userProfileEditorController', ['$scope', 'townFactory', 'authService', '$http', function($scope, townFactory, authService, $http){
-	//$scope.user.Name = 'Get this';
+adsApp.controller('userProfileEditorController', ['$scope', 'townFactory', 'authService', '$http', 'modifyUserProfileService', 
+	function($scope, townFactory, authService, $http, modifyUserProfileService) {
 
 	$scope.touchOldPass = false;
 	$scope.touchPass = false;
@@ -27,16 +27,38 @@ adsApp.controller('userProfileEditorController', ['$scope', 'townFactory', 'auth
 		$scope.formSubmitted = true;
 
 		if (valid) {
-
+			console.log(user);
 		}
 	}
 
 	function init () {
-		townFactory.getAllTowns().$promise
+		modifyUserProfileService.getUserData().$promise
 			.then(function (data) {
-				$scope.towns = data;
+				return data
 			}, function (error) {
-				adsNoty(false, 'Couln\'t retrieve towns, Sorry for the inconvenience' );
-			});
+				adsNoty(false, 'Couln\'t retrieve user information, Sorry for the inconvenience' );
+			})
+			.then(function (data) {
+				townFactory.getAllTowns().$promise
+					.then(function (data) {
+						$scope.towns = data;
+						$scope.user = {
+							Name: data.name,
+							Email: data.phoneNumber,
+							Phone: data.email,
+						};
+
+						setTimeout(function () {
+							$scope.$apply(function () {
+								$scope.user.Town = $scope.towns[data.townId].id;
+							});
+						}, 150);
+						
+						
+					}, function (error) {
+						adsNoty(false, 'Couln\'t retrieve towns, Sorry for the inconvenience' );
+					});
+			})
+		
 	}
 }])

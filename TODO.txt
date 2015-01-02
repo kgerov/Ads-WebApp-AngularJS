@@ -14,4 +14,5 @@ TODO LIST:
 12. Error and success messages
 13. Clean unused libraries
 14. Order Partial html folder
-15. Messages not only for forms but for other queries 
+15. Messages not only for forms but for other queries
+16. Edit profile page. Check what happens if the user has no town
