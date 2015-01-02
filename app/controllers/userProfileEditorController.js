@@ -1,5 +1,5 @@
-adsApp.controller('userProfileEditorController', ['$scope', 'townFactory', 'authService', '$http', 'modifyUserProfileService', 
-	function($scope, townFactory, authService, $http, modifyUserProfileService) {
+adsApp.controller('userProfileEditorController', ['$scope', 'townFactory', 'authService', '$http', 'modifyUserProfileService', '$location',
+	function($scope, townFactory, authService, $http, modifyUserProfileService, $location) {
 
 	$scope.touchOldPass = false;
 	$scope.touchPass = false;
@@ -27,7 +27,20 @@ adsApp.controller('userProfileEditorController', ['$scope', 'townFactory', 'auth
 		$scope.formSubmitted = true;
 
 		if (valid) {
-			console.log(user);
+			var jsonUser = {
+				name: user.Name,
+				email: user.Email,
+				phoneNumber: user.Phone,
+				townId: user.Town || null
+			};
+
+			modifyUserProfileService.updateUserProfile(jsonUser).$promise
+				.then(function (data) {
+					adsNoty(true, 'User profile updated successfully');
+					$location.path('/' + authService.getCurrUserName() + '/home');
+				}, function (error) {
+					adsNoty(false, 'An error occured while updating your profile, please try again.')	
+				});
 		}
 	}
 
@@ -40,7 +53,6 @@ adsApp.controller('userProfileEditorController', ['$scope', 'townFactory', 'auth
 			})
 			.then(function (data) {
 				var _userInfo = data;
-				console.log(_userInfo);
 				townFactory.getAllTowns().$promise
 					.then(function (data) {
 						$scope.towns = data;
