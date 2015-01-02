@@ -6,12 +6,12 @@ TODO LIST:
 4. Registration form messages for invalid fields (email + phone ngPattern)
 5. ESCAPING!
 6. Category Filter (show how many are in the category)
-7. Null infomration in AD
+7. Null infomration in ad
 8. When "NO ads" display message
 9. Fix bug with filters. When on last page and you click a filter, you aren't on the first page (if there is more than one page)
 10. Click logo on home page of user and his name is removed from the header
-11. Proper logout, look at forum + routing for logout
-12. Error and success messages
 13. Clean unused libraries
 14. Order Partial html folder
 15. Messages not only for forms but for other queries
+16. Error messages from server in editing a user profile and changing password
+17. BaseUrl constant

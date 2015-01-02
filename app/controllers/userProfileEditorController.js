@@ -19,7 +19,12 @@ adsApp.controller('userProfileEditorController', ['$scope', 'townFactory', 'auth
 		$scope.formPassSubmitted = true;
 
 		if (valid) {
-			console.log(pass);
+			modifyUserProfileService.changePass(jsonPass).$promise
+				.then(function (data) {
+					
+				}, function (error) {
+					adsNoty(false, 'An error occured while updating your password, please try again.');	
+				});
 		}
 	}
 
@@ -39,7 +44,7 @@ adsApp.controller('userProfileEditorController', ['$scope', 'townFactory', 'auth
 					adsNoty(true, 'User profile updated successfully');
 					$location.path('/' + authService.getCurrUserName() + '/home');
 				}, function (error) {
-					adsNoty(false, 'An error occured while updating your profile, please try again.')	
+					adsNoty(false, 'An error occured while updating your profile, please try again.');	
 				});
 		}
 	}
