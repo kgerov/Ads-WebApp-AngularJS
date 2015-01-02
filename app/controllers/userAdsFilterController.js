@@ -2,6 +2,6 @@ adsApp.controller('userAdsFilterController', ['$scope', '$rootScope', function($
 	$scope.filterMyAds = { adStatus: '' };
 	
 	$scope.filterChange = function () {
-        $rootScope.$broadcast('filterChanged', $scope.filterMyAds);
-    }
+	        $rootScope.$broadcast('filterChanged', $scope.filterMyAds);
+	}
 }]);

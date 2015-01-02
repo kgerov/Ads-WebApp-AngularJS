@@ -7,8 +7,8 @@ adsApp.controller('filterController', ['$scope', 'categoryFactory', 'townFactory
 	init();
 
 	$scope.filterChange = function () {
-        $rootScope.$broadcast('filterChanged', $scope.filterAds);
-    }
+	        $rootScope.$broadcast('filterChanged', $scope.filterAds);
+	}
 
 	function init () {
 		categoryFactory.getAllCategories().$promise

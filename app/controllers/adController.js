@@ -6,23 +6,25 @@ adsApp.controller('adController', ['$scope', 'adsFactory', 'pageSize', '$rootSco
     getPageContent(1);
 
     $rootScope.$on('filterChanged', function (event, filters) {
-        console.log(filters);
+        for(x in filters) {
+            $scope.currentFilters[x] = filters[x];
+        }
     	//$scope.currentFilters = filters;
-    	//$scope.pageChangeHandler(1, filters);
+    	$scope.pageChangeHandler(1, $scope.currentFilters);
     });
 
   	$scope.pageChangeHandler = function(num, filters) {
-        var cat = filters.categoryFilterRadio,
-            town = filters.townFilterRadio,
-            catId = cat != 'all-cat' ? cat.substring(1, cat.length) : '',
-            townId = town != 'all-town' ? town.substring(1, town.length) : '';
-            
-    	getPageContent(num, townId, catId);
+                        var cat = filters.categoryFilterRadio,
+                                town = filters.townFilterRadio,
+                                status = filters.adStatus || null,
+                                catId = cat != 'all-cat' ? cat.substring(1, cat.length) : '',
+                                townId = town != 'all-town' ? town.substring(1, town.length) : '';
+                        getPageContent(num, townId, catId, status);
   	};
 
-  	function getPageContent (pageNumber, townId, catId) {
+  	function getPageContent (pageNumber, townId, catId, adStatus) {
         if ($scope.inUserAds) {
-            adsFactory.getUserAds(pageNumber).$promise
+            adsFactory.getUserAds(pageNumber, adStatus).$promise
                 .then(function (data) {
                     $scope.ads = data.ads;
                     $scope.adsCount = data.numItems;
