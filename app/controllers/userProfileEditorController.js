@@ -17,7 +17,7 @@ adsApp.controller('userProfileEditorController', ['$scope', 'townFactory', 'auth
 
 	$scope.changePass = function (pass, valid) {
 		$scope.formPassSubmitted = true;
-
+		
 		if (valid) {
 			var jsonPass = {
 				oldPassword: pass.OldPass,
@@ -30,7 +30,11 @@ adsApp.controller('userProfileEditorController', ['$scope', 'townFactory', 'auth
 					adsNoty(true, 'Your password is changed');
 					$location.path('/' + authService.getCurrUserName() + '/home');
 				}, function (error) {
-					adsNoty(false, 'An error occured while updating your password, please try again.');	
+					var message = 'Unable to update password: ';
+					for (item in error.data.modelState) {
+					    message += error.data.modelState[item].join(', ');
+					}
+					adsNoty(false, message);
 				});
 		}
 	}
