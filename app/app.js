@@ -30,8 +30,8 @@ adsApp.config(function($routeProvider) {
 		})
 		.when('/:user/ads',
 		{
-			controller: 'userAdsController',
-			templateUrl: 'app/partials/listUserAds.html'
+			controller: 'adsListController',
+			templateUrl: 'app/partials/listAllAds.html'
 		})
 		.when('/:user/publish',
 		{

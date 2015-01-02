@@ -1,0 +1,17 @@
+<div class="col-md-2 filter-ads" ng-controller="userAdsFilterController">
+	<div>
+		<div><h3>My Ads</h3></div>
+		<div>
+			<input type="radio" id="all-ads" ng-model="filterMyAds.adStatus" value="" ng-change="filterChange()">
+			<label for="all-ads">All</label>
+			<input type="radio" id="Published" ng-model="filterMyAds.adStatus" value="Published" ng-change="filterChange()">
+			<label for="Published">Published</label>
+			<input type="radio" id="WaitingApproval" ng-model="filterMyAds.adStatus" value="WaitingApproval" ng-change="filterChange()">
+			<label for="WaitingApproval">Waiting Approval</label>
+			<input type="radio" id="Inactive" ng-model="filterMyAds.adStatus" value="Inactive" ng-change="filterChange()">
+			<label for="Inactive">Inactive</label>
+			<input type="radio" id="Rejected" ng-model="filterMyAds.adStatus" value="Rejected" ng-change="filterChange()">
+			<label for="Rejected">Rejected</label>
+		</div>
+	</div>
+</div>

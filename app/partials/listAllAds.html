@@ -1,6 +1,11 @@
 <div class="container">
 	<div class="row">
 		<div ng-include src="'app/partials/ads.html'"></div>
-		<div ng-include src="'app/partials/filtersRigth.html'"></div>
+		<div ng-include="inUserAds ? 'app/partials/filterPersonalAds.html' : 'app/partials/filtersRigth.html'"></div>
 	</div>
 </div>
+
+<!-- <span ng-switch on="inUserAds">
+   <div ng-switch-when="true" ng-include="'app/partials/filtersRigth.html'"></div>
+</span> -->
+<!-- <div ng-if="inUserAds" ng-include src="'app/partials/filtersRigth.html'"></div> -->
