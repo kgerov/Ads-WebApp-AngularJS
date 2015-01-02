@@ -34,23 +34,25 @@ adsApp.controller('userProfileEditorController', ['$scope', 'townFactory', 'auth
 	function init () {
 		modifyUserProfileService.getUserData().$promise
 			.then(function (data) {
-				return data
+				return data;
 			}, function (error) {
 				adsNoty(false, 'Couln\'t retrieve user information, Sorry for the inconvenience' );
 			})
 			.then(function (data) {
+				var _userInfo = data;
+				console.log(_userInfo);
 				townFactory.getAllTowns().$promise
 					.then(function (data) {
 						$scope.towns = data;
 						$scope.user = {
-							Name: data.name,
-							Email: data.phoneNumber,
-							Phone: data.email,
+							Name: _userInfo.name,
+							Email: _userInfo.email,
+							Phone: _userInfo.phoneNumber,
 						};
 
 						setTimeout(function () {
 							$scope.$apply(function () {
-								$scope.user.Town = $scope.towns[data.townId].id;
+								$scope.user.Town = $scope.towns[_userInfo.townId - 1].id;
 							});
 						}, 150);
 						
