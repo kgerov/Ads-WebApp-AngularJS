@@ -1,0 +1,32 @@
+<div class="col-md-10" ng-controller="adController">
+	<div class="col-md-12 ad-box" dir-paginate="ad in ads | itemsPerPage: usersPerPage" total-items="adsCount">
+		<div class="row">
+			<div class="col-md-3 align-ad">
+				<div class="text-center">
+					<img ng-src="{{ad.imageDataUrl | validImg }}" alt="" onerror="this.onerror=null;this.src='https://cdn0.iconfinder.com/data/icons/very-basic-android-l-lollipop-icon-pack/24/cancel-2-128.png';">
+				</div>
+			</div>
+			<div class="col-md-8 align-ad">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<h3>{{ad.title}}</h3>
+					</div>
+					<div class="col-md-12">
+						<p>{{ad.text}}</p>
+					</div>
+					<div class="col-md-12">
+						<ul>
+							<li>{{ad.ownerName}}</li>
+							<li>{{ad.ownerEmail}}</li>
+							<li>{{ad.ownerPhone}}</li>
+							<li>{{ad.date | date:'dd.MMM.yyyy' }}</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="text-center paging">
+		<dir-pagination-controls boundary-links="true" id="goToPageOne" on-page-change="pageChangeHandler(newPageNumber, currentFilters)" template-url="libs/dirPagination.tpl.html"></dir-pagination-controls>
+	</div>
+</div>

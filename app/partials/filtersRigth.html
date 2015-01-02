@@ -1,0 +1,22 @@
+<div class="col-md-2 filter-ads" ng-controller="filterController">
+	<div>
+		<div><h3>Categories</h3></div>
+		<div>
+			<input type="radio" id="all-cat" ng-model="filterAds.categoryFilterRadio" value="all-cat" ng-change='filterChange()'>
+			<label for="all-cat">All</label>
+			<input ng-repeat-start="cat in categories" type="radio" id="{{'c' + cat.id}}" ng-model="filterAds.categoryFilterRadio" value="{{'c' + cat.id}}" ng-change='filterChange()'>
+			<label ng-repeat-end for="{{'c' + cat.id}}">{{cat.name}}</label>
+		</div>
+	</div>
+	<div>
+		<div><h3>Towns</h3></div>
+		<div>
+			<input type="radio" id="all-towns" ng-model="filterAds.townFilterRadio" value="all-town" ng-change='filterChange()'>
+			<label for="all-towns">All</label>
+			<div ng-repeat="town in towns">
+				<input type="radio" id="{{'t' + town.id}}" ng-model="filterAds.townFilterRadio" value="{{'t' + town.id }}" ng-change='filterChange()'>
+				<label for="{{'t' + town.id}}">{{town.name}}</label>
+			</div>
+		</div>
+	</div>
+</div>
