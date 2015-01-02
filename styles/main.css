@@ -61,6 +61,13 @@ form {
   max-width: 200px;
 }
 
+.paging {
+  position: fixed;
+  bottom: 5%;
+  left: 50%;
+  margin-left: -200px;
+}
+
 .filter-ads input[type="radio"] {
     display:none;
 }
@@ -75,4 +82,10 @@ form {
 
 .filter-ads input[type="radio"]:checked + label {
     background-color:#bbb;
+}
+
+@media only screen and (max-width: 991px){
+  .paging {
+    position: static;
+  }
 }

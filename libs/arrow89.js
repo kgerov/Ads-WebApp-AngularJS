@@ -22,7 +22,7 @@ var scrolltotop={
 
     //scrollto: Keyword (Integer, or "Scroll_to_Element_ID"). How far to scroll document up when control is clicked on (0=top).
 
-    setting: {startline:100, scrollto: 0, scrollduration:1000, fadeduration:[500, 100]},
+    setting: {startline:100, scrollto: 0, scrollduration:300, fadeduration:[500, 100]},
 
     controlHTML: '<img src="http://i1155.photobucket.com/albums/p559/scrolltotop/arrow89.png" />', //HTML for control, which is auto wrapped in DIV w/ ID="topcontrol"
 
