@@ -40,7 +40,7 @@ adsApp.config(function($routeProvider) {
 		})
 		.when('/:user/ads/edit/:id',
 		{
-			controller: 'newAdController',
+			controller: 'newAdController', 
 			templateUrl: 'app/partials/publishNewAd.html'
 		})
 		.when('/:user/publish',
