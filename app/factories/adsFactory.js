@@ -2,7 +2,7 @@ adsApp.factory('adsFactory', ['$resource', '$http', 'pageSize', function($resour
 	var resource = $resource('http://softuni-ads.azurewebsites.net/api/ads?pagesize=:size&startpage=:pageNum&townid=:cityid&categoryid=:catid',
 		{size: '@size', pageNum: '@pageNum', cityid: '@cityid', catid: '@catid'});
 
-	var userResource = $resource('http://softuni-ads.azurewebsites.net/api/user/ads?pagesize=:size&startpage=:pageNum&&status=:stat',
+	var userResource = $resource('http://softuni-ads.azurewebsites.net/api/user/ads?pagesize=:size&startpage=:pageNum&status=:stat',
 		{size: '@size', pageNum: '@pageNum', stat: '@stat'});
 
 	var activateResource = $resource('http://softuni-ads.azurewebsites.net/api/user/ads/publishagain/:id',
@@ -16,6 +16,9 @@ adsApp.factory('adsFactory', ['$resource', '$http', 'pageSize', function($resour
 		update: {
 			method: 'PUT'
 		}});
+
+	var userAdResource = $resource('http://softuni-ads.azurewebsites.net/api/user/ads/:id', 
+		{id: '@id'});
 
 	function getAdsFromPage (desiredPage, townId, catId) {
 		return resource.get({ size: pageSize, pageNum: desiredPage, cityid: townId, catid: catId });
@@ -37,11 +40,21 @@ adsApp.factory('adsFactory', ['$resource', '$http', 'pageSize', function($resour
 		return deactivateResource.update({id: currId});
 	}
 
+	function getAdById (currId) {
+		return userAdResource.get({id: currId});
+	}
+
+	function deleteAdById (currId) {
+		return userResource.delete({id: currId});
+	}
+
 	return {
 		getAdsFromPage: getAdsFromPage, 
 		publishNewAd: publishNewAd,
 		getUserAds: getUserAds,
 		activateAd: activateAd,
-		deactivateAd: deactivateAd
+		deactivateAd: deactivateAd,
+		getAdById: getAdById,
+		deleteAdById: deleteAdById
 	};
 }])

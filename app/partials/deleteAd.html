@@ -1,1 +1,20 @@
-<h1>Delete Ad</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<h3>Delete Ad: {{ad.title}}</h3>
+		</div>
+		<div class="col-md-4">
+			<img ng-src="{{ad.imageDataUrl | validImg }}" alt="" onerror="this.onerror=null;this.src='https://cdn0.iconfinder.com/data/icons/very-basic-android-l-lollipop-icon-pack/24/cancel-2-128.png';">
+		</div>
+		<div class="col-md-8">
+			<p>ad.text</p>
+			<p>ad.categoryName</p>
+			<p>ad.townName</p>
+			<p>ad.date | | date:'dd.MMM.yyyy'</p>
+		</div>
+		<div class="col-md-12 text-center">
+			<button class="btn btn-danger" ng-click="deleteAd(ad.id)">Delete</button>
+			<button class="btn btn-danger" ng-click="returnToMyAds(ad.id)">Cancel</button>
+		</div>
+	</div>
+</div>
