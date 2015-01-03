@@ -5,6 +5,10 @@
 				<div class="text-center">
 					<img ng-src="{{ad.imageDataUrl | validImg }}" alt="" onerror="this.onerror=null;this.src='https://cdn0.iconfinder.com/data/icons/very-basic-android-l-lollipop-icon-pack/24/cancel-2-128.png';">
 				</div>
+				<div class="text-center" ng-show="$parent.inUserAds">
+					<label id="ad-status" ng-show="ad.status != 'WaitingApproval'">{{ad.status}}</label>
+					<label id="ad-status" ng-show="ad.status == 'WaitingApproval'">Waiting Approval</label>
+				</div>
 			</div>
 			<div class="col-md-8 align-ad">
 				<div class="row">
@@ -22,12 +26,22 @@
 								<li><div class="ad-detail-title ">Phone</div><div class='ad-detail'>{{ad.ownerPhone}}</div></li>
 							</div>
 							<div ng-show="$parent.inUserAds">
-								<li><div class="ad-detail-title ">Name</div><div class='ad-detail'>{{ad.ownerName}}</div></li>
-								<li><div class="ad-detail-title ">Email</div><div class='ad-detail'>{{ad.ownerEmail}}</div></li>
+								<li><div class="ad-detail-title ">Category</div><div class='ad-detail'>{{ad.categoryName}}</div></li>
+								<li><div class="ad-detail-title ">Town</div><div class='ad-detail'>{{ad.townName}}</div></li>
 							</div>
 							<li><div class="ad-detail-title ">Date</div><div class='ad-detail'>{{ad.date | date:'dd.MMM.yyyy' }}</div></li>
 
 						</ul>
+					</div>
+					<div class="col-md-12 text-center" ng-show="$parent.inUserAds">
+						<div ng-show="ad.status == 'WaitingApproval' || ad.status == 'Published'">
+							<a href=""><button class="btn btn-primary">Deactivate</button></a>
+						</div>
+						<div ng-show="ad.status == 'Inactive' || ad.status == 'Rejected'">
+							<a href=""><button class="btn btn-primary">Edit</button></a>
+							<a href=""><button class="btn btn-primary">Publish Again</button></a>
+							<a href=""><button class="btn btn-danger">Delete</button></a>
+						</div>
 					</div>
 				</div>
 			</div>
