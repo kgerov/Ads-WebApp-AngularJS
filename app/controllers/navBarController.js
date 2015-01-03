@@ -1,5 +1,6 @@
 adsApp.controller('navBarController', ['$scope', 'authService', function($scope, authService){
 	$scope.logout = function () {
+		adsNoty(true, 'Successfuly logged out.');
 		authService.logoutUser();
 	}
 
