@@ -1,7 +1,10 @@
-adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory', '$http', 'adsFactory', '$location', 'authService', function($scope, categoryFactory, townFactory, $http, adsFactory, $location, authService) {
+adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory', '$http', 'adsFactory', '$location', 'authService', 
+    function($scope, categoryFactory, townFactory, $http, adsFactory, $location, authService) {
+
     $scope.formSubmitted = false;
     $scope.touchTitle = false;
     $scope.touchDesciption = false;
+    $scope.inEditMode = ($location.path().match(/\/(.+?)\/ads\/edit/g) != null ? true : false); 
     $scope.categories = [];
     $scope.towns = [];
 
@@ -12,15 +15,16 @@ adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory'
             .then(function (data) {
                 $scope.categories = data;
             }, function (error) {
-                
+                adsNoty(false, 'Couldn\'t load categories');
             });
 
         townFactory.getAllTowns().$promise
             .then(function (data) {
                 $scope.towns = data;
             }, function (error) {
-                
+                adsNoty(false, 'Couldn\'t load towns');
             });
+
     }
 
     $scope.uploadAd = function (ad, valid) {

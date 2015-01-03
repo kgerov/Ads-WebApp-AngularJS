@@ -15,3 +15,4 @@ TODO LIST:
 15. Messages not only for forms but for other queries
 17. BaseUrl constant
 18. Remove repeating code from Delete ad menu
+19. Rename publish new ad files
