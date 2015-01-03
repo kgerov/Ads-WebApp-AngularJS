@@ -1,7 +1,7 @@
 <div class="col-md-10" ng-controller="adController">
 	<div class="col-md-12 ad-box" dir-paginate="ad in ads | itemsPerPage: usersPerPage" total-items="adsCount">
 		<div class="row">
-			<div class="col-md-3 align-ad">
+			<div class="col-md-3 col-sm-12 col-xs-12 align-ad">
 				<div class="text-center">
 					<img ng-src="{{ad.imageDataUrl | validImg }}" alt="" onerror="this.onerror=null;this.src='https://cdn0.iconfinder.com/data/icons/very-basic-android-l-lollipop-icon-pack/24/cancel-2-128.png';">
 				</div>
@@ -10,24 +10,24 @@
 					<label id="ad-status" ng-show="ad.status == 'WaitingApproval'">Waiting Approval</label>
 				</div>
 			</div>
-			<div class="col-md-8 align-ad">
+			<div class="col-md-8 col-sm-12 col-xs-12 align-ad">
 				<div class="row">
 					<div class="col-md-12 text-center">
 						<h3>{{ad.title}}</h3>
 					</div>
 					<div class="col-md-12">
-						<span>Description: </span><p>{{ad.text}}</p>
+						<span>Description: </span><p>{{ad.text | emptyText}}</p>
 					</div>
-					<div class="col-md-12">
+					<div class="col-md-12 col-sm-12 col-xs-12s">
 						<ul>
 							<div ng-show="!$parent.inUserAds">
-								<li><div class="ad-detail-title ">Name</div><div class='ad-detail'>{{ad.ownerName}}</div></li>
-								<li><div class="ad-detail-title ">Email</div><div class='ad-detail'>{{ad.ownerEmail}}</div></li>
-								<li><div class="ad-detail-title ">Phone</div><div class='ad-detail'>{{ad.ownerPhone}}</div></li>
+								<li><div class="ad-detail-title ">Name</div><div class='ad-detail'>{{ad.ownerName | emptyText}}</div></li>
+								<li><div class="ad-detail-title ">Email</div><div class='ad-detail'>{{ad.ownerEmail | emptyText}}</div></li>
+								<li><div class="ad-detail-title ">Phone</div><div class='ad-detail'>{{ad.ownerPhone | emptyText}}</div></li>
 							</div>
 							<div ng-show="$parent.inUserAds">
-								<li><div class="ad-detail-title ">Category</div><div class='ad-detail'>{{ad.categoryName}}</div></li>
-								<li><div class="ad-detail-title ">Town</div><div class='ad-detail'>{{ad.townName}}</div></li>
+								<li><div class="ad-detail-title ">Category</div><div class='ad-detail'>{{ad.categoryName | emptyText}}</div></li>
+								<li><div class="ad-detail-title ">Town</div><div class='ad-detail'>{{ad.townName | emptyText}}</div></li>
 							</div>
 							<li><div class="ad-detail-title ">Date</div><div class='ad-detail'>{{ad.date | date:'dd.MMM.yyyy' }}</div></li>
 
@@ -37,7 +37,7 @@
 						<div ng-show="ad.status == 'WaitingApproval' || ad.status == 'Published'">
 							<button class="btn btn-primary" ng-click="deactivateAd(ad.id)">Deactivate</button>
 						</div>
-						<div ng-show="ad.status == 'Inactive' || ad.status == 'Rejected'">
+						<div ng-show="ad.status == 'Inactive'">
 							<button class="btn btn-primary" ng-click="editAd(ad.id)">Edit</button>
 							<button class="btn btn-primary" ng-click="publishAd(ad.id)">Publish Again</button>
 							<button class="btn btn-danger" ng-click="deleteAd(ad.id)">Delete</button>
