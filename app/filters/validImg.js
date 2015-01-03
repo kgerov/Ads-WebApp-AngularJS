@@ -7,7 +7,7 @@ angular.module('validImgFilter', []).filter('validImg', function ($q) {
 		}
 	}
 })
-.filter('emptyText', function ($q) {
+.filter('emptyText', function ($q) { 
 	return function (text) {
 		if (text) {
 			return text;
