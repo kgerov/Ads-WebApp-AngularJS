@@ -56,4 +56,18 @@ adsApp.config(function($routeProvider) {
 		.otherwise({redirectTo: '/'});
 });
 
+adsApp.run(function($location, $rootScope, authService) {
+    $rootScope.$on('$routeChangeStart', function(event, val) {
+        var requestedPath = $location.path();
+
+        if ((!authService.isLoggedIn()) && 
+        	requestedPath !== '/login' &&
+            requestedPath !== '/register' && 
+            requestedPath !== '/') {
+        	
+            $location.path('/');
+        }
+    });
+})
+
 adsApp.constant("pageSize", 3);

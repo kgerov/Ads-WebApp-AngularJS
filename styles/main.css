@@ -18,6 +18,10 @@ body {
   bottom: 65px !important;
 }
 
+.adminHeader {
+    background-color: #f6b309 !important;
+}
+
 /*Forms*/
 
 form input, form select {

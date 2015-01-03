@@ -1,4 +1,4 @@
-<div class="navbar navbar-inverse navbar-static-top" ng-controller="navBarController">
+<div class="navbar navbar-inverse navbar-static-top"  ng-class="{ 'adminHeader' : (isLoggedIn && isAdmin) }" ng-controller="navBarController">
 	<div class="container">
 		<a href="#" class="navbar-brand">Обяви</a>
 		<div>
