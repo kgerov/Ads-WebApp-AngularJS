@@ -1,4 +1,6 @@
-adsApp.controller('adController', ['$scope', 'adsFactory', 'pageSize', '$rootScope', function($scope, adsFactory, pageSize, $rootScope){
+adsApp.controller('adController', ['$scope', 'adsFactory', 'pageSize', '$rootScope', '$routeParams', '$location',
+    function($scope, adsFactory, pageSize, $rootScope, $routeParams, $location) {
+
     $scope.ads = [];
     $scope.adsCount = 0;
     $scope.usersPerPage = pageSize;
@@ -9,7 +11,7 @@ adsApp.controller('adController', ['$scope', 'adsFactory', 'pageSize', '$rootSco
         for(x in filters) {
             $scope.currentFilters[x] = filters[x];
         }
-    	//$scope.currentFilters = filters;
+
     	$scope.pageChangeHandler(1, $scope.currentFilters);
     });
 
@@ -21,6 +23,36 @@ adsApp.controller('adController', ['$scope', 'adsFactory', 'pageSize', '$rootSco
                                 townId = town != 'all-town' ? town.substring(1, town.length) : '';
                         getPageContent(num, townId, catId, status);
   	};
+
+    $scope.deactivateAd = function (id) {
+        adsFactory.deactivateAd(id).$promise
+            .then(function (data) {
+                adsNoty(true, 'Ad deactivated successfuly');
+                $scope.pageChangeHandler(1, $scope.currentFilters);
+            }, function (error) {
+                adsNoty(false, 'Lost connection to server. Can\'t deactivate ad');
+            });
+    }
+
+    $scope.publishAd = function (id) {
+        adsFactory.activateAd(id).$promise
+            .then(function (data) {
+                adsNoty(true, 'Ad activated successfuly');
+                $scope.pageChangeHandler(1, $scope.currentFilters);
+            }, function (error) {
+                adsNoty(false, 'Lost connection to server. Can\'t activate ad');
+            });
+    }
+
+    $scope.deleteAd = function (id) {
+        var username = $routeParams.user;
+        $location.path('/' + username + '/ads/delete/' + id);
+    }
+
+    $scope.editAd = function (id) {
+        var username = $routeParams.user;
+        $location.path('/' + username + '/ads/edit/' + id);
+    }
 
   	function getPageContent (pageNumber, townId, catId, adStatus) {
         if ($scope.inUserAds) {

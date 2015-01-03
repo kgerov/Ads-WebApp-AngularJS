@@ -5,6 +5,18 @@ adsApp.factory('adsFactory', ['$resource', '$http', 'pageSize', function($resour
 	var userResource = $resource('http://softuni-ads.azurewebsites.net/api/user/ads?pagesize=:size&startpage=:pageNum&&status=:stat',
 		{size: '@size', pageNum: '@pageNum', stat: '@stat'});
 
+	var activateResource = $resource('http://softuni-ads.azurewebsites.net/api/user/ads/publishagain/:id',
+		{id: '@id'}, { 
+		update: {
+			method: 'PUT'
+		}});
+
+	var deactivateResource = $resource('http://softuni-ads.azurewebsites.net/api/user/ads/deactivate/:id',
+		{id: '@id'}, { 
+		update: {
+			method: 'PUT'
+		}});
+
 	function getAdsFromPage (desiredPage, townId, catId) {
 		return resource.get({ size: pageSize, pageNum: desiredPage, cityid: townId, catid: catId });
 	}
@@ -16,9 +28,20 @@ adsApp.factory('adsFactory', ['$resource', '$http', 'pageSize', function($resour
 	function getUserAds (desiredPage, currStatus) {
 		return userResource.get({ size: pageSize, pageNum: desiredPage, stat: currStatus });
 	}
+
+	function activateAd (currId) {
+		return activateResource.update({id: currId});
+	}
+
+	function deactivateAd (currId) {
+		return deactivateResource.update({id: currId});
+	}
+
 	return {
 		getAdsFromPage: getAdsFromPage, 
 		publishNewAd: publishNewAd,
-		getUserAds: getUserAds
+		getUserAds: getUserAds,
+		activateAd: activateAd,
+		deactivateAd: deactivateAd
 	};
 }])

@@ -35,12 +35,12 @@
 					</div>
 					<div class="col-md-12 text-center" ng-show="$parent.inUserAds">
 						<div ng-show="ad.status == 'WaitingApproval' || ad.status == 'Published'">
-							<a href=""><button class="btn btn-primary">Deactivate</button></a>
+							<button class="btn btn-primary" ng-click="deactivateAd(ad.id)">Deactivate</button>
 						</div>
 						<div ng-show="ad.status == 'Inactive' || ad.status == 'Rejected'">
-							<a href=""><button class="btn btn-primary">Edit</button></a>
-							<a href=""><button class="btn btn-primary">Publish Again</button></a>
-							<a href=""><button class="btn btn-danger">Delete</button></a>
+							<button class="btn btn-primary" ng-click="editAd(ad.id)">Edit</button>
+							<button class="btn btn-primary" ng-click="publishAd(ad.id)">Publish Again</button>
+							<button class="btn btn-danger" ng-click="deleteAd(ad.id)">Delete</button>
 						</div>
 					</div>
 				</div>

@@ -33,6 +33,16 @@ adsApp.config(function($routeProvider) {
 			controller: 'adsListController',
 			templateUrl: 'app/partials/listAllAds.html'
 		})
+		.when('/:user/ads/delete/:id',
+		{
+			controller: 'deleteAdController',
+			templateUrl: 'app/partials/deleteAd.html'
+		})
+		.when('/:user/ads/edit/:id',
+		{
+			controller: 'newAdController',
+			templateUrl: 'app/partials/publishNewAd.html'
+		})
 		.when('/:user/publish',
 		{
 			controller: 'newAdController',
