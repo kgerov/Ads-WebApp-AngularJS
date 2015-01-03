@@ -1,10 +1,11 @@
-adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory', '$http', 'adsFactory', '$location', 'authService', 
-    function($scope, categoryFactory, townFactory, $http, adsFactory, $location, authService) {
+adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory', '$http', 'adsFactory', '$location', 'authService', '$routeParams',
+    function($scope, categoryFactory, townFactory, $http, adsFactory, $location, authService, $routeParams) {
 
     $scope.formSubmitted = false;
     $scope.touchTitle = false;
     $scope.touchDesciption = false;
     $scope.inEditMode = ($location.path().match(/\/(.+?)\/ads\/edit/g) != null ? true : false); 
+    $scope.changeImage = false;
     $scope.categories = [];
     $scope.towns = [];
 
@@ -25,6 +26,37 @@ adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory'
                 adsNoty(false, 'Couldn\'t load towns');
             });
 
+    }
+
+    $scope.editAd = function (ad, valid) {
+        $scope.formSubmitted = true;
+
+        if (valid) {
+            var adJson = {
+                'title': ad.Title,
+                'text': ad.Description,
+                'categoryid': ad.Category,
+                'townid': ad.Town
+            };
+
+            if ($scope.changeImage) {
+                adJson.changeimage = true;
+                adJson.imageDataUrl = ad.Img;
+            }
+
+            adsFactory.updateAdById(ad.Id, adJson).$promise
+                .then(function () {
+                    adsNoty(true, 'Ad edited. Don\'t forget to submit for approval');
+                    $location.path('/' + authService.getCurrUserName() + '/ads');
+                }, function () {
+                    adsNoty(false, 'Error occured, please try again');
+                });
+        }
+    }
+
+    $scope.goToMyAds = function () {
+        var username = $routeParams.user;
+        $location.path('/' + username + '/ads');
     }
 
     $scope.uploadAd = function (ad, valid) {
@@ -65,6 +97,7 @@ adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory'
     
     $("#ad-pic-upload").change(function() {
         readURL(this);
+        $scope.changeImage = true;
         $('#remove-img').css('visibility', 'visible');
         $('#remove-img').css('display', 'inline-block');
     });
