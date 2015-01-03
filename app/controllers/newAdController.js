@@ -1,6 +1,7 @@
 adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory', '$http', 'adsFactory', '$location', 'authService', '$routeParams',
     function($scope, categoryFactory, townFactory, $http, adsFactory, $location, authService, $routeParams) {
 
+    $scope.ad = {};
     $scope.formSubmitted = false;
     $scope.touchTitle = false;
     $scope.touchDesciption = false;
@@ -26,6 +27,30 @@ adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory'
                 adsNoty(false, 'Couldn\'t load towns');
             });
 
+        if ($scope.inEditMode) {
+            var adID = $routeParams.id;
+
+            adsFactory.getAdById(adID).$promise
+                .then(function (data) {
+                    $scope.ad = {
+                        Title: data.title,
+                        Description: data.text,
+                        Img: data.imageDataUrl
+                    };
+
+                    $('#preview-pic').attr('src', data.imageDataUrl);
+
+                    setTimeout(function () {
+                            $scope.$apply(function () {
+                                $scope.ad.Town = $scope.towns[data.townId - 1].id;
+                                $scope.ad.Category = $scope.categories[data.categoryId - 1].id;
+                            });
+                        }, 150);
+
+                }, function () {
+                    adsNoty(false, 'Poor connection to server. Can\'t retrieve ad data');
+                });
+        }
     }
 
     $scope.editAd = function (ad, valid) {

@@ -52,7 +52,7 @@ adsApp.factory('adsFactory', ['$resource', '$http', 'pageSize', function($resour
 	}
 
 	function updateAdById (currId, ad) {
-		return userAdResource.update({id: currId}, ad);
+		return 	userAdResource.update({id: currId}, ad);
 	}
 
 	return {
