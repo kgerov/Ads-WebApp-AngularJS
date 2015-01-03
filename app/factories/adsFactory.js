@@ -45,7 +45,7 @@ adsApp.factory('adsFactory', ['$resource', '$http', 'pageSize', function($resour
 	}
 
 	function deleteAdById (currId) {
-		return userResource.delete({id: currId});
+		return userAdResource.delete({id: currId});
 	}
 
 	return {

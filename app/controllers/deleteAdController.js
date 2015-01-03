@@ -6,6 +6,21 @@ adsApp.controller('deleteAdController', ['$scope', 'adsFactory', '$routeParams',
 
 	init(id);
 
+	$scope.deleteAd = function (id) {
+		adsFactory.deleteAdById(id).$promise
+			.then(function () {
+				adsNoty(true, 'Ad deleted successfuly');
+				$scope.returnToMyAds();
+			}, function () {
+				adsNoty(false, 'An error occured. Can\'t delete ad, please try later');
+			});
+	}
+
+	$scope.returnToMyAds = function () {
+		var username = $routeParams.user;
+		$location.path('/' + username + '/ads');
+	}
+
 	function init (id) {
 		adsFactory.getAdById(id).$promise
 			.then(function (data) {

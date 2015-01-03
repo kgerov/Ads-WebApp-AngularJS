@@ -59,8 +59,16 @@ form {
   float: none;
 }
 
-.ad-box img {
+.ad-box img, .delete-ad img{
   max-width: 200px;
+}
+
+.delete-ad img {
+  margin-bottom: 4%;
+}
+
+.btn-box {
+  margin-top: 3%;
 }
 
 .paging {
