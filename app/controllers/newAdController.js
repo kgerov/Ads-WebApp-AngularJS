@@ -35,10 +35,15 @@ adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory'
                     $scope.ad = {
                         Title: data.title,
                         Description: data.text,
-                        Img: data.imageDataUrl
+                        Img: data.imageDataUrl,
+                        Id: data.id
                     };
 
-                    $('#preview-pic').attr('src', data.imageDataUrl);
+                    if (data.imageDataUrl) {
+                        $('#preview-pic').attr('src', data.imageDataUrl);
+                        $('#remove-img').css('visibility', 'visible');
+                        $('#remove-img').css('display', 'inline-block');
+                    }
 
                     setTimeout(function () {
                             $scope.$apply(function () {
@@ -130,6 +135,7 @@ adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory'
     $('#remove-img').on('click', function () {
         $(":file").filestyle('clear');
         $scope.ad.Img = null;
+        $scope.changeImage = true;
 
         $('#preview-pic').attr('src', 'http://img4.wikia.nocookie.net/__cb20130819001030/lego/images/a/ac/No-Image-Basic.png');
         $('#remove-img').css('visibility', 'hidden');
