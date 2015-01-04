@@ -1,5 +1,5 @@
-adsApp.controller('adController', ['$scope', 'adsFactory', 'pageSize', '$rootScope', '$routeParams', '$location',
-    function($scope, adsFactory, pageSize, $rootScope, $routeParams, $location) {
+adsApp.controller('adController', ['$scope', 'adsFactory', 'pageSize', '$rootScope', '$routeParams', '$location', 'usSpinnerService',
+    function($scope, adsFactory, pageSize, $rootScope, $routeParams, $location, usSpinnerService) {
 
     $scope.ads = [];
     $scope.adsCount = 0;
@@ -16,12 +16,12 @@ adsApp.controller('adController', ['$scope', 'adsFactory', 'pageSize', '$rootSco
     });
 
   	$scope.pageChangeHandler = function(num, filters) {
-                        var cat = filters.categoryFilterRadio,
-                                town = filters.townFilterRadio,
-                                status = filters.adStatus || null,
-                                catId = cat != 'all-cat' ? cat.substring(1, cat.length) : '',
-                                townId = town != 'all-town' ? town.substring(1, town.length) : '';
-                        getPageContent(num, townId, catId, status);
+        var cat = filters.categoryFilterRadio,
+                town = filters.townFilterRadio,
+                status = filters.adStatus || null,
+                catId = cat != 'all-cat' ? cat.substring(1, cat.length) : '',
+                townId = town != 'all-town' ? town.substring(1, town.length) : '';
+        getPageContent(num, townId, catId, status);
   	};
 
     $scope.deactivateAd = function (id) {
@@ -55,11 +55,14 @@ adsApp.controller('adController', ['$scope', 'adsFactory', 'pageSize', '$rootSco
     }
 
   	function getPageContent (pageNumber, townId, catId, adStatus) {
+        $scope.ads = [];
+        startSpin();
         if ($scope.inUserAds) {
             adsFactory.getUserAds(pageNumber, adStatus).$promise
                 .then(function (data) {
                     $scope.ads = data.ads;
                     $scope.adsCount = data.numItems;
+                    stopSpin();
                     $('html, body').animate({scrollTop : 0},100);
                 }, function (error) {
                     adsNoty(false, 'Connection to server lost. Please try again later');
@@ -69,10 +72,33 @@ adsApp.controller('adController', ['$scope', 'adsFactory', 'pageSize', '$rootSco
             .then(function (data) {
                 $scope.ads = data.ads;
                 $scope.adsCount = data.numItems;
+                stopSpin();
                 $('html, body').animate({scrollTop : 0},100);
             }, function (error) {
                 adsNoty(false, 'Connection to server lost. Please try again later');
             });
         }
   	}
+
+    $scope.spinneractive = false;
+
+    function startSpin() {
+      if (!$scope.spinneractive) {
+        usSpinnerService.spin('spinner-1');
+      }
+    };
+
+    function stopSpin() {
+      if ($scope.spinneractive) {
+        usSpinnerService.stop('spinner-1');
+      }
+    };
+
+    $rootScope.$on('us-spinner:spin', function(event, key) {
+      $scope.spinneractive = true;
+    });
+
+    $rootScope.$on('us-spinner:stop', function(event, key) {
+      $scope.spinneractive = false;
+    });
 }])

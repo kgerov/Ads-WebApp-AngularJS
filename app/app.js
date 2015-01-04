@@ -4,7 +4,8 @@ var adsApp = angular.module('adsApp', ['ngRoute',
 	'ngTouch', 
 	'angularUtils.directives.dirPagination', 
 	'validImgFilter', 
-	'validation.match']);
+	'validation.match',
+	'angularSpinner']);
 
 adsApp.config(function($routeProvider) {
 	$routeProvider
