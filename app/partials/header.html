@@ -1,4 +1,4 @@
-<div class="navbar navbar-inverse navbar-static-top"  ng-class="{ 'adminHeader' : (isLoggedIn && isAdmin) }" ng-controller="navBarController">
+<nav class="navbar navbar-default navbar-static-top navbar-customNormal"  ng-class="{ 'navbar-custom' : (isLoggedIn && isAdmin) }" ng-controller="navBarController">
 	<div class="container">
 		<a href="#" class="navbar-brand">Обяви</a>
 		<div>
@@ -19,7 +19,7 @@
 				</div>
 				<div ng-show="isLoggedIn && isAdmin">
 					<ul class="nav navbar-nav navbar-left">
-							<li><a href="">Ads</a></li>
+							<li class="active"><a href="">Ads</a></li>
 							<li><a href="">Users</a></li>
 							<li><a href="">Categories</a></li>
 							<li><a href="">Towns</a></li>
@@ -41,4 +41,4 @@
 		</div>
 		
 	</div>
-</div>
+</nav>

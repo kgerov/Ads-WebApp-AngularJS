@@ -59,6 +59,7 @@ adsApp.controller('adController', ['$scope', 'adsFactory', 'pageSize', '$rootSco
         $scope.ads = [];
         $scope.noAds = false;
         startSpin();
+        
         if ($scope.inUserAds) {
             adsFactory.getUserAds(pageNumber, adStatus).$promise
                 .then(function (data) {
