@@ -189,6 +189,16 @@ form {
   }
 }
 
+@media only screen and (max-width: 500px){
+  .ad-box .ad-detail-title {
+    width: 20%;
+  }
+
+  .ad-box .ad-detail{
+    width: 69%;
+  }
+}
+
 /*Normal Navbar*/
 
 .navbar-customNormal {
