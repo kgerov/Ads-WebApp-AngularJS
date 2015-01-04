@@ -148,6 +148,11 @@ form {
   left: 45%;
 }
 
+.noAdsMessage {
+  margin-top: 10%;
+  font-weight: bold;
+}
+
 @media only screen and (max-width: 991px){
   .paging {
     position: static;

@@ -3,6 +3,7 @@ adsApp.controller('adController', ['$scope', 'adsFactory', 'pageSize', '$rootSco
 
     $scope.ads = [];
     $scope.adsCount = 0;
+    $scope.noAds = false;
     $scope.usersPerPage = pageSize;
     $scope.currentFilters = { categoryFilterRadio : 'all-cat', townFilterRadio : 'all-town', adStatus: '' };
     getPageContent(1);
@@ -56,11 +57,13 @@ adsApp.controller('adController', ['$scope', 'adsFactory', 'pageSize', '$rootSco
 
   	function getPageContent (pageNumber, townId, catId, adStatus) {
         $scope.ads = [];
+        $scope.noAds = false;
         startSpin();
         if ($scope.inUserAds) {
             adsFactory.getUserAds(pageNumber, adStatus).$promise
                 .then(function (data) {
                     $scope.ads = data.ads;
+                    checkNumberOfAds(data.ads.length);
                     $scope.adsCount = data.numItems;
                     stopSpin();
                     $('html, body').animate({scrollTop : 0},100);
@@ -71,12 +74,21 @@ adsApp.controller('adController', ['$scope', 'adsFactory', 'pageSize', '$rootSco
             adsFactory.getAdsFromPage(pageNumber, townId, catId).$promise
             .then(function (data) {
                 $scope.ads = data.ads;
+                checkNumberOfAds(data.ads.length);
                 $scope.adsCount = data.numItems;
                 stopSpin();
                 $('html, body').animate({scrollTop : 0},100);
             }, function (error) {
                 adsNoty(false, 'Connection to server lost. Please try again later');
             });
+        }
+
+        function checkNumberOfAds (num) {
+            if (num == 0) {
+                $scope.noAds = true;
+            } else {
+                $scope.noAds = false;
+            }
         }
   	}
 
