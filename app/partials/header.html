@@ -9,20 +9,25 @@
 			</button>
 
 			<div class="collapse navbar-collapse navHeaderCollapse">
+				<div ng-show="!isLoggedIn">
+					<ul class="nav navbar-nav navbar-left">
+							<li data-ng-class="{'active':getClass('/')}"><a href="#/">Home</a></li>
+					</ul>
+				</div>
 				<div ng-show="isLoggedIn && (!isAdmin)">
 					<ul class="nav navbar-nav navbar-left">
-							<li><a href="#/{{username}}/home">Home</a></li>
-							<li><a href="#/{{username}}/ads">My Ads</a></li>
-							<li><a href="#/{{username}}/publish">Publish New Ad</a></li>
-							<li><a href="#/{{username}}/profile">Edit Profile</a></li>
+							<li data-ng-class="{'active':getClass('/home')}"><a href="#/{{username}}/home">Home</a></li>
+							<li data-ng-class="{'active':getClass('/ads')}"><a href="#/{{username}}/ads">My Ads</a></li>
+							<li data-ng-class="{'active':getClass('/publish')}"><a href="#/{{username}}/publish">Publish New Ad</a></li>
+							<li data-ng-class="{'active':getClass('/profile')}"><a href="#/{{username}}/profile">Edit Profile</a></li>
 					</ul>
 				</div>
 				<div ng-show="isLoggedIn && isAdmin">
 					<ul class="nav navbar-nav navbar-left">
-							<li class="active"><a href="">Ads</a></li>
-							<li><a href="">Users</a></li>
-							<li><a href="">Categories</a></li>
-							<li><a href="">Towns</a></li>
+							<li data-ng-class="{'active':getClass('/home')}"><a href="#/admin/home">Ads</a></li>
+							<li data-ng-class="{'active':getClass('/')}"><a href="">Users</a></li>
+							<li data-ng-class="{'active':getClass('/')}"><a href="">Categories</a></li>
+							<li data-ng-class="{'active':getClass('/')}"><a href="">Towns</a></li>
 					</ul>
 				</div>
 				<div ng-show="isLoggedIn">
@@ -33,8 +38,8 @@
 				</div>
 				<div ng-show="!isLoggedIn">
 					<ul class="nav navbar-nav navbar-right">
-							<li><a href="#/login">Login</a></li>
-							<li><a href="#/register">Register</a></li>
+							<li data-ng-class="{'active':getClass('/login')}"><a href="#/login">Login</a></li>
+							<li data-ng-class="{'active':getClass('/register')}"><a href="#/register">Register</a></li>
 					</ul>
 				</div>
 			</div>

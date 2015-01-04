@@ -16,7 +16,11 @@ adsApp.controller('loginUserController', ['$scope', 'authService', '$http', '$lo
 			authService.loginUser(jsonUser).$promise
 				.then(function () {
 					adsNoty(true, ('Successfully logged in. Welcome, ' + authService.getCurrUserName()))
-					$location.path('/' + authService.getCurrUserName() + '/home');
+					if (authService.isAdmin()) {
+						$location.path('/admin/home');
+					} else {
+						$location.path('/' + authService.getCurrUserName() + '/home');
+					}
 				}, function () {
 					adsNoty(false, 'The user name or password is incorrect.');
 				});
