@@ -120,6 +120,8 @@ form {
   display: inline-block;
   margin-left: 2.5%;
   font-family: Tahoma;
+  max-height: 200px;
+  overflow: hidden;
 }
 
 .ad-box .ad-detail-title {
