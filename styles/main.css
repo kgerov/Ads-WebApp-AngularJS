@@ -1,5 +1,3 @@
-
-
 /*Main*/
 body {
     padding-bottom: 10%;
@@ -90,7 +88,7 @@ form {
 
 .filter-ads label, #ad-status {
     display:block;
-    background-color:#ddd;
+    background-color: #ddd;
     padding:4px 11px;
     font-family:Arial;
     font-size:16px;
@@ -98,6 +96,14 @@ form {
 
 .filter-ads input[type="radio"]:checked + label {
     background-color:#bbb;
+}
+
+.filter-ads .admin {
+  background-color: #42bdbd;
+}
+
+.filter-ads .admin {
+  background-color: #339191;
 }
 
 .ad-box ul {
