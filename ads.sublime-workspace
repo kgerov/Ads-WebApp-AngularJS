@@ -4,6 +4,178 @@
 		"selected_items":
 		[
 			[
+				"im",
+				"imageDataUrl"
+			],
+			[
+				"read",
+				"readURL"
+			],
+			[
+				"cat",
+				"categoryid"
+			],
+			[
+				"ads",
+				"adsNoty"
+			],
+			[
+				"$rot",
+				"$routeParams	AngularJS"
+			],
+			[
+				"ad",
+				"adsNoty"
+			],
+			[
+				"$loca",
+				"$location	AngularJS"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"user",
+				"userResource"
+			],
+			[
+				"$ro",
+				"$routeParams	AngularJS"
+			],
+			[
+				"$route",
+				"$routeParams	AngularJS(DI)"
+			],
+			[
+				"ac",
+				"activateAd"
+			],
+			[
+				"act",
+				"activateResource"
+			],
+			[
+				"$roo",
+				"$rootScope	AngularJS"
+			],
+			[
+				"$root",
+				"$rootScope	AngularJS(DI)"
+			],
+			[
+				"ng-c",
+				"ng-controller	AngularJS"
+			],
+			[
+				"$rout",
+				"$routeParams	AngularJS"
+			],
+			[
+				"fi",
+				"filterAds"
+			],
+			[
+				"get",
+				"getPageContent"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"bo",
+				"bottom"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"border-co",
+				"border-color"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"st",
+				"style	Tag"
+			],
+			[
+				"n",
+				"nType"
+			],
+			[
+				"i",
+				"isSuccess"
+			],
+			[
+				"o",
+				"onclick	Attr"
+			],
+			[
+				"$lo",
+				"$location	AngularJS"
+			],
+			[
+				"va",
+				"valid"
+			],
+			[
+				"ca",
+				"categoryFactory"
+			],
+			[
+				"ng-s",
+				"ng-show	AngularJS"
+			],
+			[
+				"pa",
+				"pageChangeHandler"
+			],
+			[
+				"page",
+				"pageAdsResource"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"ng-cl",
+				"ng-click	AngularJS"
+			],
+			[
+				"regis",
+				"registerUser"
+			],
+			[
+				"regi",
+				"registerUser"
+			],
+			[
+				"iis",
+				"isAdmin"
+			],
+			[
+				"lo",
+				"logoutUser"
+			],
+			[
+				"ng-v",
+				"ng-view	AngularJS"
+			],
+			[
+				"ng",
+				"ng-app	AngularJS"
+			],
+			[
 				"ng-clas",
 				"ng-class	AngularJS"
 			],
@@ -20,20 +192,8 @@
 				"min-height"
 			],
 			[
-				"mar",
-				"margin-bottom"
-			],
-			[
-				"get",
-				"getSubsFilter"
-			],
-			[
 				"ge",
 				"getSubsFilter"
-			],
-			[
-				"bac",
-				"background-color"
 			],
 			[
 				"border-",
@@ -50,10 +210,6 @@
 			[
 				"tex",
 				"text-align"
-			],
-			[
-				"bor",
-				"border-bottom"
 			],
 			[
 				"li",
@@ -100,20 +256,8 @@
 				"alt	Attr"
 			],
 			[
-				"pad",
-				"padding"
-			],
-			[
 				"bord",
 				"border-collapse"
-			],
-			[
-				"o",
-				"option"
-			],
-			[
-				"ca",
-				"categories"
 			],
 			[
 				"cate",
@@ -202,10 +346,6 @@
 			[
 				"produ",
 				"Product"
-			],
-			[
-				"user",
-				"userId"
 			],
 			[
 				"p",
@@ -312,10 +452,6 @@
 				"firstName"
 			],
 			[
-				"st",
-				"students"
-			],
-			[
 				"las",
 				"lastName"
 			],
@@ -356,10 +492,6 @@
 				"totalCounter"
 			],
 			[
-				"lo",
-				"localStorage"
-			],
-			[
 				"font",
 				"font-family"
 			],
@@ -382,143 +514,29 @@
 			[
 				"background-c",
 				"background-color"
-			],
-			[
-				"pare",
-				"parent"
-			],
-			[
-				"re",
-				"refreshList"
-			],
-			[
-				"lis",
-				"listTownsButton"
-			],
-			[
-				"t",
-				"townName"
-			],
-			[
-				"bu",
-				"buttonAdd"
-			],
-			[
-				"add",
-				"add-town-text"
-			],
-			[
-				"tow",
-				"townId"
-			],
-			[
-				"but",
-				"buttonDelete"
-			],
-			[
-				"ei",
-				"editTown"
-			],
-			[
-				"va",
-				"val"
-			],
-			[
-				"country",
-				"countryName"
-			],
-			[
-				"count",
-				"countryId"
-			],
-			[
-				"obj",
-				"objectId"
-			],
-			[
-				"ad",
-				"addCountryToList"
-			],
-			[
-				"q",
-				"questionId"
-			],
-			[
-				"delete",
-				"deleteCountry"
-			],
-			[
-				"mo",
-				"moveSlide"
-			],
-			[
-				"cur",
-				"current"
-			],
-			[
-				"h",
-				"hidden"
-			],
-			[
-				"mvoe",
-				"moveLeft"
-			],
-			[
-				"for",
-				"for	for (…) {…}"
-			],
-			[
-				"ta",
-				"targetId"
-			],
-			[
-				"dat",
-				"date1"
-			],
-			[
-				"sort",
-				"sortByDateDescAndTimeAscDateObj"
-			],
-			[
-				"tra",
-				"travels"
-			],
-			[
-				"form",
-				"formatTravelsQuery"
-			],
-			[
-				"_tra",
-				"_travels"
-			],
-			[
-				"des",
-				"destination"
-			],
-			[
-				"desti",
-				"destinatins"
-			],
-			[
-				"sta",
-				"startDock"
-			],
-			[
-				"Se",
-				"setLandmark"
-			],
-			[
-				"star",
-				"startDock"
-			],
-			[
-				"inde",
-				"indexOf"
 			]
 		]
 	},
 	"buffers":
 	[
+		{
+			"file": "app/partials/ads.html",
+			"settings":
+			{
+				"buffer_size": 2763,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "Package Control Messages\n========================\n\nPackage Control:\n---------------\n\n  Version 3.0 Release Notes\n  \n  \n  **** Windows Sublime Text 3 Users ****\n  \n  Due to a bug in Package Control 2.0, Windows ST3 users will need to open the\n  Sublime Text console (ctrl+`) and execute the following Python to properly\n  upgrade. All other users may ignore this part of the message.\n  \n  Make sure NOT to copy the leading two spaces, or an \"unexpected indent\" error\n  will occur.\n  \n  import urllib.request,os; pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')\n  \n  ********\n  \n  \n  Package Control 3.0 adds a bunch of polish, improving the Sublime Text\n  experience for users and package developers:\n  \n   - improved upgrades of themes, color schemes and syntaxes\n   - dependency support\n   - SSL for Linux\n   - new secondary Windows HTTP backend\n   - patches for Python in Sublime Text 2 on Windows\n   - commands to easily remove channels and repositories\n   - an events API for packages\n   - improved documentation\n  \n  \n  As of July 2014, I now work for myself. This has allowed me to spend more time\n  working on open source software, including Package Control. If you appreciate\n  the work I've done, please consider a small donation. If even 5% of regular\n  users donated the price of a coffee or beer, that would cover quite a bit of\n  my development time! See https://packagecontrol.io/about for options.\n  \n  \n  Some recent Package Control stats:\n  \n   - every weekday over 1M JSON requests hit the channel server\n   - in December, the channel server will transmit 4TB+ of compressed JSON\n   - users have installed, upgraded or removed 85M+ packages since late 2011\n  \n  \n  Read more about the release at:\n  \n  https://packagecontrol.io/news#2014-12-23-Package_Control_30_Released\n  \n",
+			"settings":
+			{
+				"buffer_size": 2331,
+				"line_ending": "Windows",
+				"name": "Package Control Messages",
+				"scratch": true
+			}
+		}
 	],
 	"build_system": "Packages/User/nodejs.sublime-build",
 	"command_palette":
@@ -592,10 +610,72 @@
 	},
 	"expanded_folders":
 	[
-		"/D/OnCode/JS Apps/08.TestPrep"
+		"/C/xampp/htdocs/test/ads",
+		"/C/xampp/htdocs/test/ads/app"
 	],
 	"file_history":
 	[
+		"/D/Downloads/index (2).php",
+		"/C/xampp/htdocs/test/ads/styles/pagination.css",
+		"/C/xampp/htdocs/test/ads/app/controllers/navBarController.js",
+		"/C/xampp/htdocs/test/ads/app/partials/header.html",
+		"/C/xampp/htdocs/test/ads/styles/main.css",
+		"/C/xampp/htdocs/test/ads/app/app.js",
+		"/C/xampp/htdocs/test/ads/app/filters/validImg.js",
+		"/C/xampp/htdocs/test/ads/TODO.txt",
+		"/C/xampp/htdocs/test/ads/app/partials/ads.html",
+		"/C/xampp/htdocs/test/ads/app/factories/adsFactory.js",
+		"/C/xampp/htdocs/test/ads/app/controllers/userProfileEditorController.js",
+		"/C/xampp/htdocs/test/ads/app/controllers/newAdController.js",
+		"/C/xampp/htdocs/test/ads/app/partials/publishNewAd.html",
+		"/C/xampp/htdocs/test/ads/app/controllers/deleteAdController.js",
+		"/C/xampp/htdocs/test/ads/app/partials/deleteAd.html",
+		"/C/xampp/htdocs/test/ads/app/controllers/adController.js",
+		"/C/xampp/htdocs/test/ads/index.html",
+		"/C/xampp/htdocs/test/ads/app/factories/modifyUserProfileService.js",
+		"/C/xampp/htdocs/test/ads/app/controllers/adsListController.js",
+		"/C/xampp/htdocs/test/ads/app/partials/filterPersonalAds.html",
+		"/C/xampp/htdocs/test/ads/app/partials/listAllAds.html",
+		"/C/xampp/htdocs/test/ads/app/controllers/userAdsFilterController.js",
+		"/C/xampp/htdocs/test/ads/libs/arrow89.js",
+		"/C/xampp/htdocs/test/ads/app/partials/listUserAds.html",
+		"/C/xampp/htdocs/test/ads/app/controllers/userAdsController.js",
+		"/D/OnCode/SoftUni/6. PHP/6. The Exam/ChatLogger.php",
+		"/D/OnCode/SoftUni/6. PHP/6. The Exam/softuniTunes.php",
+		"/C/xampp/htdocs/test/ads/app/partials/filtersRigth.html",
+		"/C/xampp/htdocs/test/ads/app/controllers/filterController.js",
+		"/C/xampp/htdocs/test/ads/app/partials/filterRight.html",
+		"/C/xampp/htdocs/test/oldProjects/VideoSystem/styles/main.css",
+		"/C/xampp/htdocs/test/ads/app/partials/userProfile.html",
+		"/C/xampp/htdocs/test/ads/app/partials/register.html",
+		"/C/xampp/htdocs/test/ads/app/partials/passwordInput.html",
+		"/C/xampp/htdocs/test/ads/app/controllers/loginUserController.js",
+		"/C/xampp/htdocs/test/ads/libs/customNoty.js",
+		"/C/xampp/htdocs/test/ads/app/controllers/registerUserController.js",
+		"/C/xampp/htdocs/test/ads/app/factories/authService.js",
+		"/C/xampp/htdocs/test/test.html",
+		"/C/xampp/htdocs/test/ads/node_modules/noty/js/noty/themes/custom.js",
+		"/C/xampp/htdocs/test/ads/test.js",
+		"/C/xampp/htdocs/test/ads/libs/myNotyTheme.js",
+		"/D/OnCode/JS Apps/10.JSAppsExam/scripts/controller.js",
+		"/C/xampp/htdocs/test/ads/app/directives/fileread.js",
+		"/C/xampp/htdocs/test/ads/libs/dirPagination.js",
+		"/C/xampp/htdocs/test/ads/libs/dirPagination.tpl.html",
+		"/C/xampp/htdocs/test/ads/app/factories/townFactory.js",
+		"/C/xampp/htdocs/test/ads/app/factories/categoryFactory.js",
+		"/D/OnCode/AngularJS/02.ControllersAndMarkups/VideoSystem/app/app.js",
+		"/D/OnCode/AngularJS/02.ControllersAndMarkups/VideoSystem/app/controllers/VideoController.js",
+		"/D/OnCode/AngularJS/02.ControllersAndMarkups/VideoSystem/app/filters/trustedUrl.js",
+		"/D/OnCode/AngularJS/01.Introduction/02.ImageBind/scripts/factory.js",
+		"/C/xampp/htdocs/test/oldProjects/VideoSystem/app/partials/video.html",
+		"/D/Downloads/a.html",
+		"/C/xampp/htdocs/test/ads/app/partials/login.html",
+		"/C/xampp/htdocs/test/oldProjects/VideoSystem/app/partials/add-video.html",
+		"/C/xampp/htdocs/test/oldProjects/VideoSystem/app/controllers/VideoController.js",
+		"/C/xampp/htdocs/test/oldProjects/VideoSystem/app/app.js",
+		"/C/xampp/htdocs/test/oldProjects/VideoSystem/index.html",
+		"/C/xampp/htdocs/test/oldProjects/VideoSystem/app/controllers/AddVideoController.js",
+		"/C/xampp/htdocs/test/ads/node_modules/angular-route/angular-route.min.js",
 		"/D/Downloads/bo.html",
 		"/D/OnCode/SoftUni/10.AngularJS/SPA-with-AngularJS/2. Controllers and Markup/5. Validation/form.html",
 		"/C/xampp/htdocs/test/VideoSystem/app/app.js",
@@ -611,9 +691,6 @@
 		"/D/OnCode/SoftUni/10.AngularJS/SPA-with-AngularJS/2. Controllers and Markup/4. Filters/1. Using Built-In Fitlers/scripts/controllers/news-controller.js",
 		"/D/OnCode/SoftUni/10.AngularJS/SPA-with-AngularJS/2. Controllers and Markup/4. Filters/1. Using Built-In Fitlers/news.html",
 		"/D/OnCode/HTML/08. CSS - Responsive/01. Unresponsive-Homework/styles/01.Unresponsive-Homework.css",
-		"/C/xampp/htdocs/test/ads/styles/main.css",
-		"/C/xampp/htdocs/test/ads/index.html",
-		"/D/OnCode/JS Apps/10.JSAppsExam/scripts/controller.js",
 		"/C/xampp/htdocs/test/ads/node_modules/noty/js/noty/jquery.noty.js",
 		"/D/OnCode/AngularJS/01.Introduction/03.TigerPage/index.html",
 		"/D/OnCode/AngularJS/01.Introduction/03.TigerPage/styles/main.css",
@@ -622,7 +699,6 @@
 		"/D/OnCode/AngularJS/01.Introduction/02.ImageBind/styles/main.css",
 		"/D/OnCode/AngularJS/01.Introduction/02.ImageBind/index.html",
 		"/D/OnCode/AngularJS/01.Introduction/02.ImageBind/scripts/controller/image.js",
-		"/D/OnCode/AngularJS/01.Introduction/02.ImageBind/scripts/factory.js",
 		"/D/OnCode/AngularJS/01.Introduction/02.ImageBind/scripts/app.js",
 		"/D/OnCode/JS Apps/06.SPAApplications/scripts/view.js",
 		"/D/OnCode/JS Apps/06.SPAApplications/scripts/requester.js",
@@ -666,64 +742,7 @@
 		"/C/xampp/htdocs/test/TestPrep/templates/login.html",
 		"/C/xampp/htdocs/test/TestPrep/templates/home.html",
 		"/D/OnCode/JS Apps/08.TestPrep/templates/bookmarks.html",
-		"/D/OnCode/JS Apps/08.TestPrep/templates/register.html",
-		"/D/OnCode/JS Apps/08.TestPrep/templates/login.html",
-		"/D/OnCode/JS Apps/08.TestPrep/templates/home.html",
-		"/D/OnCode/JS Apps/08.TestPrep/index.html",
-		"/D/OnCode/JS Apps/08.TestPrep/scripts/ajax-requester.js",
-		"/D/OnCode/JS Apps/08.TestPrep/scripts/data.js",
-		"/D/OnCode/JS Apps/08.TestPrep/scripts/controller.js",
-		"/D/OnCode/JS Apps/08.TestPrep/scripts/app.js",
-		"/D/OnCode/JS Apps/08.TestPrep/styles/main.css",
-		"/D/OnCode/JS Apps/08.TestPrep/node_modules/jquery/dist/cdn/jquery-2.1.1.min.js",
-		"/D/Downloads/Homework-Underscore.js-33543/Underscore.js/students-collection.js",
-		"/D/Downloads/Homework-Underscore.js-33543/Underscore.js/book-store.js",
-		"/D/Downloads/Homework-SPA приложения и архитектури-33435/SPA HW/scripts/requester.js",
-		"/D/Downloads/Homework-SPA приложения и архитектури-33435/SPA HW/scripts/data.js",
-		"/D/Downloads/Homework-SPA приложения и архитектури-33435/SPA HW/scripts/controller.js",
-		"/D/Downloads/Homework-SPA приложения и архитектури-33435/SPA HW/scripts/app.js",
-		"/D/Downloads/Homework-SPA приложения и архитектури-33435/SPA HW/index.html",
-		"/D/Downloads/Homework-SPA приложения и архитектури-33491/SPA-Applications-and-Applications-Architecture/scripts/views.js",
-		"/D/Downloads/Homework-SPA приложения и архитектури-33491/SPA-Applications-and-Applications-Architecture/scripts/requester.js",
-		"/D/Downloads/Homework-SPA приложения и архитектури-33491/SPA-Applications-and-Applications-Architecture/scripts/main.js",
-		"/D/Downloads/Homework-SPA приложения и архитектури-33491/SPA-Applications-and-Applications-Architecture/scripts/data.js",
-		"/D/Downloads/Homework-SPA приложения и архитектури-33491/SPA-Applications-and-Applications-Architecture/scripts/controller.js",
-		"/D/Downloads/Homework-SPA приложения и архитектури-33491/SPA-Applications-and-Applications-Architecture/index.html",
-		"/D/Downloads/Homework-SPA приложения и архитектури-33491/SPA-Applications-and-Applications-Architecture/templates/books.html",
-		"/D/OnCode/SoftUni/9. JS Apps/Demos/JavaScript-Applications/6. Unit-Testing-in-JavaScript/1. running tests/running-tests.html",
-		"/D/OnCode/SoftUni/9. JS Apps/Demos/JavaScript-Applications/6. Unit-Testing-in-JavaScript/1. running tests/sum.js",
-		"/D/OnCode/SoftUni/9. JS Apps/Demos/JavaScript-Applications/6. Unit-Testing-in-JavaScript/1. running tests/sum.tests.js",
-		"/C/Program Files (x86)/nodejs/node_modules/npm/bin/npm-cli.js",
-		"/D/OnCode/JS Apps/07.UnderscoreJS/index.html",
-		"/D/OnCode/JS Apps/07.UnderscoreJS/scripts/main.js",
-		"/D/OnCode/JS Apps/07.UnderscoreJS/styles/main.css",
-		"/D/OnCode/JS Apps/06.SPAApplications/index.html",
-		"/D/Downloads/q-1/q-1/q.js",
-		"/D/Downloads/Homework-Достъп до отдалечени данни-32912/script/book-script.js",
-		"/D/Downloads/Homework-Съхранение на данни (Cookies и Web Storages)-32332/Cookies и Web Storages/new  1.js",
-		"/D/Downloads/Homework-Съхранение на данни (Cookies и Web Storages)-32332/Cookies и Web Storages/new  3.js",
-		"/D/Downloads/Homework-Съхранение на данни (Cookies и Web Storages)-32525/Homework/PollSystem/PollSystem/pollSystem.html",
-		"/D/Downloads/Homework-Съхранение на данни (Cookies и Web Storages)-32525/Homework/PollSystem/PollSystem/pollSystem.js",
-		"/D/OnCode/JS Apps/04.WebStorages/02.Poll/styles/poll.css",
-		"/D/OnCode/JS Apps/04.WebStorages/02.Poll/index.html",
-		"/D/OnCode/JS Apps/04.WebStorages/02.Poll/scripts/greet.js",
-		"/D/OnCode/JS Apps/04.WebStorages/01.GreetingSystem/styles/greeting.css",
-		"/D/OnCode/JS Apps/04.WebStorages/01.GreetingSystem/scripts/greet.js",
-		"/D/OnCode/JS Apps/04.WebStorages/01.GreetingSystem/index.html",
-		"/D/OnCode/HTML/08. CSS - Responsive/02. FlowersHome/styles/02.FlowersHome.css",
-		"/D/OnCode/JS Apps/02. JQueryPlugins/02. TextMessage/activate.js",
-		"/D/OnCode/JS Apps/04.WebStorages/01.GreetingSystem",
-		"/D/Downloads/Homework-BaaS и Parse.com-31696/data-base-functions.js",
-		"/D/OnCode/JS Apps/03.BaaSandParse/scripts/main.js",
-		"/D/Downloads/Homework-BaaS и Parse.com-31370/jQuery REST/jquery.noty.packaged.min.js",
-		"/D/OnCode/JS Apps/03.BaaSandParse/index.html",
-		"/D/OnCode/JS Apps/03.BaaSandParse/styles/find.css",
-		"/D/OnCode/JS Apps/03.BaaSandParse/scripts/parse.js",
-		"/D/OnCode/JS Apps/02. JQueryPlugins/02. TextMessage/message-box.js",
-		"/D/OnCode/JS Apps/03.BaaSandParse/scripts/ss.js",
-		"/C/Users/Dimitar/AppData/Local/Temp/Rar$DIa0.866/message-box.js",
-		"/D/OnCode/JS Apps/02. JQueryPlugins/02. TextMessage/index.html",
-		"/D/OnCode/JS Apps/01.JQueryOverview/04.Slideshow/change-slide.js"
+		"/D/OnCode/JS Apps/08.TestPrep/templates/register.html"
 	],
 	"find":
 	{
@@ -741,6 +760,13 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"currId",
+			"user",
+			"registerForm",
+			"setCurrent",
+			"setCur",
+			"{{ad.imageDataUrl}}",
+			"defer",
 			"r",
 			">",
 			"form",
@@ -861,14 +887,7 @@
 			"american",
 			"Mercedes",
 			"results",
-			"teamates",
-			"Volvo",
-			"seconds",
-			"condition",
-			"name",
-			"firstname",
-			"phone",
-			"city"
+			"teamates"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -876,6 +895,8 @@
 		"regex": false,
 		"replace_history":
 		[
+			"ad",
+			"newAdForm",
 			"Product",
 			"onPageLoad",
 			"Element",
@@ -921,8 +942,66 @@
 			]
 		},
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/partials/ads.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2763,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2331,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2331,
+								2331
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -954,7 +1033,7 @@
 		"cols":
 		[
 			0.0,
-			0.534375,
+			0.968434343434,
 			1.0
 		],
 		"rows":
@@ -979,7 +1058,7 @@
 	"project": "ads.sublime-project",
 	"replace":
 	{
-		"height": 102.0
+		"height": 64.0
 	},
 	"save_all_on_build": false,
 	"select_file":
@@ -1010,7 +1089,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 		"xdebug":
@@ -1063,8 +1142,8 @@
 	"show_minimap": false,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
-	"side_bar_width": 242.0,
+	"side_bar_visible": true,
+	"side_bar_width": 336.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

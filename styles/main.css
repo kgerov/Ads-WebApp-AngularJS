@@ -146,4 +146,26 @@ form {
   .paging {
     position: static;
   }
+
+  .ad-box ul {
+    padding-left: 0;
+  }
+
+  .ad-box p {
+    margin-left: 0;
+  }
+
+  body {
+    padding-bottom: 20%;
+  }
+
+  .paging {
+    margin-left: -50px;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .paging {
+    margin-left: 0;
+  }
 }
