@@ -9,7 +9,7 @@
 		return resource.save(user, function (data) {
 			$localStorage.isLoggedIn = true;
 			$localStorage.currUser = data.username;
-			$http.defaults.headers.common['Authorization'] = 'Bearer ' + data.access_token;
+			$http.defaults.headers.common['Authorization'] = 'Bearer ' + data.access_token; 
 			if (data.isAdmin) {
 				$localStorage.isAdmin = true;
 			} else {

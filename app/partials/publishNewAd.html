@@ -39,7 +39,7 @@
 					<option ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
 				</select>
 				<div ng-show="inAdminEditMode">
-					<!-- Title -->
+					<!-- User -->
 					<div class="form-group has-feedback" ng-class="{ 'has-error' : (newAdForm.inputAdUser.$error.required && (touchAdUser || formSubmitted)), 'has-success' : newAdForm.inputAdUser.$valid && (touchAdUser || formSubmitted)}">
 						<input type="text"  class="form-control" name="inputAdUser" ng-model="ad.User" placeholder="User" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchAdUser=true">
 						<div ng-show="touchAdUser || formSubmitted">
@@ -47,6 +47,18 @@
 							<div ng-if="newAdForm.inputAdUser.$error.required" ng-include src="'app/partials/error.html'"></div>
 						</div>
 					</div>
+					<!-- Date -->
+					<div class='input-group date' id='datetimepicker1'>
+	                    <input type='text' id="inputDate" class="form-control" ng-model="ad.Date" />
+	                    <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span></span>
+                	</div>
+                	<!-- Status -->
+                	<select ng-model="ad.Status" class="form-control">
+						<option value="Published">Published</option>
+						<option value="WaitingApproval">Waiting Approval</option>
+						<option value="Inactive">Inactive</option>
+						<option value="Rejected">Rejected</option>
+					</select>
 				</div>
 
 				<div class="text-center">

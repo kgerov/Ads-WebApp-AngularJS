@@ -1,6 +1,8 @@
 adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory', '$http', 'adsFactory', '$location', 'authService', '$routeParams',
     function($scope, categoryFactory, townFactory, $http, adsFactory, $location, authService, $routeParams) {
 
+    $('#datetimepicker1').datetimepicker();
+
     $scope.ad = {};
     $scope.formSubmitted = false;
     $scope.touchTitle = false;
@@ -57,6 +59,12 @@ adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory'
                     Category: data.categoryId ? data.categoryId : ""          
                 };
 
+                if ($scope.inAdminEditMode) {
+                    $scope.ad.User = data.ownerUsername;
+                    $scope.ad.Date = data.date;
+                    $scope.ad.Status = data.status;
+                }
+
                 if (data.imageDataUrl) {
                     $('#preview-pic').attr('src', data.imageDataUrl);
                     $('#remove-img').css('visibility', 'visible');
@@ -83,12 +91,22 @@ adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory'
             }
 
             if ($scope.inAdminEditMode) {
+                adJson.ownerUsername = $scope.ad.User;
+                adJson.date = $('#inputDate').val();
+                adJson.status = $scope.ad.Status;
+
                 adsFactory.adminUpdateAd(ad.Id, adJson).$promise
                     .then(function () {
                         adsNoty(true, 'Ad edited.');
                         $location.path('/admin/home');
-                    }, function () {
-                        adsNoty(false, 'Error occured, please try again');
+                    }, function (error) {
+                        var message = 'Can\'t edit ad';
+
+                        if (error.data.message) {
+                            message += ': ' + error.data.message;
+                        }
+
+                        adsNoty(false, message);
                     });
             } else {
                 adsFactory.updateAdById(ad.Id, adJson).$promise
@@ -103,8 +121,12 @@ adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory'
     }
 
     $scope.goToMyAds = function () {
-        var username = $routeParams.user;
-        $location.path('/' + username + '/ads');
+        if ($scope.inAdminEditMode) {
+            $location.path('/admin/home');
+        } else {
+            var username = $routeParams.user;
+            $location.path('/' + username + '/ads');
+        }
     }
 
     $scope.uploadAd = function (ad, valid) {
