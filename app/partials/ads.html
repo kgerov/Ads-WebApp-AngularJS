@@ -1,11 +1,11 @@
-<div class="col-md-10" ng-controller="adController"> 
+<div class="" ng-controller="adController"> 
 	<div class="col-md-12 ad-box" dir-paginate="ad in ads | itemsPerPage: usersPerPage" total-items="adsCount">
 		<div class="row">
 			<div class="col-md-3 col-sm-12 col-xs-12 align-ad">
 				<div class="text-center">
 					<img ng-src="{{ad.imageDataUrl | validImg }}" alt="" onerror="this.onerror=null;this.src='https://cdn0.iconfinder.com/data/icons/very-basic-android-l-lollipop-icon-pack/24/cancel-2-128.png';">
 				</div>
-				<div class="text-center" ng-show="$parent.inUserAds">
+				<div class="text-center" ng-show="$parent.inUserAds || $parent.inAdminAds">
 					<label id="ad-status" ng-show="ad.status != 'WaitingApproval'">{{ad.status}}</label>
 					<label id="ad-status" ng-show="ad.status == 'WaitingApproval'">Waiting Approval</label>
 				</div>
@@ -25,7 +25,7 @@
 								<li><div class="ad-detail-title ">Email</div><div class='ad-detail'>{{ad.ownerEmail | emptyText}}</div></li>
 								<li><div class="ad-detail-title ">Phone</div><div class='ad-detail'>{{ad.ownerPhone | emptyText}}</div></li>
 							</div>
-							<div ng-show="$parent.inUserAds">
+							<div ng-show="$parent.inUserAds || $parent.inAdminAds">
 								<li><div class="ad-detail-title ">Category</div><div class='ad-detail'>{{ad.categoryName | emptyText}}</div></li>
 								<li><div class="ad-detail-title ">Town</div><div class='ad-detail'>{{ad.townName | emptyText}}</div></li>
 							</div>
@@ -33,7 +33,7 @@
 
 						</ul>
 					</div>
-					<div class="col-md-12 text-center" ng-show="$parent.inUserAds">
+					<div class="col-md-12 text-center" ng-show="$parent.inUserAds ">
 						<div ng-show="ad.status == 'WaitingApproval' || ad.status == 'Published'">
 							<button class="btn btn-primary" ng-click="deactivateAd(ad.id)">Deactivate</button>
 						</div>
@@ -41,6 +41,16 @@
 							<button class="btn btn-primary" ng-click="editAd(ad.id)">Edit</button>
 							<button class="btn btn-primary" ng-click="publishAd(ad.id)">Publish Again</button>
 							<button class="btn btn-danger" ng-click="deleteAd(ad.id)">Delete</button>
+						</div>
+					</div>
+					<div class="col-md-12 text-center" ng-show="$parent.inAdminAds ">
+						<div ng-show="ad.status == 'WaitingApproval'"  class="adminButton">
+							<button class="btn btn-primary" ng-click="approveAd(ad.id)">Approve</button>
+							<button class="btn btn-primary" ng-click="rejectAd(ad.id)">Reject</button>
+						</div>
+						<div class="adminButton">
+							<button class="btn btn-primary" ng-click="editAdAdmin(ad.id)">Edit</button>
+							<button class="btn btn-danger" ng-click="deleteAdAdmin(ad.id)">Delete</button>
 						</div>
 					</div>
 				</div>

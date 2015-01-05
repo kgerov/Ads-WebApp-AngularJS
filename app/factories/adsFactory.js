@@ -23,6 +23,9 @@ adsApp.factory('adsFactory', ['$resource', '$http', 'pageSize', function($resour
 			method: 'PUT'
 		}});
 
+	var adminResource = $resource('http://softuni-ads.azurewebsites.net/api/admin/ads?pagesize=:size&startpage=:pageNum&townid=:cityid&categoryid=:catid&status=:stat&sortby=-Title',
+		{size: '@size', pageNum: '@pageNum', cityid: '@cityid', catid: '@catid', stat: '@stat'});
+
 	function getAdsFromPage (desiredPage, townId, catId) {
 		return resource.get({ size: pageSize, pageNum: desiredPage, cityid: townId, catid: catId });
 	}
@@ -55,6 +58,10 @@ adsApp.factory('adsFactory', ['$resource', '$http', 'pageSize', function($resour
 		return 	userAdResource.update({id: currId}, ad);
 	}
 
+	function getAdminAds (desiredPage, townId, catId, currStatus) {
+		return adminResource.get({ size: pageSize, pageNum: desiredPage, cityid: townId, catid: catId, stat: currStatus });
+	}
+
 	return {
 		getAdsFromPage: getAdsFromPage, 
 		publishNewAd: publishNewAd,
@@ -63,6 +70,7 @@ adsApp.factory('adsFactory', ['$resource', '$http', 'pageSize', function($resour
 		deactivateAd: deactivateAd,
 		getAdById: getAdById,
 		deleteAdById: deleteAdById,
-		updateAdById: updateAdById
+		updateAdById: updateAdById,
+		getAdminAds: getAdminAds
 	};
 }])

@@ -55,34 +55,48 @@ adsApp.controller('adController', ['$scope', 'adsFactory', 'pageSize', '$rootSco
         $location.path('/' + username + '/ads/edit/' + id);
     }
 
-  	function getPageContent (pageNumber, townId, catId, adStatus) {
-        $scope.ads = [];
-        $scope.noAds = false;
-        startSpin();
+    $scope.deleteAdAdmin = function (id) {
         
-        if ($scope.inUserAds) {
-            adsFactory.getUserAds(pageNumber, adStatus).$promise
-                .then(function (data) {
-                    $scope.ads = data.ads;
-                    checkNumberOfAds(data.ads.length);
-                    $scope.adsCount = data.numItems;
-                    stopSpin();
-                    $('html, body').animate({scrollTop : 0},100);
-                }, function (error) {
-                    adsNoty(false, 'Connection to server lost. Please try again later');
-                });
-        } else {
-            adsFactory.getAdsFromPage(pageNumber, townId, catId).$promise
-            .then(function (data) {
-                $scope.ads = data.ads;
-                checkNumberOfAds(data.ads.length);
-                $scope.adsCount = data.numItems;
-                stopSpin();
-                $('html, body').animate({scrollTop : 0},100);
-            }, function (error) {
-                adsNoty(false, 'Connection to server lost. Please try again later');
-            });
-        }
+    }
+
+    function getPageContent (pageNumber, townId, catId, adStatus) {
+                $scope.ads = [];
+                $scope.noAds = false;
+                startSpin();
+                if ($scope.inUserAds) {
+                    adsFactory.getUserAds(pageNumber, adStatus).$promise
+                        .then(function (data) {
+                            $scope.ads = data.ads;
+                            checkNumberOfAds(data.ads.length);
+                            $scope.adsCount = data.numItems;
+                            stopSpin();
+                            $('html, body').animate({scrollTop : 0},100);
+                        }, function (error) {
+                            adsNoty(false, 'Connection to server lost. Please try again later');
+                        });
+                } else if($scope.inAdminAds) {
+                    adsFactory.getAdminAds(pageNumber, townId, catId, adStatus).$promise
+                        .then(function (data) {
+                            $scope.ads = data.ads;
+                            checkNumberOfAds(data.ads.length);
+                            $scope.adsCount = data.numItems;
+                            stopSpin();
+                            $('html, body').animate({scrollTop : 0},100);
+                        }, function (error) {
+                            adsNoty(false, 'Connection to server lost. Please try again later');
+                        });
+                } else {
+                    adsFactory.getAdsFromPage(pageNumber, townId, catId).$promise
+                    .then(function (data) {
+                        $scope.ads = data.ads;
+                        checkNumberOfAds(data.ads.length);
+                        $scope.adsCount = data.numItems;
+                        stopSpin();
+                        $('html, body').animate({scrollTop : 0},100);
+                    }, function (error) {
+                        adsNoty(false, 'Connection to server lost. Please try again later');
+                    });
+    }
 
         function checkNumberOfAds (num) {
             if (num == 0) {

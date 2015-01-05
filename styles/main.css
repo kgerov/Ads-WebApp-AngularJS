@@ -152,6 +152,10 @@ form {
   margin-top: 10.0%;
 }
 
+.adminButton {
+  display: inline-block;
+}
+
 .spinner {
   position: fixed;
   top: 50%;
