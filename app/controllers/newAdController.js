@@ -5,7 +5,8 @@ adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory'
     $scope.formSubmitted = false;
     $scope.touchTitle = false;
     $scope.touchDesciption = false;
-    $scope.inEditMode = ($location.path().match(/\/(.+?)\/ads\/edit/g) != null ? true : false); 
+    $scope.inEditMode = ($location.path().match(/\/(.+?)\/ads\/edit/g) != null ? true : false);
+    $scope.inAdminEditMode = ($location.path().match(/\/admin\/ads\/edit/g) != null ? true : false);
     $scope.changeImage = false;
     $scope.categories = [];
     $scope.towns = [];
@@ -29,10 +30,24 @@ adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory'
 
         if ($scope.inEditMode) {
             var adID = $routeParams.id; 
-
-            adsFactory.getAdById(adID).$promise
+            if ($scope.inAdminEditMode) {
+                adsFactory.adminGetAdById(adID).$promise
                 .then(function (data) {
-                    $scope.ad = {
+                    handleData(data);
+                }, function () {
+                    adsNoty(false, 'Poor connection to server. Can\'t retrieve ad data');
+                });
+            } else {
+                adsFactory.getAdById(adID).$promise
+                .then(function (data) {
+                    handleData(data);
+                }, function () {
+                    adsNoty(false, 'Poor connection to server. Can\'t retrieve ad data');
+                });
+            }
+
+            function handleData (data) {
+                $scope.ad = {
                         Title: data.title,
                         Description: data.text,
                         Img: data.imageDataUrl,
@@ -47,14 +62,22 @@ adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory'
 
                     setTimeout(function () {
                             $scope.$apply(function () {
-                                $scope.ad.Town = $scope.towns[data.townId - 1].id;
-                                $scope.ad.Category = $scope.categories[data.categoryId - 1].id;
+                                for(x in $scope.towns) {
+                                    if ($scope.towns[x].id = data.townId) {
+                                        $scope.ad.Town = $scope.towns[x].id;
+                                        break;
+                                    }
+                                }
+
+                                for(x in $scope.categories) {
+                                    if ($scope.categories[x].id = data.categoryId) {
+                                        $scope.ad.Category = $scope.categories[x].id;
+                                        break;
+                                    }
+                                }
                             });
                         }, 150);
-
-                }, function () {
-                    adsNoty(false, 'Poor connection to server. Can\'t retrieve ad data');
-                });
+            }
         }
     }
 

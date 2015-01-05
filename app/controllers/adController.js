@@ -93,39 +93,40 @@ adsApp.controller('adController', ['$scope', 'adsFactory', 'pageSize', '$rootSco
                 $scope.ads = [];
                 $scope.noAds = false;
                 startSpin();
+                
                 if ($scope.inUserAds) {
                     adsFactory.getUserAds(pageNumber, adStatus).$promise
                         .then(function (data) {
-                            $scope.ads = data.ads;
-                            checkNumberOfAds(data.ads.length);
-                            $scope.adsCount = data.numItems;
-                            stopSpin();
-                            $('html, body').animate({scrollTop : 0},100);
+                            handleData(data);
                         }, function (error) {
-                            adsNoty(false, 'Connection to server lost. Please try again later');
+                            handleError ();
                         });
                 } else if($scope.inAdminAds) {
                     adsFactory.getAdminAds(pageNumber, townId, catId, adStatus).$promise
                         .then(function (data) {
+                            handleData(data);
+                        }, function (error) {
+                            handleError ();
+                        });
+                } else {
+                    adsFactory.getAdsFromPage(pageNumber, townId, catId).$promise
+                    .then(function (data) {
+                        handleData(data);
+                    }, function (error) {
+                        handleError ();
+                    });
+
+                    function handleData (data) {
                             $scope.ads = data.ads;
                             checkNumberOfAds(data.ads.length);
                             $scope.adsCount = data.numItems;
                             stopSpin();
                             $('html, body').animate({scrollTop : 0},100);
-                        }, function (error) {
-                            adsNoty(false, 'Connection to server lost. Please try again later');
-                        });
-                } else {
-                    adsFactory.getAdsFromPage(pageNumber, townId, catId).$promise
-                    .then(function (data) {
-                        $scope.ads = data.ads;
-                        checkNumberOfAds(data.ads.length);
-                        $scope.adsCount = data.numItems;
-                        stopSpin();
-                        $('html, body').animate({scrollTop : 0},100);
-                    }, function (error) {
+                    }
+
+                    function handleError () {
                         adsNoty(false, 'Connection to server lost. Please try again later');
-                    });
+                    }
     }
 
         function checkNumberOfAds (num) {
