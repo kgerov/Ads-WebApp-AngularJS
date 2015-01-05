@@ -49,7 +49,7 @@ adsApp.controller('userProfileEditorController', ['$scope', 'townFactory', 'auth
 				phoneNumber: user.Phone,
 				townId: user.Town
 			};
-			console.log(jsonUser);
+
 			modifyUserProfileService.updateUserProfile(jsonUser).$promise
 				.then(function (data) {
 					adsNoty(true, 'User profile updated successfully');
@@ -61,41 +61,35 @@ adsApp.controller('userProfileEditorController', ['$scope', 'townFactory', 'auth
 	}
 
 	function init () {
-		modifyUserProfileService.getUserData().$promise
-			.then(function (data) {
-				return data;
-			}, function (error) {
-				adsNoty(false, 'Couln\'t retrieve user information, Sorry for the inconvenience' );
-			})
-			.then(function (data) {
-				console.log(data);
-				var _userInfo = data;
-				townFactory.getAllTowns().$promise
+		townFactory.getAllTowns().$promise
 					.then(function (data) {
 						$scope.towns = data;
-						$scope.user = {
-							Name: _userInfo.name,
-							Email: _userInfo.email,
-							Phone: _userInfo.phoneNumber,
-						};
-
-						setTimeout(function () {
-							$scope.$apply(function () {
-								// for(x in $scope.towns) {
-						  //                                   if ($scope.towns[x].id = _userInfo.townId) {
-						  //                                       $scope.user.Town = $scope.towns[x].id;
-						  //                                       break;
-						  //                                   }
-						  //                         }
-						  $scope.user.Town = $scope.towns[_userInfo.townId - 1].id;
-							});
-						}, 150);
-						
-						
 					}, function (error) {
 						adsNoty(false, 'Couln\'t retrieve towns, Sorry for the inconvenience' );
+					})
+					.then(function () {
+						modifyUserProfileService.getUserData().$promise
+							.then(function (data) {
+								var _userInfo = data;
+								if (_userInfo.townId) {
+									$scope.user = {
+										Name: _userInfo.name,
+										Email: _userInfo.email,
+										Phone: _userInfo.phoneNumber,
+										Town: _userInfo.townId
+									};
+								} else {
+									$scope.user = {
+										Name: _userInfo.name,
+										Email: _userInfo.email,
+										Phone: _userInfo.phoneNumber
+									};
+								}
+							}, function () {
+								adsNoty(false, 'Couln\'t retrieve user information, Sorry for the inconvenience');
+							});
+					}, function () {
+						
 					});
-			})
-		
 	}
 }])

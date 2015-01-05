@@ -8,6 +8,7 @@ adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory'
     $scope.inEditMode = ($location.path().match(/\/(.+?)\/ads\/edit/g) != null ? true : false);
     $scope.inAdminEditMode = ($location.path().match(/\/admin\/ads\/edit/g) != null ? true : false);
     $scope.changeImage = false;
+    $scope.touchAdUser = false;
     $scope.categories = [];
     $scope.towns = [];
 
@@ -48,37 +49,19 @@ adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory'
 
             function handleData (data) {
                 $scope.ad = {
-                        Title: data.title,
-                        Description: data.text,
-                        Img: data.imageDataUrl,
-                        Id: data.id
-                    };
+                    Title: data.title,
+                    Description: data.text,
+                    Img: data.imageDataUrl,
+                    Id: data.id,
+                    Town: data.townId ? data.townId : "",
+                    Category: data.categoryId ? data.categoryId : ""          
+                };
 
-                    if (data.imageDataUrl) {
-                        $('#preview-pic').attr('src', data.imageDataUrl);
-                        $('#remove-img').css('visibility', 'visible');
-                        $('#remove-img').css('display', 'inline-block');
-                    }
-
-                    setTimeout(function () {
-                            $scope.$apply(function () {
-                                // for(x in $scope.towns) {
-                                //     if ($scope.towns[x].id = data.townId) {
-                                //         $scope.ad.Town = $scope.towns[x].id;
-                                //         break;
-                                //     }
-                                // }
-
-                                // for(x in $scope.categories) {
-                                //     if ($scope.categories[x].id = data.categoryId) {
-                                //         $scope.ad.Category = $scope.categories[x].id;
-                                //         break;
-                                //     }
-                                // }
-                                $scope.ad.Town = $scope.towns[data.townId - 1].id;
-                                $scope.ad.Category = $scope.categories[data.categoryId - 1].id;
-                            });
-                        }, 150);
+                if (data.imageDataUrl) {
+                    $('#preview-pic').attr('src', data.imageDataUrl);
+                    $('#remove-img').css('visibility', 'visible');
+                    $('#remove-img').css('display', 'inline-block');
+                }
             }
         }
     }
@@ -99,13 +82,23 @@ adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory'
                 adJson.imageDataUrl = ad.Img;
             }
 
-            adsFactory.updateAdById(ad.Id, adJson).$promise
-                .then(function () {
-                    adsNoty(true, 'Ad edited. Don\'t forget to submit for approval');
-                    $location.path('/' + authService.getCurrUserName() + '/ads');
-                }, function () {
-                    adsNoty(false, 'Error occured, please try again');
-                });
+            if ($scope.inAdminEditMode) {
+                adsFactory.adminUpdateAd(ad.Id, adJson).$promise
+                    .then(function () {
+                        adsNoty(true, 'Ad edited.');
+                        $location.path('/admin/home');
+                    }, function () {
+                        adsNoty(false, 'Error occured, please try again');
+                    });
+            } else {
+                adsFactory.updateAdById(ad.Id, adJson).$promise
+                    .then(function () {
+                        adsNoty(true, 'Ad edited. Don\'t forget to submit for approval');
+                        $location.path('/' + authService.getCurrUserName() + '/ads');
+                    }, function () {
+                        adsNoty(false, 'Error occured, please try again');
+                    }); 
+            }
         }
     }
 

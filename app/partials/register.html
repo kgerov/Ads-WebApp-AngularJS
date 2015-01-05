@@ -54,9 +54,12 @@
 				</div>
 				<!-- Town -->
 				<select ng-model="user.Town" class="form-control">
-					<option style="display:none;" value="">Chose a Town</option>
+					<option style="display:none;" value="">Choose a Town</option>
 					<option ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
 				</select>
+				<!-- <select ng-options="town.name for town in towns" ng-model="user.Town">
+				    <option value="" disabled>Choose town</option>
+				</select> -->
 				<div class="text-center">
 					<button class="btn btn-lg btn-primary register-button" type="submit" ng-click="registerUser(user, registerForm.$valid)" value="Save">Register</button>
 				</div>

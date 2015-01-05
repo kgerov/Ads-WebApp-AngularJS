@@ -8,13 +8,13 @@ adsApp.controller('registerUserController', ['$scope', 'townFactory', 'authServi
 	$scope.touchTown = false;
 
 	$scope.formSubmitted = false;
-	$scope.towns = [];
+	$scope.towns = []; 
 
 	init();
 
 	$scope.registerUser = function (user, valid) {
 		$scope.formSubmitted = true;
-		console.log(user);
+
 		if (valid) {
 			var jsonUser = {
 				'username': user.Username,
@@ -23,9 +23,9 @@ adsApp.controller('registerUserController', ['$scope', 'townFactory', 'authServi
 				'name': user.Name,
 				'email': user.Email,
 				'phone': user.Phone,
-				'townId ': user.Town || null
+				'townId': user.Town || null
 			};
-			console.log(jsonUser);
+
 			authService.registerUser(jsonUser).$promise
 				.then(function () {
 					adsNoty(true, 'Acount created successfuly. Welcome.')

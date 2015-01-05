@@ -96,8 +96,8 @@ adsApp.factory('adsFactory', ['$resource', '$http', 'pageSize', function($resour
 		return adminAdResourse.get({id: currId});
 	}
 
-	function adminUpdateAd (currId) {
-		return adminAdResourse.update({id: currId});
+	function adminUpdateAd (currId, ad) {
+		return adminAdResourse.update({id: currId}, ad);
 	}
 
 	return {
