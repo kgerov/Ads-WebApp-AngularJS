@@ -54,6 +54,16 @@ adsApp.config(function($routeProvider) {
 			controller: 'userProfileEditorController',
 			templateUrl: 'app/partials/userProfile.html'
 		})
+		.when('/admin/home',
+		{
+			controller: 'adsListController',
+			templateUrl: 'app/partials/listAllAds.html'
+		})
+		.when('/admin/ads/edit/:id',
+		{
+			controller: 'newAdController', 
+			templateUrl: 'app/partials/publishNewAd.html'
+		})
 		.otherwise({redirectTo: '/'});
 });
 

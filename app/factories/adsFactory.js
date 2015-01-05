@@ -23,6 +23,24 @@ adsApp.factory('adsFactory', ['$resource', '$http', 'pageSize', function($resour
 			method: 'PUT'
 		}});
 
+	var adminApproveResourse = $resource('http://softuni-ads.azurewebsites.net/api/admin/ads/approve/:id',
+		{id: '@id'}, { 
+		update: {
+			method: 'PUT'
+		}});
+
+	var adminRejectResourse = $resource('http://softuni-ads.azurewebsites.net/api/admin/ads/reject/:id',
+		{id: '@id'}, { 
+		update: {
+			method: 'PUT'
+		}});
+
+	var adminAdResourse = $resource('http://softuni-ads.azurewebsites.net/api/admin/ads/:id',
+		{id: '@id'}, { 
+		update: {
+			method: 'PUT'
+		}});
+
 	var adminResource = $resource('http://softuni-ads.azurewebsites.net/api/admin/ads?pagesize=:size&startpage=:pageNum&townid=:cityid&categoryid=:catid&status=:stat&sortby=-Title',
 		{size: '@size', pageNum: '@pageNum', cityid: '@cityid', catid: '@catid', stat: '@stat'});
 
@@ -62,6 +80,26 @@ adsApp.factory('adsFactory', ['$resource', '$http', 'pageSize', function($resour
 		return adminResource.get({ size: pageSize, pageNum: desiredPage, cityid: townId, catid: catId, stat: currStatus });
 	}
 
+	function approveAd (currId) {
+		return adminApproveResourse.update({id: currId});
+	}
+
+	function rejectAd (currId) {
+		return adminRejectResourse.update({id: currId});
+	}
+
+	function adminDeleteAd (currId) {
+		return adminAdResourse.delete({id: currId});
+	}
+
+	function adminGetAdById (currId) {
+		return adminAdResourse.get({id: currId});
+	}
+
+	function adminUpdateAd (currId) {
+		return adminAdResourse.update({id: currId});
+	}
+
 	return {
 		getAdsFromPage: getAdsFromPage, 
 		publishNewAd: publishNewAd,
@@ -71,6 +109,11 @@ adsApp.factory('adsFactory', ['$resource', '$http', 'pageSize', function($resour
 		getAdById: getAdById,
 		deleteAdById: deleteAdById,
 		updateAdById: updateAdById,
-		getAdminAds: getAdminAds
+		getAdminAds: getAdminAds,
+		approveAd: approveAd,
+		rejectAd: rejectAd,
+		adminDeleteAd: adminDeleteAd,
+		adminGetAdById: adminGetAdById,
+		adminUpdateAd: adminUpdateAd
 	};
 }])

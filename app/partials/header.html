@@ -25,9 +25,9 @@
 				<div ng-show="isLoggedIn && isAdmin">
 					<ul class="nav navbar-nav navbar-left">
 							<li data-ng-class="{'active':getClass('/home')}"><a href="#/admin/home">Ads</a></li>
-							<li data-ng-class="{'active':getClass('/')}"><a href="">Users</a></li>
-							<li data-ng-class="{'active':getClass('/')}"><a href="">Categories</a></li>
-							<li data-ng-class="{'active':getClass('/')}"><a href="">Towns</a></li>
+							<li data-ng-class="{'active':getClass('/users/list')}"><a href="#/admin/users/list">Users</a></li>
+							<li data-ng-class="{'active':getClass('/categories/list')}"><a href="#/admin/categories/list">Categories</a></li>
+							<li data-ng-class="{'active':getClass('/towns/list')}"><a href="#/admin/towns/list">Towns</a></li>
 					</ul>
 				</div>
 				<div ng-show="isLoggedIn">

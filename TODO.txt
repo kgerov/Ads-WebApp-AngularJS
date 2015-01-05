@@ -1,12 +1,9 @@
 TODO LIST:
 
-1. Active submenu in navbar, bootstrap class active + ng-if
 2. authService remove repeating code
 3. Hello in different languages
 4. Registration form messages for invalid fields (email + phone ngPattern)
-5. ESCAPING!
 6. Category Filter (show how many are in the category)
-8. When "NO ads" display message
 9. Fix bug with filters. When on last page and you click a filter, you aren't on the first page (if there is more than one page)
 10. Click logo on home page of user and his name is removed from the header
 13. Clean unused libraries
@@ -15,3 +12,4 @@ TODO LIST:
 17. BaseUrl constant
 18. Remove repeating code from Delete ad menu
 19. Rename publish new ad files
+20. Hello, _____ name button for admin. Redirect only works for users

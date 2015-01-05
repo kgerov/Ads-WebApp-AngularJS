@@ -55,8 +55,38 @@ adsApp.controller('adController', ['$scope', 'adsFactory', 'pageSize', '$rootSco
         $location.path('/' + username + '/ads/edit/' + id);
     }
 
-    $scope.deleteAdAdmin = function (id) {
-        
+    $scope.approveAd = function (id) {
+        adsFactory.approveAd(id).$promise
+            .then(function (data) {
+                adsNoty(true, 'Ad approved successfuly');
+                $scope.pageChangeHandler(1, $scope.currentFilters);
+            }, function (error) {
+                adsNoty(false, 'Lost connection to server. Can\'t activate ad');
+            });
+    }
+
+     $scope.rejectAd = function (id) {
+        adsFactory.rejectAd(id).$promise
+            .then(function (data) {
+                adsNoty(true, 'Ad rejected successfuly');
+                $scope.pageChangeHandler(1, $scope.currentFilters);
+            }, function (error) {
+                adsNoty(false, 'Lost connection to server. Can\'t activate ad');
+            });
+    }
+
+     $scope.editAdAdmin = function (id) {
+        $location.path('/admin/ads/edit/' + id);
+    }
+
+     $scope.deleteAdAdmin = function (id) {
+        adsFactory.adminDeleteAd(id).$promise
+            .then(function (data) {
+                adsNoty(true, 'Ad deleted successfuly');
+                $scope.pageChangeHandler(1, $scope.currentFilters);
+            }, function (error) {
+                adsNoty(false, 'Lost connection to server. Can\'t activate ad');
+            });
     }
 
     function getPageContent (pageNumber, townId, catId, adStatus) {

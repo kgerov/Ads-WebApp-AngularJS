@@ -28,7 +28,7 @@ adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory'
             });
 
         if ($scope.inEditMode) {
-            var adID = $routeParams.id;
+            var adID = $routeParams.id; 
 
             adsFactory.getAdById(adID).$promise
                 .then(function (data) {
