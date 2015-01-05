@@ -40,8 +40,8 @@
 				</select>
 				<div ng-show="inAdminEditMode">
 					<!-- User -->
-					<div class="form-group has-feedback" ng-class="{ 'has-error' : (newAdForm.inputAdUser.$error.required && (touchAdUser || formSubmitted)), 'has-success' : newAdForm.inputAdUser.$valid && (touchAdUser || formSubmitted)}">
-						<input type="text"  class="form-control" name="inputAdUser" ng-model="ad.User" placeholder="User" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchAdUser=true">
+					<div class="form-group has-feedback" ng-class="{ 'has-error' : (newAdForm.inputAdUser.$error.required && (touchAdUser || formSubmitted) && (inAdminEditMode)), 'has-success' : newAdForm.inputAdUser.$valid && (touchAdUser || formSubmitted)}">
+						<input type="text"  class="form-control" name="inputAdUser" ng-model="ad.User" placeholder="User" aria-describedby="inputSuccess2Status" ng-blur="touchAdUser=true">
 						<div ng-show="touchAdUser || formSubmitted">
 							<div ng-if="newAdForm.inputAdUser.$valid" ng-include src="'app/partials/success.html'"></div>
 							<div ng-if="newAdForm.inputAdUser.$error.required" ng-include src="'app/partials/error.html'"></div>

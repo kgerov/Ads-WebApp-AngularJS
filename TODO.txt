@@ -13,3 +13,8 @@ TODO LIST:
 18. Remove repeating code from Delete ad menu
 19. Rename publish new ad files
 20. Hello, _____ name button for admin. Redirect only works for users
+
+
+
+21. ! Edit ad in admin mode, user should be required
+22. Admin should be asked before he deletes an ad
