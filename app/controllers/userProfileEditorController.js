@@ -80,7 +80,12 @@ adsApp.controller('userProfileEditorController', ['$scope', 'townFactory', 'auth
 
 						setTimeout(function () {
 							$scope.$apply(function () {
-								$scope.user.Town = $scope.towns[_userInfo.townId - 1].id;
+								for(x in $scope.towns) {
+						                                    if ($scope.towns[x].id = data.townId) {
+						                                        $scope.ad.Town = $scope.towns[x].id;
+						                                        break;
+						                                    }
+						                          }
 							});
 						}, 150);
 						
