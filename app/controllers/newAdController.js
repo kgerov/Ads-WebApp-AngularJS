@@ -62,19 +62,21 @@ adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory'
 
                     setTimeout(function () {
                             $scope.$apply(function () {
-                                for(x in $scope.towns) {
-                                    if ($scope.towns[x].id = data.townId) {
-                                        $scope.ad.Town = $scope.towns[x].id;
-                                        break;
-                                    }
-                                }
+                                // for(x in $scope.towns) {
+                                //     if ($scope.towns[x].id = data.townId) {
+                                //         $scope.ad.Town = $scope.towns[x].id;
+                                //         break;
+                                //     }
+                                // }
 
-                                for(x in $scope.categories) {
-                                    if ($scope.categories[x].id = data.categoryId) {
-                                        $scope.ad.Category = $scope.categories[x].id;
-                                        break;
-                                    }
-                                }
+                                // for(x in $scope.categories) {
+                                //     if ($scope.categories[x].id = data.categoryId) {
+                                //         $scope.ad.Category = $scope.categories[x].id;
+                                //         break;
+                                //     }
+                                // }
+                                $scope.ad.Town = $scope.towns[data.townId - 1].id;
+                                $scope.ad.Category = $scope.categories[data.categoryId - 1].id;
                             });
                         }, 150);
             }

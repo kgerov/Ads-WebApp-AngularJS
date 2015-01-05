@@ -14,6 +14,7 @@ adsApp.controller('registerUserController', ['$scope', 'townFactory', 'authServi
 
 	$scope.registerUser = function (user, valid) {
 		$scope.formSubmitted = true;
+		console.log(user);
 		if (valid) {
 			var jsonUser = {
 				'username': user.Username,
@@ -24,7 +25,7 @@ adsApp.controller('registerUserController', ['$scope', 'townFactory', 'authServi
 				'phone': user.Phone,
 				'townId ': user.Town || null
 			};
-
+			console.log(jsonUser);
 			authService.registerUser(jsonUser).$promise
 				.then(function () {
 					adsNoty(true, 'Acount created successfuly. Welcome.')

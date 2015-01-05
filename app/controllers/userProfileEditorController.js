@@ -47,9 +47,9 @@ adsApp.controller('userProfileEditorController', ['$scope', 'townFactory', 'auth
 				name: user.Name,
 				email: user.Email,
 				phoneNumber: user.Phone,
-				townId: user.Town || null
+				townId: user.Town
 			};
-
+			console.log(jsonUser);
 			modifyUserProfileService.updateUserProfile(jsonUser).$promise
 				.then(function (data) {
 					adsNoty(true, 'User profile updated successfully');
@@ -68,6 +68,7 @@ adsApp.controller('userProfileEditorController', ['$scope', 'townFactory', 'auth
 				adsNoty(false, 'Couln\'t retrieve user information, Sorry for the inconvenience' );
 			})
 			.then(function (data) {
+				console.log(data);
 				var _userInfo = data;
 				townFactory.getAllTowns().$promise
 					.then(function (data) {
@@ -80,12 +81,13 @@ adsApp.controller('userProfileEditorController', ['$scope', 'townFactory', 'auth
 
 						setTimeout(function () {
 							$scope.$apply(function () {
-								for(x in $scope.towns) {
-						                                    if ($scope.towns[x].id = data.townId) {
-						                                        $scope.ad.Town = $scope.towns[x].id;
-						                                        break;
-						                                    }
-						                          }
+								// for(x in $scope.towns) {
+						  //                                   if ($scope.towns[x].id = _userInfo.townId) {
+						  //                                       $scope.user.Town = $scope.towns[x].id;
+						  //                                       break;
+						  //                                   }
+						  //                         }
+						  $scope.user.Town = $scope.towns[_userInfo.townId - 1].id;
 							});
 						}, 150);
 						
