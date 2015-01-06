@@ -64,6 +64,11 @@ adsApp.config(function($routeProvider) {
 			controller: 'newAdController', 
 			templateUrl: 'app/partials/publishNewAd.html'
 		})
+		.when('/admin/categories/list',
+		{
+			controller: 'categoriesListController', 
+			templateUrl: 'app/partials/categories.html'
+		})
 		.otherwise({redirectTo: '/'});
 });
 
@@ -82,3 +87,4 @@ adsApp.run(function($location, $rootScope, authService) {
 })
 
 adsApp.constant("pageSize", 3);
+adsApp.constant('filterPageSize', 6);

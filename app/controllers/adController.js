@@ -99,21 +99,21 @@ adsApp.controller('adController', ['$scope', 'adsFactory', 'pageSize', '$rootSco
                         .then(function (data) {
                             handleData(data);
                         }, function (error) {
-                            handleError ();
+                            handleError();
                         });
                 } else if($scope.inAdminAds) {
                     adsFactory.getAdminAds(pageNumber, townId, catId, adStatus).$promise
                         .then(function (data) {
                             handleData(data);
                         }, function (error) {
-                            handleError ();
+                            handleError();
                         });
                 } else {
                     adsFactory.getAdsFromPage(pageNumber, townId, catId).$promise
                     .then(function (data) {
                         handleData(data);
                     }, function (error) {
-                        handleError ();
+                        handleError();
                     });
 
                     function handleData (data) {
