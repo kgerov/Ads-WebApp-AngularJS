@@ -1,9 +1,16 @@
-adsApp.controller('categoriesListController', ['$scope', 'categoryFactory', 'filterPageSize', function($scope, categoryFactory, filterPageSize){
-	$scope.categories = [];
-    $scope.categoriesCount = 0;
-    $scope.noCategories = false;
-    $scope.categoriesPerPage = filterPageSize;
+adsApp.controller('categoriesListController', ['$scope', 'categoryFactory', 'filterPageSize', '$location', 
+	function($scope, categoryFactory, filterPageSize, $location){
+	
+	$scope.filterCollection = [];
+    $scope.filterCollectionCount = 0;
+    $scope.nofilterCollection = false;
+    $scope.filtersPerPage = filterPageSize;
+    $scope.inCategoriesMenu = ($location.path().match(/\/admin\/categories\/list/g) != null ? true : false);
     $scope.currentFilter = { };
+    $scope.filterIdActive = false;
+    $scope.filterCatActive = false;
+    $scope.filterIdAsc = false;
+    $scope.filterCatAsc = false;
 
     getPageContent(1);
 
@@ -12,22 +19,26 @@ adsApp.controller('categoriesListController', ['$scope', 'categoryFactory', 'fil
   	};
 
   	function getPageContent (pageNumber, filter) {
-        $scope.categories = [];
-        $scope.noCategories = false;
-        //startSpin();
+        $scope.filterCollection = [];
+        $scope.nofilterCollection = false;
+        $scope.startSpin();
         
-        categoryFactory.adminGetAllCategories(pageNumber, filter).$promise
+        if ($scope.inCategoriesMenu) {
+        	categoryFactory.adminGetAllCategories(pageNumber, filter).$promise
             .then(function (data) {
                 handleData(data);
             }, function (error) {
                 handleError();
             });
+        } else {
+
+        }
 
         function handleData (data) {
-                $scope.categories = data.categories;
-                checkNumberOfAds(data.categories.length);
-                $scope.categoriesCount = data.numItems;
-                //stopSpin();
+                $scope.filterCollection = data.categories;
+                checkNumberOfFilters(data.categories.length);
+                $scope.filterCollectionCount = data.numItems;
+                $scope.stopSpin();
                 $('html, body').animate({scrollTop : 0},100);
         }
 
@@ -35,12 +46,52 @@ adsApp.controller('categoriesListController', ['$scope', 'categoryFactory', 'fil
             adsNoty(false, 'Connection to server lost. Please try again later');
         }
 
-        function checkNumberOfAds (num) {
+        function checkNumberOfFilters (num) {
             if (num == 0) {
-                $scope.noCategories = true;
+                $scope.nofilterCollection = true;
             } else {
-                $scope.noCategories = false;
+                $scope.nofilterCollection = false;
             }
         }
+  	}
+
+  	$scope.EditFilter = function (id) {
+  		if ($scope.inCategoriesMenu) {
+  			$location.path('/admin/categories/edit/' + id);
+  		} else {
+  			$location.path('/admin/towns/edit/' + id);
+  		}
+  	}
+
+  	$scope.DeleteFilter = function (id) {
+  		if ($scope.inCategoriesMenu) {
+  			$location.path('/admin/categories/delete/' + id);
+  		} else {
+  			$location.path('/admin/towns/delete/' + id);
+  		}
+  	}
+
+  	$scope.sortAscId = function () {
+  		if ($scope.filterIdActive) {
+  			$scope.sortDescId();
+  		} else {
+  			$scope.filterIdActive = true;
+    		$scope.filterCatActive = false;
+  		}
+
+  		
+  	}
+
+  	$scope.sortDescId = function () {
+  		
+  	}
+
+  	$scope.sortAscCategory = function () {
+		$scope.filterIdActive = false;
+    	$scope.filterCatActive = true;		
+  	}
+
+  	$scope.sortDescCategory = function () {
+  		
   	}
 }])

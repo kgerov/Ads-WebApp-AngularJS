@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="adsApp">
+<html ng-app="adsApp" ng-controller="mainController">
 	<head>
 		<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
 		<!-- Angular JS -->
@@ -41,6 +41,7 @@
 		<script type="text/javascript" src="app/controllers/adController.js" defer></script>
 		<script type="text/javascript" src="app/controllers/deleteAdController.js" defer></script>
 		<script type="text/javascript" src="app/controllers/categoriesListController.js" defer></script>
+		<script type="text/javascript" src="app/controllers/mainController.js" defer></script>
 
 		<!-- Bootstrap -->
 		<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js" defer></script>
@@ -57,7 +58,7 @@
 	</head>
 	<body>
 		<div ng-include src="'app/partials/header.html'"></div>
-		<div ng-view></div>
+		<div ng-view class="fill"></div>
 		<div class="navbar navbar-default navbar-fixed-bottom">
 			<div class="container">
 				<p class="navbar-text pull-left">Created by Konstantin</p>

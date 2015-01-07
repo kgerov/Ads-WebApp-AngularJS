@@ -1,25 +1,45 @@
-<div class="container">
-	<div class="row">
-		<div class="col-md-8 col-centered">
+<div class="container fill">
+	<div class="row fill">
+		<div class="col-md-8 col-centered filterSection">
 			<table class="table table-striped">
 				<tr>
-					<th>Id</th>
-					<th>Category</th>
-					<th>Action</th>
+					<th>
+						<a ng-click="sortAscId()" class="pull-left"><span>Id</span></a>
+						<div ng-show="filterIdActive">
+							<a ng-show="filterIdAsc" ng-click="sortAscId()" class="pull-right"><span class='glyphicon glyphicon-chevron-up'></span></a>
+							<a ng-show="!filterIdAsc" ng-click="sortDescId()" class="pull-right"><span class='glyphicon glyphicon-chevron-down'></span></a>
+						</div>
+					</th>
+					<th>
+						<a ng-click="sortAscCategory()" class="pull-left"><span>Category</span></a>
+						<div ng-show="filterCatActive">
+							<a ng-show="filterCatAsc" ng-click="sortAscCategory()" class="pull-right"><span class='glyphicon glyphicon-chevron-up'></span></a>
+							<a ng-show="!filterCatAsc" ng-click="sortDescCategory()" class="pull-right"><span class='glyphicon glyphicon-chevron-down'></span></a>
+						</div>
+					</th>
+					<th><a class="pull-left"><span>Action</span></a></th>
 				</tr>
-				<tr dir-paginate="category in categories | itemsPerPage: categoriesPerPage" total-items="categoriesCount">
-					<td>{{category.id}}</td>
-					<td>{{category.username}}</td>
+				<tr dir-paginate="filter in filterCollection | itemsPerPage: filtersPerPage" total-items="filterCollectionCount">
+					<td>{{filter.id}}</td>
+					<td>{{filter.username}}</td>
 					<td>
-						<button type="button" class="btn btn-warning btn-sm">Edit</button>
-						<button type="button" class="btn btn-danger btn-sm">Delete</button>
+						<button type="button" class="btn btn-warning btn-sm" ng-click="EditFilter(filter.id)">Edit</button>
+						<button type="button" class="btn btn-danger btn-sm" ng-click="DeleteFilter(filter.id)">Delete</button>
 					</td>
 				</tr>
 			</table>
+		</div>
+		<div class="col-md-4 col-centered">
+			<div ng-show="inCategoriesMenu">
+				<a href="#/admin/categories/create" class="btn btn-primary createNewFilter" role="button">Create Category</a>
+			</div>
+			<div ng-show="!inCategoriesMenu">
+				<a href="#/admin/categories/create" class="btn btn-primary createNewFilter" role="button">Create Town</a>
+			</div>
 		</div>
 		<div class="text-center paging">
 				<dir-pagination-controls boundary-links="true" id="goToPageOne" on-page-change="pageChangeHandler(newPageNumber, currentFilter)" template-url="libs/dirPagination.tpl.html"></dir-pagination-controls>
 		</div>
 	</div>
-	</div>
+	<span us-spinner="{radius:10, width:3, length: 6}" spinner-key="spinner-1" class="spinnerSpecial"></span>
 </div>

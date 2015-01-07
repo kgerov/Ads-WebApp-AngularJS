@@ -18,10 +18,6 @@ body {
   bottom: 65px !important;
 }
 
-/*.adminHeader {
-    background-color: #f6b309 !important;
-}*/
-
 /*Forms*/
 
 form input, form select {
@@ -166,10 +162,43 @@ form {
   left: 45%;
 }
 
+.spinnerSpecial {
+  position: fixed;
+  top: 25%;
+  left: 45%;
+}
+
 .noAdsMessage {
   margin-top: 10%;
   font-weight: bold;
 }
+
+/*Admin List towns and categories*/
+
+.createNewFilter {
+  width: 100%;
+}
+
+th span {
+  cursor: default;
+}
+
+html, body {
+    height: 100%;
+}
+
+.fill { 
+    min-height: 100%;
+    height: 100%;
+}
+
+.filterSection {
+    min-height: 60%;
+}
+
+
+
+/*Responsive webpage*/
 
 @media only screen and (max-width: 991px){
   .paging {
