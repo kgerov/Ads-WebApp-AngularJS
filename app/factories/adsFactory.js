@@ -1,47 +1,47 @@
-adsApp.factory('adsFactory', ['$resource', '$http', 'pageSize', function($resource, $http, pageSize){
-	var resource = $resource('http://softuni-ads.azurewebsites.net/api/ads?pagesize=:size&startpage=:pageNum&townid=:cityid&categoryid=:catid',
+adsApp.factory('adsFactory', ['$resource', '$http', 'pageSize', 'baseUrl', function($resource, $http, pageSize, baseUrl){
+	var resource = $resource(baseUrl + 'ads?pagesize=:size&startpage=:pageNum&townid=:cityid&categoryid=:catid',
 		{size: '@size', pageNum: '@pageNum', cityid: '@cityid', catid: '@catid'});
 
-	var userResource = $resource('http://softuni-ads.azurewebsites.net/api/user/ads?pagesize=:size&startpage=:pageNum&status=:stat',
+	var userResource = $resource(baseUrl + 'user/ads?pagesize=:size&startpage=:pageNum&status=:stat',
 		{size: '@size', pageNum: '@pageNum', stat: '@stat'});
 
-	var activateResource = $resource('http://softuni-ads.azurewebsites.net/api/user/ads/publishagain/:id',
+	var activateResource = $resource(baseUrl + 'user/ads/publishagain/:id',
 		{id: '@id'}, { 
 		update: {
 			method: 'PUT'
 		}});
 
-	var deactivateResource = $resource('http://softuni-ads.azurewebsites.net/api/user/ads/deactivate/:id',
+	var deactivateResource = $resource(baseUrl + 'user/ads/deactivate/:id',
 		{id: '@id'}, { 
 		update: {
 			method: 'PUT'
 		}});
 
-	var userAdResource = $resource('http://softuni-ads.azurewebsites.net/api/user/ads/:id', 
+	var userAdResource = $resource(baseUrl + 'user/ads/:id', 
 		{id: '@id'}, { 
 		update: {
 			method: 'PUT'
 		}});
 
-	var adminApproveResourse = $resource('http://softuni-ads.azurewebsites.net/api/admin/ads/approve/:id',
+	var adminApproveResourse = $resource(baseUrl + 'admin/ads/approve/:id',
 		{id: '@id'}, { 
 		update: {
 			method: 'PUT'
 		}});
 
-	var adminRejectResourse = $resource('http://softuni-ads.azurewebsites.net/api/admin/ads/reject/:id',
+	var adminRejectResourse = $resource(baseUrl + 'admin/ads/reject/:id',
 		{id: '@id'}, { 
 		update: {
 			method: 'PUT'
 		}});
 
-	var adminAdResourse = $resource('http://softuni-ads.azurewebsites.net/api/admin/ads/:id',
+	var adminAdResourse = $resource(baseUrl + 'admin/ads/:id',
 		{id: '@id'}, { 
 		update: {
 			method: 'PUT'
 		}});
 
-	var adminResource = $resource('http://softuni-ads.azurewebsites.net/api/admin/ads?pagesize=:size&startpage=:pageNum&townid=:cityid&categoryid=:catid&status=:stat&sortby=-Title',
+	var adminResource = $resource(baseUrl + 'admin/ads?pagesize=:size&startpage=:pageNum&townid=:cityid&categoryid=:catid&status=:stat&sortby=-Title',
 		{size: '@size', pageNum: '@pageNum', cityid: '@cityid', catid: '@catid', stat: '@stat'});
 
 	function getAdsFromPage (desiredPage, townId, catId) {

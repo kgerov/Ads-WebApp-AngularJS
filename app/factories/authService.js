@@ -1,9 +1,9 @@
- adsApp.factory('authService', ['$resource', '$localStorage', '$http', function($resource, $localStorage, $http){
+ adsApp.factory('authService', ['$resource', '$localStorage', '$http', 'baseUrl', function($resource, $localStorage, $http, baseUrl){
 	var resource = $resource(
-		'http://softuni-ads.azurewebsites.net/api/user/login'
+		baseUrl + 'user/login'
 	);
 
-	var regResource = $resource('http://softuni-ads.azurewebsites.net/api/user/register');
+	var regResource = $resource(baseUrl + 'user/register');
 
 	function loginUser (user) {
 		return resource.save(user, function (data) {

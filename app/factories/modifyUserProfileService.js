@@ -1,10 +1,10 @@
-adsApp.factory('modifyUserProfileService', ['$resource', '$http', function($resource, $http) {
-	var resource = $resource('http://softuni-ads.azurewebsites.net/api/user/profile', {}, { 
+adsApp.factory('modifyUserProfileService', ['$resource', '$http', 'baseUrl', function($resource, $http, baseUrl) {
+	var resource = $resource(baseUrl + 'user/profile', {}, { 
 		update: {
 			method: 'PUT'
 		}});
 	
-	var changePassResource = $resource('http://softuni-ads.azurewebsites.net/api/user/changePassword', {}, { 
+	var changePassResource = $resource(baseUrl + 'user/changePassword', {}, { 
 		update: {
 			method: 'PUT'
 		}});

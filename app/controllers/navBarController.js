@@ -11,7 +11,7 @@ adsApp.controller('navBarController', ['$scope', 'authService', '$location', fun
 	});
 
 	$scope.getClass = function (path) {
-		var width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+		var width = screen.width;
 		
 		if (width < 768) {
 			return false;

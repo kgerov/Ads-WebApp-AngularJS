@@ -1,7 +1,7 @@
-adsApp.factory('categoryFactory', ['$resource', '$http', 'filterPageSize', function($resource, $http, filterPageSize){
-	var resource = $resource('http://softuni-ads.azurewebsites.net/api/categories');
+adsApp.factory('categoryFactory', ['$resource', '$http', 'filterPageSize', 'baseUrl', function($resource, $http, filterPageSize, baseUrl){
+	var resource = $resource(baseUrl + 'categories');
 
-	var adminResource = $resource('http://softuni-ads.azurewebsites.net/api/admin/categories?sortBy=:sort&pagesize=:size&startpage=:page',
+	var adminResource = $resource(baseUrl + 'admin/categories?sortBy=:sort&pagesize=:size&startpage=:page',
 		{sort: '@sort', size: '@size', page: '@page'});
 
 	function getAllCategories () {

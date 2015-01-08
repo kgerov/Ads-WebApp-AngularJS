@@ -88,3 +88,4 @@ adsApp.run(function($location, $rootScope, authService) {
 
 adsApp.constant("pageSize", 3);
 adsApp.constant('filterPageSize', 6);
+adsApp.constant('baseUrl', 'http://softuni-ads.azurewebsites.net/api/');
