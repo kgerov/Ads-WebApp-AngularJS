@@ -1,1 +1,30 @@
-<h3>Edit</h3>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-centered">
+			<div>
+				<h3 ng-show="inEditMode && inCategories">Edit Category</h3>
+				<h3 ng-show="!inEditMode && inCategories">Create New Category</h3>
+				<h3 ng-show="inEditMode && !inCategories">Edit Town</h3>
+				<h3 ng-show="!inEditMode && !inCategories">Create New Town</h3>
+
+				<p ng-show="inCategories">Category: </p>
+				<p ng-show="!inCategories">Town: </p>
+				<form name="EditFilterForm" novalidate>
+					<div class="form-group has-feedback" ng-class="{ 'has-error' : (EditFilterForm.inputFilterName.$error.required && (touchName || formSubmitted)), 'has-success' : EditFilterForm.inputFilterName.$valid && (touchName || formSubmitted)}">
+						<input type="text"  class="form-control" name="inputFilterName" ng-model="filter.name" placeholder="Name" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchName=true">
+						<div ng-show="touchName || formSubmitted">
+							<div ng-if="EditFilterForm.inputFilterName.$valid" ng-include src="'app/partials/formMessages/success.html'"></div>
+							<div ng-if="EditFilterForm.inputFilterName.$error.required" ng-include src="'app/partials/formMessages/error.html'"></div>
+						</div>
+					</div>
+				    
+					<div class="text-center">
+							<button ng-show="inEditMode" class="btn btn-warning" type="submit" ng-click="crudFilter(filter, EditFilterForm.$valid)" value="Save">Edit</button>
+							<button ng-show="!inEditMode" class="btn btn-warning" type="submit" ng-click="crudFilter(filter, EditFilterForm.$valid)" value="Save">Create</button>
+							<button class="btn btn-primary" ng-click="backToCategories()">Cancel</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

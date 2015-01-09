@@ -79,6 +79,31 @@ adsApp.config(function($routeProvider) {
 			controller: 'filtersArrangeListDeleteController', 
 			templateUrl: 'app/partials/filtersArrange/filtersArrangeDelete.html'
 		})
+		.when('/admin/categories/create',
+		{
+			controller: 'filtersArrangeListEditController', 
+			templateUrl: 'app/partials/filtersArrange/filtersArrangeEdit.html'
+		})
+		.when('/admin/towns/list',
+		{
+			controller: 'filtersArrangeListController', 
+			templateUrl: 'app/partials/filtersArrange/filtersArrange.html'
+		})
+		.when('/admin/towns/edit/:name/:id',
+		{
+			controller: 'filtersArrangeListEditController', 
+			templateUrl: 'app/partials/filtersArrange/filtersArrangeEdit.html'
+		})
+		.when('/admin/towns/delete/:name/:id',
+		{
+			controller: 'filtersArrangeListDeleteController', 
+			templateUrl: 'app/partials/filtersArrange/filtersArrangeDelete.html'
+		})
+		.when('/admin/towns/create',
+		{
+			controller: 'filtersArrangeListEditController', 
+			templateUrl: 'app/partials/filtersArrange/filtersArrangeEdit.html'
+		})
 		.otherwise({redirectTo: '/'});
 });
 

@@ -73,38 +73,38 @@ adsApp.controller('filtersArrangeListController', ['$scope', 'categoryFactory', 
   	}
 
     $scope.startSortId = function () {
-      $scope.filterIdActive = true;
-    $scope.filterCatActive = false;
-    $scope.sortAscId();
+        $scope.filterIdActive = true;
+        $scope.filterCatActive = false;
+        $scope.sortAscId();
     }
 
     $scope.startSortCat = function () {
-      $scope.filterIdActive = false;
-    $scope.filterCatActive = true;
-    $scope.sortAscCategory();
+        $scope.filterIdActive = false;
+        $scope.filterCatActive = true;
+        $scope.sortAscCategory();
     }
 
   	$scope.sortAscId = function () {
-  		$scope.filterIdAsc = true;
-            $scope.currentFilter = 'Id';
-            $scope.pageChangeHandler(1);
+        $scope.filterIdAsc = true;
+        $scope.currentFilter = 'Id';
+        $scope.pageChangeHandler(1);
   	}
 
   	$scope.sortDescId = function () {
-  		$scope.filterIdAsc = false;
-      $scope.currentFilter = '-Id';
-      $scope.pageChangeHandler(1);
+        $scope.filterIdAsc = false;
+        $scope.currentFilter = '-Id';
+        $scope.pageChangeHandler(1);
   	}
 
   	$scope.sortAscCategory = function () {
-            $scope.filterCatAsc = true;	
-            $scope.currentFilter = 'Name';
-            $scope.pageChangeHandler(1);
+        $scope.filterCatAsc = true;	
+        $scope.currentFilter = 'Name';
+        $scope.pageChangeHandler(1);
   	}
 
   	$scope.sortDescCategory = function () {
-            $scope.filterCatAsc = false;
-            $scope.currentFilter = '-Name';
-            $scope.pageChangeHandler(1);
+        $scope.filterCatAsc = false;
+        $scope.currentFilter = '-Name';
+        $scope.pageChangeHandler(1);
   	}
 }])

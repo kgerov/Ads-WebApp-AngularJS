@@ -4,8 +4,11 @@ adsApp.factory('categoryFactory', ['$resource', '$http', 'filterPageSize', 'base
 	var adminResource = $resource(baseUrl + 'admin/categories?sortBy=:sort&pagesize=:size&startpage=:page',
 		{sort: '@sort', size: '@size', page: '@page'});
 
-	var adminDeleteCategory = $resource(baseUrl + 'admin/categories/:id',
-		{id: '@id'});
+	var adminCategory = $resource(baseUrl + 'admin/categories/:id',
+		{id: '@id'}, { 
+		update: {
+			method: 'PUT'
+		}});
 
 	function getAllCategories () {
 		return resource.query();
@@ -16,12 +19,22 @@ adsApp.factory('categoryFactory', ['$resource', '$http', 'filterPageSize', 'base
 	}
 
 	function deleteCategory (currId) {
-		return adminDeleteCategory.delete({id: currId});
+		return adminCategory.delete({id: currId});
+	}
+
+	function updateCategory (currId, category) {
+		return adminCategory.update({id: currId}, category);
+	}
+
+	function createCategory (category) {
+		return adminCategory.save(category);
 	}
 
 	return {
 		getAllCategories: getAllCategories,
 		adminGetAllCategories: adminGetAllCategories,
-		deleteCategory: deleteCategory
+		deleteCategory: deleteCategory,
+		updateCategory: updateCategory,
+		createCategory: createCategory
 	};
 }])
