@@ -3,18 +3,18 @@
 		<div class="col-md-8 col-centered filterSection">
 			<table class="table table-striped">
 				<tr>
-					<th>
-						<a ng-click="sortAscId()" class="pull-left"><span>Id</span></a>
+					<th class="unselectable">
+						<a ng-click="startSortId()" class="pull-left"><span >Id</span></a>
 						<div ng-show="filterIdActive">
-							<a ng-show="filterIdAsc" ng-click="sortAscId()" class="pull-right"><span class='glyphicon glyphicon-chevron-up'></span></a>
-							<a ng-show="!filterIdAsc" ng-click="sortDescId()" class="pull-right"><span class='glyphicon glyphicon-chevron-down'></span></a>
+							<a ng-show="!filterIdAsc" ng-click="sortAscId()" class="pull-right"><span class='glyphicon glyphicon-chevron-up'></span></a>
+							<a ng-show="filterIdAsc" ng-click="sortDescId()" class="pull-right"><span class='glyphicon glyphicon-chevron-down'></span></a>
 						</div>
 					</th>
-					<th>
-						<a ng-click="sortAscCategory()" class="pull-left"><span>Category</span></a>
+					<th class="unselectable">
+						<a ng-click="startSortCat()" class="pull-left"><span>Category</span></a>
 						<div ng-show="filterCatActive">
-							<a ng-show="filterCatAsc" ng-click="sortAscCategory()" class="pull-right"><span class='glyphicon glyphicon-chevron-up'></span></a>
-							<a ng-show="!filterCatAsc" ng-click="sortDescCategory()" class="pull-right"><span class='glyphicon glyphicon-chevron-down'></span></a>
+							<a ng-show="!filterCatAsc" ng-click="sortAscCategory()" class="pull-right"><span class='glyphicon glyphicon-chevron-up'></span></a>
+							<a ng-show="filterCatAsc" ng-click="sortDescCategory()" class="pull-right"><span class='glyphicon glyphicon-chevron-down'></span></a>
 						</div>
 					</th>
 					<th><a class="pull-left"><span>Action</span></a></th>
@@ -38,7 +38,7 @@
 			</div>
 		</div>
 		<div class="text-center paging">
-				<dir-pagination-controls boundary-links="true" id="goToPageOne" on-page-change="pageChangeHandler(newPageNumber, currentFilter)" template-url="libs/dirPagination.tpl.html"></dir-pagination-controls>
+				<dir-pagination-controls boundary-links="true" id="goToPageOne" on-page-change="pageChangeHandler(newPageNumber)" template-url="libs/dirPagination.tpl.html"></dir-pagination-controls>
 		</div>
 	</div>
 	<span us-spinner="{radius:10, width:3, length: 6}" spinner-key="spinner-1" class="spinnerSpecial"></span>

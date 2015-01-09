@@ -9,7 +9,7 @@ adsApp.factory('categoryFactory', ['$resource', '$http', 'filterPageSize', 'base
 	}
 
 	function adminGetAllCategories (pageNum, filter) {
-		return adminResource.get({sort: '-Name', size: filterPageSize, page: pageNum});
+		return adminResource.get({sort: filter, size: filterPageSize, page: pageNum});
 	}
 
 	return {

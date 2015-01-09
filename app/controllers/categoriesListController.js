@@ -6,7 +6,7 @@ adsApp.controller('categoriesListController', ['$scope', 'categoryFactory', 'fil
     $scope.nofilterCollection = false;
     $scope.filtersPerPage = filterPageSize;
     $scope.inCategoriesMenu = ($location.path().match(/\/admin\/categories\/list/g) != null ? true : false);
-    $scope.currentFilter = { };
+    $scope.currentFilter = '';
     $scope.filterIdActive = false;
     $scope.filterCatActive = false;
     $scope.filterIdAsc = false;
@@ -14,7 +14,8 @@ adsApp.controller('categoriesListController', ['$scope', 'categoryFactory', 'fil
 
     getPageContent(1);
 
-	$scope.pageChangeHandler = function(num, filter) {
+	$scope.pageChangeHandler = function(num) {
+        var filter = $scope.currentFilter;
         getPageContent(num, filter);
   	};
 
@@ -71,27 +72,39 @@ adsApp.controller('categoriesListController', ['$scope', 'categoryFactory', 'fil
   		}
   	}
 
-  	$scope.sortAscId = function () {
-  		if ($scope.filterIdActive) {
-  			$scope.sortDescId();
-  		} else {
-  			$scope.filterIdActive = true;
-    		$scope.filterCatActive = false;
-  		}
+    $scope.startSortId = function () {
+      $scope.filterIdActive = true;
+    $scope.filterCatActive = false;
+    $scope.sortAscId();
+    }
 
-  		
+    $scope.startSortCat = function () {
+      $scope.filterIdActive = false;
+    $scope.filterCatActive = true;
+    $scope.sortAscCategory();
+    }
+
+  	$scope.sortAscId = function () {
+  		$scope.filterIdAsc = true;
+            $scope.currentFilter = 'Id';
+            $scope.pageChangeHandler(1);
   	}
 
   	$scope.sortDescId = function () {
-  		
+  		$scope.filterIdAsc = false;
+      $scope.currentFilter = '-Id';
+      $scope.pageChangeHandler(1);
   	}
 
   	$scope.sortAscCategory = function () {
-		$scope.filterIdActive = false;
-    	$scope.filterCatActive = true;		
+            $scope.filterCatAsc = true;	
+            $scope.currentFilter = 'Name';
+            $scope.pageChangeHandler(1);
   	}
 
   	$scope.sortDescCategory = function () {
-  		
+            $scope.filterCatAsc = false;
+            $scope.currentFilter = '-Name';
+            $scope.pageChangeHandler(1);
   	}
 }])
