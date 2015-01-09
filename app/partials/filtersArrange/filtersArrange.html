@@ -20,14 +20,14 @@
 							<a ng-show="filterCatAsc" ng-click="sortDescCategory()" class="pull-right"><span class='glyphicon glyphicon-chevron-down'></span></a>
 						</div>
 					</th>
-					<th><a class="pull-left"><span>Action</span></a></th>
+					<th><a class="pull-right"><span>Action</span></a></th>
 				</tr>
 				<tr dir-paginate="filter in filterCollection | itemsPerPage: filtersPerPage" total-items="filterCollectionCount">
 					<td>{{filter.id}}</td>
 					<td>{{filter.username}}</td>
 					<td>
-						<button type="button" class="btn btn-warning btn-sm" ng-click="EditFilter(filter.id, filter.username)">Edit</button>
-						<button type="button" class="btn btn-danger btn-sm" ng-click="DeleteFilter(filter.id, filter.username)">Delete</button>
+						<button type="button" class="btn btn-warning btn-sm pull-right" ng-click="EditFilter(filter.id, filter.username)">Edit</button>
+						<button type="button" class="btn btn-danger btn-sm pull-right" ng-click="DeleteFilter(filter.id, filter.username)">Delete</button>
 					</td>
 				</tr>
 			</table>

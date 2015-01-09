@@ -171,7 +171,7 @@ form {
 .spinnerSpecial {
   position: fixed;
   top: 25%;
-  left: 45%;
+  left: 47%;
 }
 
 .noAdsMessage {
@@ -207,6 +207,10 @@ html, body {
 -webkit-user-select: none; /* Chrome/Safari */        
 -moz-user-select: none; /* Firefox */
 -ms-user-select: none; /* IE10+ */
+}
+
+table td button:nth-child(2) {
+  margin-right: 5%;
 }
 
 /*Responsive webpage*/
