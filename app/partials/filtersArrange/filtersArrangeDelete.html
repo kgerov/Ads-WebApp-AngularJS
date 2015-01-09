@@ -1,1 +1,15 @@
-<h3>Delete</h3>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-centered">
+			<div>
+				<h3>Confirm Deleting Category</h3>
+				<p>Category: </p>
+				<p>{{filterName}}</p>
+				<div>
+					<button class="btn btn-danger" ng-click="deleteFilter(filterId)">Delete</button>
+					<button class="btn btn-primary" ng-click="backToCategories()">Cancel</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

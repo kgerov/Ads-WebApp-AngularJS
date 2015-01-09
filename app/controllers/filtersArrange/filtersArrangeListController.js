@@ -56,19 +56,19 @@ adsApp.controller('filtersArrangeListController', ['$scope', 'categoryFactory', 
         }
   	}
 
-  	$scope.EditFilter = function (id) {
+  	$scope.EditFilter = function (id, name) {
   		if ($scope.inCategoriesMenu) {
-  			$location.path('/admin/categories/edit/' + id);
+  			$location.path('/admin/categories/edit/' + name + '/'+ id);
   		} else {
-  			$location.path('/admin/towns/edit/' + id);
+  			$location.path('/admin/towns/edit/' + name + '/'+ id);
   		}
   	}
 
-  	$scope.DeleteFilter = function (id) {
+  	$scope.DeleteFilter = function (id, name) {
   		if ($scope.inCategoriesMenu) {
-  			$location.path('/admin/categories/delete/' + id);
+  			$location.path('/admin/categories/delete/' + name + '/'+ id);
   		} else {
-  			$location.path('/admin/towns/delete/' + id);
+  			$location.path('/admin/towns/delete/' + name + '/'+ id);
   		}
   	}
 

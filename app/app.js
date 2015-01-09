@@ -69,12 +69,12 @@ adsApp.config(function($routeProvider) {
 			controller: 'filtersArrangeListController', 
 			templateUrl: 'app/partials/filtersArrange/filtersArrange.html'
 		})
-		.when('/admin/categories/edit/:id',
+		.when('/admin/categories/edit/:name/:id',
 		{
 			controller: 'filtersArrangeListEditController', 
 			templateUrl: 'app/partials/filtersArrange/filtersArrangeEdit.html'
 		})
-		.when('/admin/categories/delete/:id',
+		.when('/admin/categories/delete/:name/:id',
 		{
 			controller: 'filtersArrangeListDeleteController', 
 			templateUrl: 'app/partials/filtersArrange/filtersArrangeDelete.html'
