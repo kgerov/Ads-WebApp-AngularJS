@@ -11,7 +11,10 @@
 						</div>
 					</th>
 					<th class="unselectable">
-						<a ng-click="startSortCat()" class="pull-left"><span>Category</span></a>
+						<a ng-click="startSortCat()" class="pull-left">
+							<span ng-show="inCategoriesMenu">Category</span>
+							<span ng-show="!inCategoriesMenu">Town</span>
+						</a>
 						<div ng-show="filterCatActive">
 							<a ng-show="!filterCatAsc" ng-click="sortAscCategory()" class="pull-right"><span class='glyphicon glyphicon-chevron-up'></span></a>
 							<a ng-show="filterCatAsc" ng-click="sortDescCategory()" class="pull-right"><span class='glyphicon glyphicon-chevron-down'></span></a>
@@ -34,7 +37,7 @@
 				<a href="#/admin/categories/create" class="btn btn-primary createNewFilter" role="button">Create Category</a>
 			</div>
 			<div ng-show="!inCategoriesMenu">
-				<a href="#/admin/categories/create" class="btn btn-primary createNewFilter" role="button">Create Town</a>
+				<a href="#/admin/towns/create" class="btn btn-primary createNewFilter" role="button">Create Town</a>
 			</div>
 		</div>
 		<div class="text-center paging">

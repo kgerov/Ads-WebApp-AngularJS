@@ -1,5 +1,5 @@
-adsApp.controller('filtersArrangeListEditController', ['$scope', 'categoryFactory', '$location', '$routeParams',
-	function($scope, categoryFactory, $location, $routeParams) {
+adsApp.controller('filtersArrangeListEditController', ['$scope', 'categoryFactory', '$location', '$routeParams', 'townFactory',
+	function($scope, categoryFactory, $location, $routeParams, townFactory) {
 		$scope.touchName = false;
 		$scope.formSubmitted = false;
 		$scope.inEditMode = ($location.path().match(/\/(.+?)\/(.+?)\/edit/g) != null ? true : false);
@@ -16,21 +16,43 @@ adsApp.controller('filtersArrangeListEditController', ['$scope', 'categoryFactor
 				var id = $routeParams.id;
 
 				if ($scope.inEditMode) {
-					categoryFactory.updateCategory(id, filter).$promise
+					if ($scope.inCategories) {
+						categoryFactory.updateCategory(id, filter).$promise
 						.then(function () {
 							adsNoty(true, 'Category name updated successfully!');
 							$location.path('/admin/categories/list');
 						}, function () {
 							adsNoty(false, 'Couldn\'t update category name, please try again.');
 						});
+					} else {
+						townFactory.updateTown(id, filter).$promise
+						.then(function () {
+							adsNoty(true, 'Town name updated successfully!');
+							$location.path('/admin/towns/list');
+						}, function () {
+							adsNoty(false, 'Couldn\'t update town name, please try again.');
+						});
+					}
+					
 				} else {
-					categoryFactory.createCategory(filter).$promise
+					if ($scope.inCategories) {
+						categoryFactory.createCategory(filter).$promise
 						.then(function () {
 							adsNoty(true, 'Category created successfully!');
 							$location.path('/admin/categories/list');
 						}, function () {
 							adsNoty(false, 'Couldn\'t create category, please try again.');
 						});
+					} else {
+						townFactory.createTown(filter).$promise
+						.then(function () {
+							adsNoty(true, 'Town created successfully!');
+							$location.path('/admin/towns/list');
+						}, function () {
+							adsNoty(false, 'Couldn\'t create town, please try again.');
+						});
+					}
+					
 				}
 			}
 		}

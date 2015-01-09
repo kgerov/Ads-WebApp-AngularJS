@@ -1,5 +1,5 @@
-adsApp.controller('filtersArrangeListController', ['$scope', 'categoryFactory', 'filterPageSize', '$location', 
-	function($scope, categoryFactory, filterPageSize, $location){
+adsApp.controller('filtersArrangeListController', ['$scope', 'categoryFactory', 'filterPageSize', '$location', 'townFactory',
+	function($scope, categoryFactory, filterPageSize, $location, townFactory){
 	
 	$scope.filterCollection = [];
     $scope.filterCollectionCount = 0;
@@ -32,12 +32,23 @@ adsApp.controller('filtersArrangeListController', ['$scope', 'categoryFactory', 
                 handleError();
             });
         } else {
-
+          townFactory.adminGetAllTowns(pageNumber, filter).$promise
+            .then(function (data) {
+                handleData(data);
+            }, function (error) {
+                handleError();
+            });
         }
 
         function handleData (data) {
-                $scope.filterCollection = data.categories;
-                checkNumberOfFilters(data.categories.length);
+                if ($scope.inCategoriesMenu) {
+                    $scope.filterCollection = data.categories;
+                    checkNumberOfFilters(data.categories.length);
+                } else {
+                    $scope.filterCollection = data.towns;
+                    checkNumberOfFilters(data.towns.length);
+                }
+                
                 $scope.filterCollectionCount = data.numItems;
                 $scope.stopSpin();
                 $('html, body').animate({scrollTop : 0},100);

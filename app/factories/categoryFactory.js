@@ -1,4 +1,5 @@
-adsApp.factory('categoryFactory', ['$resource', '$http', 'filterPageSize', 'baseUrl', function($resource, $http, filterPageSize, baseUrl){
+adsApp.factory('categoryFactory', ['$resource', '$http', 'filterPageSize', 'baseUrl', 
+	function($resource, $http, filterPageSize, baseUrl){
 	var resource = $resource(baseUrl + 'categories');
 
 	var adminResource = $resource(baseUrl + 'admin/categories?sortBy=:sort&pagesize=:size&startpage=:page',
