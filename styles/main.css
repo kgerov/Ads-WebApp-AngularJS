@@ -57,6 +57,10 @@ form {
 }
 
 /*Ad display*/
+.ad-container {
+  margin-bottom: 10%;
+}
+
 .align-ad {
   display: inline-block;
   vertical-align: middle;
@@ -79,7 +83,9 @@ form {
   position: fixed;
   bottom: 5%;
   left: 50%;
-  margin-left: -200px;
+  transform: translateX(-50%);
+  -ms-transform: translateX(-50%); /* IE 9 */
+  -webkit-transform: translateX(-50%); /* Chrome, Safari, Opera */
 }
 
 .filter-ads input[type="radio"] {
@@ -223,15 +229,22 @@ html, body {
   }
 
   .paging {
-    margin-left: -50px;
+    /*margin-left: -50px;*/
+    transform: translateX(0);
+    -ms-transform: translateX(0); /* IE 9 */
+    -webkit-transform: translateX(0); /* Chrome, Safari, Opera */
+  }
+
+  .spinner {
+    display: none;
   }
 }
 
-@media only screen and (max-width: 768px){
+/*@media only screen and (max-width: 768px){
   .paging {
     margin-left: 0;
   }
-}
+}*/
 
 @media only screen and (max-width: 500px){
   .ad-box .ad-detail-title {
