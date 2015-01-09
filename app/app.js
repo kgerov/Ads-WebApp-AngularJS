@@ -69,6 +69,16 @@ adsApp.config(function($routeProvider) {
 			controller: 'categoriesListController', 
 			templateUrl: 'app/partials/categories.html'
 		})
+		.when('/admin/categories/edit/:id',
+		{
+			controller: 'categoriesListEditController', 
+			templateUrl: 'app/partials/categoriesEdit.html'
+		})
+		.when('/admin/categories/delete/:id',
+		{
+			controller: 'categoriesListDeleteController', 
+			templateUrl: 'app/partials/categoriesDelete.html'
+		})
 		.otherwise({redirectTo: '/'});
 });
 
