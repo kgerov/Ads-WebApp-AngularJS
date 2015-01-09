@@ -8,16 +8,16 @@
 				<div class="form-group has-feedback" ng-class="{ 'has-error' : (newAdForm.inputAdTitle.$error.required && (touchTitle || formSubmitted)), 'has-success' : newAdForm.inputAdTitle.$valid && (touchTitle || formSubmitted)}">
 					<input type="text"  class="form-control" name="inputAdTitle" ng-model="ad.Title" placeholder="Title" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchTitle=true">
 					<div ng-show="touchTitle || formSubmitted">
-						<div ng-if="newAdForm.inputAdTitle.$valid" ng-include src="'app/partials/success.html'"></div>
-						<div ng-if="newAdForm.inputAdTitle.$error.required" ng-include src="'app/partials/error.html'"></div>
+						<div ng-if="newAdForm.inputAdTitle.$valid" ng-include src="'app/partials/formMessages/success.html'"></div>
+						<div ng-if="newAdForm.inputAdTitle.$error.required" ng-include src="'app/partials/formMessages/error.html'"></div>
 					</div>
 				</div>
                 <!-- Description -->
                 <div class="form-group has-feedback" ng-class="{ 'has-error' : (newAdForm.inputAdDescription.$error.required && (touchDesciption || formSubmitted)), 'has-success' : newAdForm.inputAdDescription.$valid && (touchDesciption || formSubmitted)}">
                 <textarea class="form-control" rows="3" name="inputAdDescription" ng-model="ad.Description" placeholder="Description" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchDesciption=true"></textarea>
                     <div ng-show="touchDesciption || formSubmitted">
-                        <div ng-if="newAdForm.inputAdDescription.$valid" ng-include src="'app/partials/success.html'"></div>
-                        <div ng-if="newAdForm.inputAdDescription.$error.required" ng-include src="'app/partials/error.html'"></div>
+                        <div ng-if="newAdForm.inputAdDescription.$valid" ng-include src="'app/partials/formMessages/success.html'"></div>
+                        <div ng-if="newAdForm.inputAdDescription.$error.required" ng-include src="'app/partials/formMessages/error.html'"></div>
                     </div>
                 </div>
                 <!-- Image -->
@@ -43,8 +43,8 @@
 					<div class="form-group has-feedback" ng-class="{ 'has-error' : (newAdForm.inputAdUser.$error.required && (touchAdUser || formSubmitted) && (inAdminEditMode)), 'has-success' : newAdForm.inputAdUser.$valid && (touchAdUser || formSubmitted)}">
 						<input type="text"  class="form-control" name="inputAdUser" ng-model="ad.User" placeholder="User" aria-describedby="inputSuccess2Status" ng-blur="touchAdUser=true">
 						<div ng-show="touchAdUser || formSubmitted">
-							<div ng-if="newAdForm.inputAdUser.$valid" ng-include src="'app/partials/success.html'"></div>
-							<div ng-if="newAdForm.inputAdUser.$error.required" ng-include src="'app/partials/error.html'"></div>
+							<div ng-if="newAdForm.inputAdUser.$valid" ng-include src="'app/partials/formMessages/success.html'"></div>
+							<div ng-if="newAdForm.inputAdUser.$error.required" ng-include src="'app/partials/formMessages/error.html'"></div>
 						</div>
 					</div>
 					<!-- Date -->

@@ -12,72 +12,72 @@ adsApp.config(function($routeProvider) {
 		.when('/',
 		{
 			controller: 'adsListController',
-			templateUrl: 'app/partials/listAllAds.html'
+			templateUrl: 'app/partials/ads/listAds.html'
 		})
 		.when('/login',
 		{
 			controller: 'loginUserController',
-			templateUrl: 'app/partials/login.html'
+			templateUrl: 'app/partials/user/login.html'
 		})
 		.when('/register',
 		{
 			controller: 'registerUserController',
-			templateUrl: 'app/partials/register.html'
+			templateUrl: 'app/partials/user/register.html'
 		})
 		.when('/:user/home',
 		{
 			controller: 'adsListController',
-			templateUrl: 'app/partials/listAllAds.html'
+			templateUrl: 'app/partials/ads/listAds.html'
 		})
 		.when('/:user/ads',
 		{
 			controller: 'adsListController',
-			templateUrl: 'app/partials/listAllAds.html'
+			templateUrl: 'app/partials/ads/listAds.html'
 		})
 		.when('/:user/ads/delete/:id',
 		{
 			controller: 'deleteAdController',
-			templateUrl: 'app/partials/deleteAd.html'
+			templateUrl: 'app/partials/ads/deleteAd.html'
 		})
 		.when('/:user/ads/edit/:id',
 		{
-			controller: 'newAdController', 
-			templateUrl: 'app/partials/publishNewAd.html'
+			controller: 'AdCreateEditController', 
+			templateUrl: 'app/partials/ads/adCreateEditMode.html'
 		})
 		.when('/:user/publish',
 		{
-			controller: 'newAdController',
-			templateUrl: 'app/partials/publishNewAd.html'
+			controller: 'AdCreateEditController',
+			templateUrl: 'app/partials/ads/adCreateEditMode.html'
 		})
 		.when('/:user/profile',
 		{
 			controller: 'userProfileEditorController',
-			templateUrl: 'app/partials/userProfile.html'
+			templateUrl: 'app/partials/user/userProfile.html'
 		})
 		.when('/admin/home',
 		{
 			controller: 'adsListController',
-			templateUrl: 'app/partials/listAllAds.html'
+			templateUrl: 'app/partials/ads/listAds.html'
 		})
 		.when('/admin/ads/edit/:id',
 		{
-			controller: 'newAdController', 
-			templateUrl: 'app/partials/publishNewAd.html'
+			controller: 'AdCreateEditController', 
+			templateUrl: 'app/partials/ads/adCreateEditMode.html'
 		})
 		.when('/admin/categories/list',
 		{
-			controller: 'categoriesListController', 
-			templateUrl: 'app/partials/categories.html'
+			controller: 'filtersArrangeListController', 
+			templateUrl: 'app/partials/filtersArrange/filtersArrange.html'
 		})
 		.when('/admin/categories/edit/:id',
 		{
-			controller: 'categoriesListEditController', 
-			templateUrl: 'app/partials/categoriesEdit.html'
+			controller: 'filtersArrangeListEditController', 
+			templateUrl: 'app/partials/filtersArrange/filtersArrangeEdit.html'
 		})
 		.when('/admin/categories/delete/:id',
 		{
-			controller: 'categoriesListDeleteController', 
-			templateUrl: 'app/partials/categoriesDelete.html'
+			controller: 'filtersArrangeListDeleteController', 
+			templateUrl: 'app/partials/filtersArrange/filtersArrangeDelete.html'
 		})
 		.otherwise({redirectTo: '/'});
 });

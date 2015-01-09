@@ -1,4 +1,4 @@
-adsApp.controller('categoriesListController', ['$scope', 'categoryFactory', 'filterPageSize', '$location', 
+adsApp.controller('filtersArrangeListController', ['$scope', 'categoryFactory', 'filterPageSize', '$location', 
 	function($scope, categoryFactory, filterPageSize, $location){
 	
 	$scope.filterCollection = [];

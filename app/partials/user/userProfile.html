@@ -7,24 +7,24 @@
 				<div class="form-group has-feedback" ng-class="{ 'has-error' : (changeProfileForm.inputName.$error.required && (touchName || formSubmitted)), 'has-success' : changeProfileForm.inputName.$valid && (touchName || formSubmitted)}">
 					<input type="text"  class="form-control" name="inputName" ng-model="user.Name" placeholder="Name" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchName=true">
 					<div ng-show="touchName || formSubmitted">
-						<div ng-if="changeProfileForm.inputName.$valid" ng-include src="'app/partials/success.html'"></div>
-						<div ng-if="changeProfileForm.inputName.$error.required" ng-include src="'app/partials/error.html'"></div>
+						<div ng-if="changeProfileForm.inputName.$valid" ng-include src="'app/partials/formMessages/success.html'"></div>
+						<div ng-if="changeProfileForm.inputName.$error.required" ng-include src="'app/partials/formMessages/error.html'"></div>
 					</div>
 				</div>
 				<!-- Email -->
 				<div class="form-group has-feedback" ng-class="{ 'has-error' : (changeProfileForm.inputEmail.$error.required && (touchEmail || formSubmitted)), 'has-success' : changeProfileForm.inputEmail.$valid && (touchEmail || formSubmitted)}">
 					<input type="email"  class="form-control" name="inputEmail" ng-model="user.Email" placeholder="Email" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchEmail=true">
 					<div ng-show="touchEmail || formSubmitted">
-						<div ng-if="changeProfileForm.inputEmail.$valid" ng-include src="'app/partials/success.html'"></div>
-						<div ng-if="changeProfileForm.inputEmail.$error.required" ng-include src="'app/partials/error.html'"></div>
+						<div ng-if="changeProfileForm.inputEmail.$valid" ng-include src="'app/partials/formMessages/success.html'"></div>
+						<div ng-if="changeProfileForm.inputEmail.$error.required" ng-include src="'app/partials/formMessages/error.html'"></div>
 					</div>
 				</div>
 				<!-- Phone -->
 				<div class="form-group has-feedback" ng-class="{ 'has-error' : (changeProfileForm.inputPhone.$error.required && (touchPhone || formSubmitted)), 'has-success' : changeProfileForm.inputPhone.$valid && (touchPhone || formSubmitted)}">
 					<input type="text"  class="form-control" name="inputPhone" ng-model="user.Phone" placeholder="Phone" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchPhone=true">
 					<div ng-show="touchPhone || formSubmitted">
-						<div ng-if="changeProfileForm.inputPhone.$valid" ng-include src="'app/partials/success.html'"></div>
-						<div ng-if="changeProfileForm.inputPhone.$error.required" ng-include src="'app/partials/error.html'"></div>
+						<div ng-if="changeProfileForm.inputPhone.$valid" ng-include src="'app/partials/formMessages/success.html'"></div>
+						<div ng-if="changeProfileForm.inputPhone.$error.required" ng-include src="'app/partials/formMessages/error.html'"></div>
 					</div>
 				</div>
 				<!-- Town -->
@@ -46,25 +46,25 @@
 				<div class="form-group has-feedback" ng-class="{ 'has-error' : (changePassForm.inputOldPass.$error.required && (touchOldPass || formPassSubmitted)), 'has-success' : changePassForm.inputOldPass.$valid && (touchOldPass || formPassSubmitted)}">
 					<input type="password"  class="form-control" name="inputOldPass" ng-model="newPass.OldPass" placeholder="Old Password" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchOldPass=true">
 					<div ng-show="touchOldPass || formPassSubmitted">
-						<div ng-if="changePassForm.inputOldPass.$valid" ng-include src="'app/partials/success.html'"></div>
-						<div ng-if="changePassForm.inputOldPass.$error.required" ng-include src="'app/partials/error.html'"></div>
+						<div ng-if="changePassForm.inputOldPass.$valid" ng-include src="'app/partials/formMessages/success.html'"></div>
+						<div ng-if="changePassForm.inputOldPass.$error.required" ng-include src="'app/partials/formMessages/error.html'"></div>
 					</div>
 				</div>
 				<!-- Password -->
 				<div class="form-group has-feedback" ng-class="{ 'has-error' : (changePassForm.inputPass.$error.required && (touchPass || formPassSubmitted)), 'has-success' : changePassForm.inputPass.$valid && (touchPass || formPassSubmitted)}">
 					<input type="password"  class="form-control" name="inputPass" ng-model="newPass.Pass" placeholder="New Password" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchPass=true">
 					<div ng-show="touchPass || formPassSubmitted">
-						<div ng-if="changePassForm.inputPass.$valid" ng-include src="'app/partials/success.html'"></div>
-						<div ng-if="changePassForm.inputPass.$error.required" ng-include src="'app/partials/error.html'"></div>
+						<div ng-if="changePassForm.inputPass.$valid" ng-include src="'app/partials/formMessages/success.html'"></div>
+						<div ng-if="changePassForm.inputPass.$error.required" ng-include src="'app/partials/formMessages/error.html'"></div>
 					</div>
 				</div>
 				<!-- Confirm Password -->
 				<div class="form-group has-feedback" ng-class="{ 'has-error' : (changePassForm.inputPassConfirm.$error.required && (touchPassConfirm || formPassSubmitted)), 'has-success' : changePassForm.inputPassConfirm.$valid && (touchPassConfirm || formPassSubmitted)}">
 					<input type="password"  class="form-control" name="inputPassConfirm" ng-model="newPass.PassConfirm" placeholder="Confirm Pasword" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchPassConfirm=true" data-match="newPass.Pass">
 					<div ng-show="touchPassConfirm || formPassSubmitted">
-						<div ng-if="changePassForm.inputPassConfirm.$valid" ng-include src="'app/partials/success.html'"></div>
-						<div ng-if="changePassForm.inputPassConfirm.$error.required" ng-include src="'app/partials/error.html'"></div>
-						<div ng-if="changePassForm.inputPassConfirm.$error.match" ng-include src="'app/partials/error.html'"></div>
+						<div ng-if="changePassForm.inputPassConfirm.$valid" ng-include src="'app/partials/formMessages/success.html'"></div>
+						<div ng-if="changePassForm.inputPassConfirm.$error.required" ng-include src="'app/partials/formMessages/error.html'"></div>
+						<div ng-if="changePassForm.inputPassConfirm.$error.match" ng-include src="'app/partials/formMessages/error.html'"></div>
 					</div>
 				</div>
 				

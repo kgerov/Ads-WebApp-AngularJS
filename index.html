@@ -21,29 +21,34 @@
 		<link rel="stylesheet" type="text/css" href="libs/bootstrap-datetimepicker.css">
 
 		<!-- App scripts -->
-		<script type="text/javascript" src="app/filters/validImg.js" defer></script>
+		<script type="text/javascript" src="app/filters/validImgFilter.js" defer></script>
 		<script type="text/javascript" src="app/app.js" defer></script>
+		<script type="text/javascript" src="app/directives/filereadDrct.js" defer></script>
+
 		<script type="text/javascript" src="app/factories/authService.js" defer></script>
 		<script type="text/javascript" src="app/factories/adsFactory.js" defer></script>
 		<script type="text/javascript" src="app/factories/categoryFactory.js" defer></script>
 		<script type="text/javascript" src="app/factories/townFactory.js" defer></script>
-		<script type="text/javascript" src="app/directives/fileread.js" defer></script>
 		<script type="text/javascript" src="app/factories/modifyUserProfileService.js" defer></script>
 		<!-- Controllers -->
-		<script type="text/javascript" src="app/controllers/adsListController.js" defer></script>
-		<script type="text/javascript" src="app/controllers/navBarController.js" defer></script>
-		<script type="text/javascript" src="app/controllers/loginUserController.js" defer></script>
-		<script type="text/javascript" src="app/controllers/registerUserController.js" defer></script>
-		<script type="text/javascript" src="app/controllers/filterController.js" defer></script>
-		<script type="text/javascript" src="app/controllers/userProfileEditorController.js" defer></script>
-		<script type="text/javascript" src="app/controllers/userAdsFilterController.js" defer></script>
-		<script type="text/javascript" src="app/controllers/newAdController.js" defer></script>
-		<script type="text/javascript" src="app/controllers/adController.js" defer></script>
-		<script type="text/javascript" src="app/controllers/deleteAdController.js" defer></script>
-		<script type="text/javascript" src="app/controllers/categoriesListController.js" defer></script>
+		<script type="text/javascript" src="app/controllers/ads/adController.js" defer></script>
+		<script type="text/javascript" src="app/controllers/ads/adsListController.js" defer></script>
+		<script type="text/javascript" src="app/controllers/ads/deleteAdController.js" defer></script>
+		<script type="text/javascript" src="app/controllers/ads/AdCreateEditController.js" defer></script>
+		<script type="text/javascript" src="app/controllers/ads/userAdsFilterController.js" defer></script>
+
+		<script type="text/javascript" src="app/controllers/user/loginUserController.js" defer></script>
+		<script type="text/javascript" src="app/controllers/user/registerUserController.js" defer></script>
+		<script type="text/javascript" src="app/controllers/user/userProfileEditorController.js" defer></script>
+
+		<script type="text/javascript" src="app/controllers/filters/filterController.js" defer></script>
+
+		<script type="text/javascript" src="app/controllers/filtersArrange/filtersArrangeListController.js" defer></script>
+		<script type="text/javascript" src="app/controllers/filtersArrange/filtersArrangeListEditController.js" defer></script>
+		<script type="text/javascript" src="app/controllers/filtersArrange/filtersArrangeListDeleteController.js" defer></script>
+
 		<script type="text/javascript" src="app/controllers/mainController.js" defer></script>
-		<script type="text/javascript" src="app/controllers/categoriesListEditController.js" defer></script>
-		<script type="text/javascript" src="app/controllers/categoriesListDeleteController.js" defer></script>
+		<script type="text/javascript" src="app/controllers/navBarController.js" defer></script>
 
 		<!-- Bootstrap -->
 		<script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.min.js" defer></script>
@@ -59,7 +64,7 @@
 		<title>Обяви</title>
 	</head>
 	<body>
-		<div ng-include src="'app/partials/header.html'"></div>
+		<div ng-include src="'app/partials/navbar.html'"></div>
 		<div ng-view class="fill"></div>
 		<div class="navbar navbar-default navbar-fixed-bottom">
 			<div class="container">

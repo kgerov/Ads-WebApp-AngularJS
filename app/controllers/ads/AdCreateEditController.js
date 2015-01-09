@@ -1,4 +1,4 @@
-adsApp.controller('newAdController', ['$scope', 'categoryFactory', 'townFactory', '$http', 'adsFactory', '$location', 'authService', '$routeParams',
+adsApp.controller('AdCreateEditController', ['$scope', 'categoryFactory', 'townFactory', '$http', 'adsFactory', '$location', 'authService', '$routeParams',
     function($scope, categoryFactory, townFactory, $http, adsFactory, $location, authService, $routeParams) {
 
     $('#datetimepicker1').datetimepicker();
