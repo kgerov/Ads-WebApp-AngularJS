@@ -1,18 +1,20 @@
 adsApp.controller('usersListController', ['$scope', 'userPageSize', '$location', 'userFactory',
 	function($scope, userPageSize, $location, userFactory) {
 		$scope.users = [];
-	    $scope.usersCount = 0;
+	    $scope.userCount = 0;
 	    $scope.noUsers = false;
 	    $scope.usersPerPage = userPageSize;
 	    $scope.currentFilter = '';
 
 	    $scope.filterUsernameActive = false;
-	    $scope.filterCatActive = false;
-	    $scope.filterIdActive = false;
-	    $scope.filterCatActive = false;
+	    $scope.filterNameActive = false;
+	    $scope.filterEmailActive = false;
+	    $scope.filterPhoneActive = false;
 
-	    $scope.filterIdAsc = false;
-	    $scope.filterCatAsc = false;
+	    $scope.filterUsernameAsc = false;
+	    $scope.filterNameAsc = false;
+	    $scope.filterEmailAsc = false;
+	    $scope.filterPhoneAsc = false;
 
 	    getPageContent(1);
 
@@ -36,7 +38,7 @@ adsApp.controller('usersListController', ['$scope', 'userPageSize', '$location',
 	        function handleData (data) {
 	            $scope.users = data.users;
 	            checkNumberOfFilters(data.users.length);
-	            $scope.usersCount = data.numItems;
+	            $scope.userCount = data.numItems;
 	            $scope.stopSpin();
 	            $('html, body').animate({scrollTop : 0},100);
 	        }
@@ -54,6 +56,7 @@ adsApp.controller('usersListController', ['$scope', 'userPageSize', '$location',
 	        }
 	  	}
 
+	  	//Edit + Delete
 	  	$scope.EditFilter = function (id) {
 	  		$location.path('/admin/users/edit/'+ id);
 	  	}
@@ -62,39 +65,90 @@ adsApp.controller('usersListController', ['$scope', 'userPageSize', '$location',
 	  		$location.path('/admin/users/delete/'+ id);
 	  	}
 
-	    $scope.startSortId = function () {
-	        $scope.filterIdActive = true;
-	        $scope.filterCatActive = false;
-	        $scope.sortAscId();
+
+	  	//Filters
+
+	  	//Deactivates all filters
+	  	$scope.deactivateFilters = function () {
+	  		$scope.filterUsernameActive = false;
+		    $scope.filterNameActive = false;
+		    $scope.filterEmailActive = false;
+		    $scope.filterPhoneActive = false;
+	  	}
+
+
+	  	//Start Filters
+	    $scope.startSortUsername = function () {
+	    	$scope.deactivateFilters();
+	        $scope.filterUsernameActive = true;
+	        $scope.sortAscUsername();
 	    }
 
-	    $scope.startSortCat = function () {
-	        $scope.filterIdActive = false;
-	        $scope.filterCatActive = true;
-	        $scope.sortAscCategory();
+	    $scope.startSortName = function () {
+	    	$scope.deactivateFilters();
+	        $scope.filterNameActive = true;
+	        $scope.sortAscName();
 	    }
 
-	  	$scope.sortAscId = function () {
-	        $scope.filterIdAsc = true;
-	        $scope.currentFilter = 'Id';
+	    $scope.startSortEmail = function () {
+	    	$scope.deactivateFilters();
+	        $scope.filterEmailActive = true;
+	        $scope.sortAscEmail();
+	    }
+
+	    $scope.startSortPhone = function () {
+	    	$scope.deactivateFilters();
+	        $scope.filterPhoneActive = true;
+	        $scope.sortAscPhone();
+	    }
+
+
+	    //Sorting
+	  	$scope.sortAscUsername = function () {
+	        $scope.filterUsernameAsc = true;
+	        $scope.currentFilter = 'UserName';
 	        $scope.pageChangeHandler(1);
 	  	}
 
-	  	$scope.sortDescId = function () {
-	        $scope.filterIdAsc = false;
-	        $scope.currentFilter = '-Id';
+	  	$scope.sortDescUsername = function () {
+	        $scope.filterUsernameAsc = false;
+	        $scope.currentFilter = '-UserName';
 	        $scope.pageChangeHandler(1);
 	  	}
 
-	  	$scope.sortAscCategory = function () {
-	        $scope.filterCatAsc = true;	
+	  	$scope.sortAscName = function () {
+	        $scope.filterNameAsc = true;	
 	        $scope.currentFilter = 'Name';
 	        $scope.pageChangeHandler(1);
 	  	}
 
-	  	$scope.sortDescCategory = function () {
-	        $scope.filterCatAsc = false;
+	  	$scope.sortDescName = function () {
+	        $scope.filterNameAsc = false;
 	        $scope.currentFilter = '-Name';
+	        $scope.pageChangeHandler(1);
+	  	}
+
+	  	$scope.sortAscEmail = function () {
+	        $scope.filterEmailAsc = true;
+	        $scope.currentFilter = 'Email';
+	        $scope.pageChangeHandler(1);
+	  	}
+
+	  	$scope.sortDescEmail = function () {
+	        $scope.filterEmailAsc = false;
+	        $scope.currentFilter = '-Email';
+	        $scope.pageChangeHandler(1);
+	  	}
+
+	  	$scope.sortAscPhone = function () {
+	        $scope.filterPhoneAsc = true;	
+	        $scope.currentFilter = 'PhoneNumber';
+	        $scope.pageChangeHandler(1);
+	  	}
+
+	  	$scope.sortDescPhone = function () {
+	        $scope.filterPhoneAsc = false;
+	        $scope.currentFilter = '-PhoneNumber';
 	        $scope.pageChangeHandler(1);
 	  	}
 }])
