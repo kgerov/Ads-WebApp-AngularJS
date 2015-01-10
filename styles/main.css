@@ -5,6 +5,14 @@ body {
     font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 }
 
+div, p {
+  word-wrap: break-word;
+}
+
+p {
+  max-width: 100%;
+}
+
 .footer-fix {
 	border-bottom: 0;
 }

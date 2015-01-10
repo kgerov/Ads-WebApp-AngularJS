@@ -19,3 +19,10 @@ TODO LIST:
 21. ! Edit ad in admin mode, user should be required
 22. Admin should be asked before he deletes an ad
 23. Should you remove unused files from bower and npm
+
+
+
+App Checklist:
+1. Long text
+2. Long word
+3. Escape text

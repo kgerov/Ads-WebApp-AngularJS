@@ -1,1 +1,53 @@
-<h1>List users</h1>
+<div class="container fill">
+	<div class="row fill">
+		<div class="col-md-12 col-centered filterSection">
+			<table class="table table-striped">
+				<tr>
+					<th class="unselectable">
+						<a ng-click="startSortUsername()" class="pull-left"><span >Username</span></a>
+						<div ng-show="filterUsernameActive">
+							<a ng-show="!filterUsernameAsc" ng-click="sortAscUsername()" class="pull-right"><span class='glyphicon glyphicon-chevron-up'></span></a>
+							<a ng-show="filterUsernameAsc" ng-click="sortDescUsername()" class="pull-right"><span class='glyphicon glyphicon-chevron-down'></span></a>
+						</div>
+					</th>
+					<th class="unselectable">
+						<a ng-click="startSortName()" class="pull-left"><span>Name</span></a>
+						<div ng-show="filterNameActive">
+							<a ng-show="!filterNameAsc" ng-click="sortAscName()" class="pull-right"><span class='glyphicon glyphicon-chevron-up'></span></a>
+							<a ng-show="filterNameAsc" ng-click="sortDescName()" class="pull-right"><span class='glyphicon glyphicon-chevron-down'></span></a>
+						</div>
+					</th>
+					<th class="unselectable">
+						<a ng-click="startSortEmail()" class="pull-left"><span >Email</span></a>
+						<div ng-show="filterEmailActive">
+							<a ng-show="!filterEmailAsc" ng-click="sortAscEmail()" class="pull-right"><span class='glyphicon glyphicon-chevron-up'></span></a>
+							<a ng-show="filterEmailAsc" ng-click="sortDescEmail()" class="pull-right"><span class='glyphicon glyphicon-chevron-down'></span></a>
+						</div>
+					</th>
+					<th class="unselectable">
+						<a ng-click="startSortPhone()" class="pull-left"><span>Phone</span></a>
+						<div ng-show="filterPhoneActive">
+							<a ng-show="!filterPhoneAsc" ng-click="sortAscPhone()" class="pull-right"><span class='glyphicon glyphicon-chevron-up'></span></a>
+							<a ng-show="filterPhoneAsc" ng-click="sortDescPhone()" class="pull-right"><span class='glyphicon glyphicon-chevron-down'></span></a>
+						</div>
+					</th>
+					<th><a class="pull-right"><span>Action</span></a></th>
+				</tr>
+				<tr dir-paginate="user in users | itemsPerPage: usersPerPage" total-items="userCount">
+					<td>{{user.username}}</td>
+					<td>{{user.name}}</td>
+					<td>{{user.email}}</td>
+					<td>{{user.phoneNumber}}</td>
+					<td>
+						<button type="button" class="btn btn-warning btn-sm pull-right" ng-click="EditFilter(user.id)">Edit</button>
+						<button type="button" class="btn btn-danger btn-sm pull-right" ng-click="DeleteFilter(user.id)">Delete</button>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="text-center paging">
+				<dir-pagination-controls boundary-links="true" id="goToPageOne" on-page-change="pageChangeHandler(newPageNumber)" template-url="libs/dirPagination.tpl.html"></dir-pagination-controls>
+		</div>
+	</div>
+	<span us-spinner="{radius:10, width:3, length: 6}" spinner-key="spinner-1" class="spinnerSpecial"></span>
+</div>
