@@ -104,6 +104,21 @@ adsApp.config(function($routeProvider) {
 			controller: 'filtersArrangeListEditController', 
 			templateUrl: 'app/partials/filtersArrange/filtersArrangeEdit.html'
 		})
+		.when('/admin/users/list',
+		{
+			controller: 'usersListController', 
+			templateUrl: 'app/partials/adminUserList/usersList.html'
+		})
+		.when('/admin/users/edit/:id',
+		{
+			controller: 'userProfileEditorController', 
+			templateUrl: 'app/partials/user/userProfile.html'
+		})
+		.when('/admin/users/delete/:id',
+		{
+			controller: 'userProfileDeleteController', 
+			templateUrl: 'app/partials/adminUserList/userProfileDelete.html'
+		})
 		.otherwise({redirectTo: '/'});
 });
 

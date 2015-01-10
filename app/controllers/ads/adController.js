@@ -6,6 +6,7 @@ adsApp.controller('adController', ['$scope', 'adsFactory', 'pageSize', '$rootSco
     $scope.noAds = false;
     $scope.usersPerPage = pageSize;
     $scope.currentFilters = { categoryFilterRadio : 'all-cat', townFilterRadio : 'all-town', adStatus: '' };
+    $scope.startSpin();
     getPageContent(1);
 
     $rootScope.$on('filterChanged', function (event, filters) {
