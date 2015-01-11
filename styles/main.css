@@ -221,6 +221,10 @@ table td button:nth-child(2) {
   margin-right: 5%;
 }
 
+body > div.fill.ng-scope > div > div > div.col-md-12.col-centered.filterSection > table > tbody > tr:nth-child(5) > td:nth-child(5) {
+  min-width: 126px;
+}
+
 /*Responsive webpage*/
 
 @media only screen and (max-width: 991px){

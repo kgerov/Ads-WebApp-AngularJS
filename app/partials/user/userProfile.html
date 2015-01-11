@@ -32,6 +32,11 @@
 					<option style="display:none;" value="">Choose a Town</option>
 					<option ng-repeat="town in towns" value="{{town.id}}">{{town.name}}</option>
 				</select>
+				<div ng-show="inAdminEditMode" class="checkbox">
+					<label>
+						<input type="checkbox" ng-model="user.isAdmin"> isAdmin
+					</label>
+				</div>
 				<div class="text-center">
 					<button class="btn btn-lg btn-primary register-button" type="submit" ng-click="editUser(user, changeProfileForm.$valid)" value="Save">Edit</button>
 				</div>
@@ -43,7 +48,7 @@
 			<form name="changePassForm" novalidate>
 				<h2>Change Password</h2>
 				<!-- Old Password -->
-				<div class="form-group has-feedback" ng-class="{ 'has-error' : (changePassForm.inputOldPass.$error.required && (touchOldPass || formPassSubmitted)), 'has-success' : changePassForm.inputOldPass.$valid && (touchOldPass || formPassSubmitted)}">
+				<div ng-show="!inAdminEditMode" class="form-group has-feedback" ng-class="{ 'has-error' : (changePassForm.inputOldPass.$error.required && (touchOldPass || formPassSubmitted)), 'has-success' : changePassForm.inputOldPass.$valid && (touchOldPass || formPassSubmitted)}">
 					<input type="password"  class="form-control" name="inputOldPass" ng-model="newPass.OldPass" placeholder="Old Password" required=""  aria-describedby="inputSuccess2Status" ng-blur="touchOldPass=true">
 					<div ng-show="touchOldPass || formPassSubmitted">
 						<div ng-if="changePassForm.inputOldPass.$valid" ng-include src="'app/partials/formMessages/success.html'"></div>
@@ -69,7 +74,7 @@
 				</div>
 				
 				<div class="text-center">
-					<button class="btn btn-lg btn-primary register-button" type="submit" ng-click="changePass(newPass, changePassForm.$valid)" value="Save">Change</button>
+					<button class="btn btn-lg btn-primary register-button" type="submit" ng-click="changePass(newPass, changePassForm.$valid, changePassForm)" value="Save">Change</button>
 				</div>
 			</form>
 		</div>
