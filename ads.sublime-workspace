@@ -4,6 +4,138 @@
 		"selected_items":
 		[
 			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"fun",
+				"fun	Function"
+			],
+			[
+				"is",
+				"isAdmin"
+			],
+			[
+				"ha",
+				"handleData"
+			],
+			[
+				"fu",
+				"fun	Function"
+			],
+			[
+				"set",
+				"setPassResource"
+			],
+			[
+				"de",
+				"deleteResource"
+			],
+			[
+				"$loc",
+				"$localStorage"
+			],
+			[
+				"hand",
+				"handleError"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"tow",
+				"townFactory"
+			],
+			[
+				"false",
+				"false"
+			],
+			[
+				"cate",
+				"category"
+			],
+			[
+				"ad",
+				"adminCategory"
+			],
+			[
+				"for",
+				"formSubmitted"
+			],
+			[
+				"ng",
+				"ng-click	AngularJS"
+			],
+			[
+				"adm",
+				"adminDelete"
+			],
+			[
+				"$rot",
+				"$routeParams	AngularJS(DI)"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"$root",
+				"$rootScope	AngularJS"
+			],
+			[
+				"$sc",
+				"$scope	AngularJS"
+			],
+			[
+				"admi",
+				"adminResource"
+			],
+			[
+				"in",
+				"inAdminEditMode"
+			],
+			[
+				"li",
+				"link	Tag"
+			],
+			[
+				"ca",
+				"categoryId"
+			],
+			[
+				"Ca",
+				"Category"
+			],
+			[
+				"town",
+				"townId"
+			],
+			[
+				"to",
+				"top"
+			],
+			[
+				"imp",
+				"important"
+			],
+			[
+				"star",
+				"startSpin"
+			],
+			[
+				"pad",
+				"padding-left"
+			],
+			[
 				"im",
 				"imageDataUrl"
 			],
@@ -20,24 +152,8 @@
 				"adsNoty"
 			],
 			[
-				"$rot",
-				"$routeParams	AngularJS"
-			],
-			[
-				"ad",
-				"adsNoty"
-			],
-			[
 				"$loca",
 				"$location	AngularJS"
-			],
-			[
-				"mar",
-				"margin-bottom"
-			],
-			[
-				"user",
-				"userResource"
 			],
 			[
 				"$ro",
@@ -58,10 +174,6 @@
 			[
 				"$roo",
 				"$rootScope	AngularJS"
-			],
-			[
-				"$root",
-				"$rootScope	AngularJS(DI)"
 			],
 			[
 				"ng-c",
@@ -86,14 +198,6 @@
 			[
 				"bo",
 				"bottom"
-			],
-			[
-				"pad",
-				"padding-top"
-			],
-			[
-				"for",
-				"for	for (…) {…}"
 			],
 			[
 				"border-co",
@@ -126,10 +230,6 @@
 			[
 				"va",
 				"valid"
-			],
-			[
-				"ca",
-				"categoryFactory"
 			],
 			[
 				"ng-s",
@@ -172,10 +272,6 @@
 				"ng-view	AngularJS"
 			],
 			[
-				"ng",
-				"ng-app	AngularJS"
-			],
-			[
 				"ng-clas",
 				"ng-class	AngularJS"
 			],
@@ -210,10 +306,6 @@
 			[
 				"tex",
 				"text-align"
-			],
-			[
-				"li",
-				"li	Tag"
 			],
 			[
 				"a",
@@ -260,20 +352,8 @@
 				"border-collapse"
 			],
 			[
-				"cate",
-				"categories"
-			],
-			[
-				"min",
-				"min-price"
-			],
-			[
 				"prod",
 				"products"
-			],
-			[
-				"max",
-				"maxPrice"
 			],
 			[
 				"filter",
@@ -352,24 +432,8 @@
 				"password"
 			],
 			[
-				"is",
-				"isLogedIn"
-			],
-			[
-				"de",
-				"delete"
-			],
-			[
-				"in",
-				"inline-block"
-			],
-			[
 				"getU",
 				"getUserName"
-			],
-			[
-				"set",
-				"setItem"
 			],
 			[
 				"se",
@@ -450,93 +514,11 @@
 			[
 				"fir",
 				"firstName"
-			],
-			[
-				"las",
-				"lastName"
-			],
-			[
-				"sc",
-				"script	Tag"
-			],
-			[
-				"Sc",
-				"script"
-			],
-			[
-				"def",
-				"deferred"
-			],
-			[
-				"scr",
-				"scripts"
-			],
-			[
-				"marg",
-				"margin-top"
-			],
-			[
-				"hide",
-				"hideInputUser"
-			],
-			[
-				"cle",
-				"clearStorage"
-			],
-			[
-				"ses",
-				"sessCounter"
-			],
-			[
-				"to",
-				"totalCounter"
-			],
-			[
-				"font",
-				"font-family"
-			],
-			[
-				"fon",
-				"font-weight"
-			],
-			[
-				"wid",
-				"width"
-			],
-			[
-				"list",
-				"list-style"
-			],
-			[
-				"wi",
-				"width"
-			],
-			[
-				"background-c",
-				"background-color"
 			]
 		]
 	},
 	"buffers":
 	[
-		{
-			"file": "app/partials/ads.html",
-			"settings":
-			{
-				"buffer_size": 2763,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "Package Control Messages\n========================\n\nPackage Control:\n---------------\n\n  Version 3.0 Release Notes\n  \n  \n  **** Windows Sublime Text 3 Users ****\n  \n  Due to a bug in Package Control 2.0, Windows ST3 users will need to open the\n  Sublime Text console (ctrl+`) and execute the following Python to properly\n  upgrade. All other users may ignore this part of the message.\n  \n  Make sure NOT to copy the leading two spaces, or an \"unexpected indent\" error\n  will occur.\n  \n  import urllib.request,os; pr='Preferences.sublime-settings'; ip='ignored_packages'; n='Package Control'; s=sublime.load_settings(pr); ig=s.get(ip); ig.append(n); s.set(ip,ig); sublime.save_settings('Preferences.sublime-settings'); pf=n+'.sublime-package'; urllib.request.install_opener(urllib.request.build_opener(urllib.request.ProxyHandler())); by=urllib.request.urlopen('https://packagecontrol.io/'+pf.replace(' ','%20')).read(); open(os.path.join(sublime.installed_packages_path(),pf),'wb').write(by); ig.remove(n); s.set(ip,ig); sublime.save_settings(pr); print('Package Control: 3.0.0 upgrade successful!')\n  \n  ********\n  \n  \n  Package Control 3.0 adds a bunch of polish, improving the Sublime Text\n  experience for users and package developers:\n  \n   - improved upgrades of themes, color schemes and syntaxes\n   - dependency support\n   - SSL for Linux\n   - new secondary Windows HTTP backend\n   - patches for Python in Sublime Text 2 on Windows\n   - commands to easily remove channels and repositories\n   - an events API for packages\n   - improved documentation\n  \n  \n  As of July 2014, I now work for myself. This has allowed me to spend more time\n  working on open source software, including Package Control. If you appreciate\n  the work I've done, please consider a small donation. If even 5% of regular\n  users donated the price of a coffee or beer, that would cover quite a bit of\n  my development time! See https://packagecontrol.io/about for options.\n  \n  \n  Some recent Package Control stats:\n  \n   - every weekday over 1M JSON requests hit the channel server\n   - in December, the channel server will transmit 4TB+ of compressed JSON\n   - users have installed, upgraded or removed 85M+ packages since late 2011\n  \n  \n  Read more about the release at:\n  \n  https://packagecontrol.io/news#2014-12-23-Package_Control_30_Released\n  \n",
-			"settings":
-			{
-				"buffer_size": 2331,
-				"line_ending": "Windows",
-				"name": "Package Control Messages",
-				"scratch": true
-			}
-		}
 	],
 	"build_system": "Packages/User/nodejs.sublime-build",
 	"command_palette":
@@ -610,66 +592,92 @@
 	},
 	"expanded_folders":
 	[
-		"/C/xampp/htdocs/test/ads",
-		"/C/xampp/htdocs/test/ads/app"
 	],
 	"file_history":
 	[
-		"/D/Downloads/index (2).php",
-		"/C/xampp/htdocs/test/ads/styles/pagination.css",
-		"/C/xampp/htdocs/test/ads/app/controllers/navBarController.js",
-		"/C/xampp/htdocs/test/ads/app/partials/header.html",
 		"/C/xampp/htdocs/test/ads/styles/main.css",
+		"/C/xampp/htdocs/test/ads/app/partials/ads/ads.html",
+		"/C/xampp/htdocs/test/ads/app/partials/user/userProfile.html",
+		"/C/xampp/htdocs/test/ads/app/controllers/User/userProfileEditorController.js",
+		"/C/xampp/htdocs/test/ads/app/factories/userFactory.js",
+		"/C/xampp/htdocs/test/ads/app/controllers/adminUserController/usersListController.js",
+		"/C/xampp/htdocs/test/ads/app/controllers/adminUserController/userProfileDeleteController.js",
+		"/C/xampp/htdocs/test/ads/app/partials/adminUserList/userProfileDelete.html",
+		"/C/xampp/htdocs/test/ads/app/partials/adminUserList/usersList.html",
+		"/C/xampp/htdocs/test/ads/app/partials/ads/deleteAd.html",
+		"/C/xampp/htdocs/test/ads/app/factories/modifyUserProfileService.js",
+		"/C/xampp/htdocs/test/ads/index.html",
 		"/C/xampp/htdocs/test/ads/app/app.js",
-		"/C/xampp/htdocs/test/ads/app/filters/validImg.js",
+		"/C/xampp/htdocs/test/ads/app/controllers/filtersArrange/filtersArrangeListController.js",
+		"/C/xampp/htdocs/test/ads/app/controllers/ads/adController.js",
 		"/C/xampp/htdocs/test/ads/TODO.txt",
+		"/C/xampp/htdocs/test/ads/app/partials/adminUserList",
+		"/C/xampp/htdocs/test/ads/app/partials/ads/listAds.html",
+		"/C/xampp/htdocs/test/ads/app/partials/filtersArrange/filtersArrange.html",
+		"/C/xampp/htdocs/test/ads/app/factories/townFactory.js",
+		"/C/xampp/htdocs/test/ads/app/controllers/filtersArrange/filtersArrangeListEditController.js",
+		"/C/xampp/htdocs/test/ads/app/controllers/filtersArrange/filtersArrangeListDeleteController.js",
+		"/C/xampp/htdocs/test/ads/app/partials/filtersArrange/filtersArrangeEdit.html",
+		"/C/xampp/htdocs/test/ads/app/factories/categoryFactory.js",
+		"/C/xampp/htdocs/test/ads/app/controllers/ads/AdCreateEditController.js",
+		"/C/xampp/htdocs/test/ads/app/partials/filtersArrange/filtersArrangeDelete.html",
+		"/C/xampp/htdocs/test/ads/app/partials/ads/listAllAds.html",
+		"/C/xampp/htdocs/test/ads/app/partials/listAllAds.html",
+		"/C/xampp/htdocs/test/ads/app/partials/userProfile.html",
+		"/C/xampp/htdocs/test/ads/app/partials/register.html",
+		"/C/xampp/htdocs/test/ads/app/partials/publishNewAd.html",
+		"/C/xampp/htdocs/test/ads/app/partials/login.html",
+		"/C/xampp/htdocs/test/ads/app/directives/fileread.js",
+		"/C/xampp/htdocs/test/ads/app/controllers/deleteAdController.js",
+		"/C/xampp/htdocs/test/ads/app/partials/categories.html",
+		"/C/xampp/htdocs/test/ads/app/controllers/categoriesListController.js",
+		"/C/xampp/htdocs/test/ads/app/controllers/adController.js",
+		"/C/xampp/htdocs/test/ads/app/factories/spinnerService.js",
+		"/C/xampp/htdocs/test/ads/app/controllers/mainController.js",
+		"/C/xampp/htdocs/test/ads/app/controllers/newAdController.js",
+		"/C/xampp/htdocs/test/ads/libs/angular-file-upload.min.js",
+		"/C/xampp/htdocs/test/ads/app/factories/authService.js",
+		"/C/xampp/htdocs/test/ads/app/partials/filterPersonalAds.html",
 		"/C/xampp/htdocs/test/ads/app/partials/ads.html",
 		"/C/xampp/htdocs/test/ads/app/factories/adsFactory.js",
 		"/C/xampp/htdocs/test/ads/app/controllers/userProfileEditorController.js",
-		"/C/xampp/htdocs/test/ads/app/controllers/newAdController.js",
-		"/C/xampp/htdocs/test/ads/app/partials/publishNewAd.html",
-		"/C/xampp/htdocs/test/ads/app/controllers/deleteAdController.js",
+		"/C/xampp/htdocs/test/ads/app/controllers/registerUserController.js",
+		"/C/xampp/htdocs/test/ads/app/controllers/navBarController.js",
+		"/C/xampp/htdocs/test/ads/app/partials/filtersRigth.html",
+		"/D/Downloads/bootstrap-3.3.1/bootstrap-3.3.1/dist/css/bootstrap.css",
+		"/C/xampp/htdocs/test/ads/app/partials/header.html",
+		"/C/xampp/htdocs/test/ads/styles/a.css",
+		"/C/xampp/htdocs/test/ads/libs/jquery.snow.min.1.0.js",
+		"/D/Downloads/index (2).php",
+		"/C/xampp/htdocs/test/ads/styles/pagination.css",
+		"/C/xampp/htdocs/test/ads/app/filters/validImg.js",
 		"/C/xampp/htdocs/test/ads/app/partials/deleteAd.html",
-		"/C/xampp/htdocs/test/ads/app/controllers/adController.js",
-		"/C/xampp/htdocs/test/ads/index.html",
-		"/C/xampp/htdocs/test/ads/app/factories/modifyUserProfileService.js",
 		"/C/xampp/htdocs/test/ads/app/controllers/adsListController.js",
-		"/C/xampp/htdocs/test/ads/app/partials/filterPersonalAds.html",
-		"/C/xampp/htdocs/test/ads/app/partials/listAllAds.html",
 		"/C/xampp/htdocs/test/ads/app/controllers/userAdsFilterController.js",
 		"/C/xampp/htdocs/test/ads/libs/arrow89.js",
 		"/C/xampp/htdocs/test/ads/app/partials/listUserAds.html",
 		"/C/xampp/htdocs/test/ads/app/controllers/userAdsController.js",
 		"/D/OnCode/SoftUni/6. PHP/6. The Exam/ChatLogger.php",
 		"/D/OnCode/SoftUni/6. PHP/6. The Exam/softuniTunes.php",
-		"/C/xampp/htdocs/test/ads/app/partials/filtersRigth.html",
 		"/C/xampp/htdocs/test/ads/app/controllers/filterController.js",
 		"/C/xampp/htdocs/test/ads/app/partials/filterRight.html",
 		"/C/xampp/htdocs/test/oldProjects/VideoSystem/styles/main.css",
-		"/C/xampp/htdocs/test/ads/app/partials/userProfile.html",
-		"/C/xampp/htdocs/test/ads/app/partials/register.html",
 		"/C/xampp/htdocs/test/ads/app/partials/passwordInput.html",
 		"/C/xampp/htdocs/test/ads/app/controllers/loginUserController.js",
 		"/C/xampp/htdocs/test/ads/libs/customNoty.js",
-		"/C/xampp/htdocs/test/ads/app/controllers/registerUserController.js",
-		"/C/xampp/htdocs/test/ads/app/factories/authService.js",
 		"/C/xampp/htdocs/test/test.html",
 		"/C/xampp/htdocs/test/ads/node_modules/noty/js/noty/themes/custom.js",
 		"/C/xampp/htdocs/test/ads/test.js",
 		"/C/xampp/htdocs/test/ads/libs/myNotyTheme.js",
 		"/D/OnCode/JS Apps/10.JSAppsExam/scripts/controller.js",
-		"/C/xampp/htdocs/test/ads/app/directives/fileread.js",
 		"/C/xampp/htdocs/test/ads/libs/dirPagination.js",
 		"/C/xampp/htdocs/test/ads/libs/dirPagination.tpl.html",
-		"/C/xampp/htdocs/test/ads/app/factories/townFactory.js",
-		"/C/xampp/htdocs/test/ads/app/factories/categoryFactory.js",
 		"/D/OnCode/AngularJS/02.ControllersAndMarkups/VideoSystem/app/app.js",
 		"/D/OnCode/AngularJS/02.ControllersAndMarkups/VideoSystem/app/controllers/VideoController.js",
 		"/D/OnCode/AngularJS/02.ControllersAndMarkups/VideoSystem/app/filters/trustedUrl.js",
 		"/D/OnCode/AngularJS/01.Introduction/02.ImageBind/scripts/factory.js",
 		"/C/xampp/htdocs/test/oldProjects/VideoSystem/app/partials/video.html",
 		"/D/Downloads/a.html",
-		"/C/xampp/htdocs/test/ads/app/partials/login.html",
 		"/C/xampp/htdocs/test/oldProjects/VideoSystem/app/partials/add-video.html",
 		"/C/xampp/htdocs/test/oldProjects/VideoSystem/app/controllers/VideoController.js",
 		"/C/xampp/htdocs/test/oldProjects/VideoSystem/app/app.js",
@@ -714,35 +722,7 @@
 		"/D/Downloads/angular-seed-master/angular-seed-master/app/index.html",
 		"/C/xampp/htdocs/test/JSApps/index.html",
 		"/C/xampp/htdocs/test/JSApps/templates/products.html",
-		"/C/xampp/htdocs/test/JSApps/scripts/controller.js",
-		"/C/xampp/htdocs/test/TheExam/scripts/ajax-requester.js",
-		"/C/xampp/htdocs/test/TheExam/scripts/data.js",
-		"/C/xampp/htdocs/test/TheExam/index.html",
-		"/C/xampp/htdocs/test/TheExam/scripts/app.js",
-		"/C/xampp/htdocs/test/TheExam/scripts/controller.js",
-		"/C/xampp/htdocs/test/TheExam/templates/products.html",
-		"/D/OnCode/JS Apps/07.UnderscoreJS/02.BookStore/scripts/main.js",
-		"/D/OnCode/JS Apps/07.UnderscoreJS/01.StudentsCollection/scripts/main.js",
-		"/C/xampp/htdocs/test/TheExam/templates/edit.html",
-		"/C/xampp/htdocs/test/TheExam/templates/delete.html",
-		"/C/xampp/htdocs/test/TheExam/templates/addproducts.html",
-		"/C/xampp/htdocs/test/TestPrep/templates/bookmarks.html",
-		"/C/xampp/htdocs/test/TheExam/templates/home.html",
-		"/C/xampp/htdocs/test/TheExam/templates/register.html",
-		"/C/xampp/htdocs/test/TheExam/templates/login.html",
-		"/C/xampp/htdocs/test/TheExam/templates/welcome.html",
-		"/C/xampp/htdocs/test/TheExam/templates/bookmarks.html",
-		"/C/xampp/htdocs/test/TestPrep/index.html",
-		"/C/xampp/htdocs/test/TestPrep/scripts/ajax-requester.js",
-		"/C/xampp/htdocs/test/TestPrep/scripts/data.js",
-		"/C/xampp/htdocs/test/TestPrep/scripts/controller.js",
-		"/C/xampp/htdocs/test/TestPrep/scripts/app.js",
-		"/C/xampp/htdocs/test/TestPrep/styles/main.css",
-		"/C/xampp/htdocs/test/TestPrep/templates/register.html",
-		"/C/xampp/htdocs/test/TestPrep/templates/login.html",
-		"/C/xampp/htdocs/test/TestPrep/templates/home.html",
-		"/D/OnCode/JS Apps/08.TestPrep/templates/bookmarks.html",
-		"/D/OnCode/JS Apps/08.TestPrep/templates/register.html"
+		"/C/xampp/htdocs/test/JSApps/scripts/controller.js"
 	],
 	"find":
 	{
@@ -760,6 +740,31 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"$localStorage",
+			"userFactory",
+			"$location",
+			"ad",
+			"sortAscName",
+			"Cat",
+			"Id",
+			"filterCollection",
+			">\n",
+			"$scope",
+			"paging",
+			"townFactory",
+			"\n				",
+			"$routeParams",
+			"newAdForm",
+			"$routeParams",
+			"include",
+			"false",
+			"  			\n",
+			"bower",
+			";\n",
+			"active",
+			"default",
+			"inverse",
+			"default",
 			"currId",
 			"user",
 			"registerForm",
@@ -862,32 +867,7 @@
 			"semName",
 			"date",
 			"php",
-			"];\n",
-			"']);\n",
-			"stcart",
-			"submit",
-			"pattern",
-			"/	",
-			"pieces",
-			"condition",
-			"lname",
-			"Name",
-			"combo",
-			"Email",
-			"// ",
-			"Lastnaeleme",
-			"Lastname",
-			"button",
-			"true",
-			"window",
-			"window.progLangID",
-			"progLangID",
-			"boxCounter",
-			"pernichanin",
-			"american",
-			"Mercedes",
-			"results",
-			"teamates"
+			"];\n"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -895,6 +875,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"customNormal",
+			"custom",
+			"inverse",
 			"ad",
 			"newAdForm",
 			"Product",
@@ -942,66 +925,8 @@
 			]
 		},
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "app/partials/ads.html",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 2763,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2331,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2331,
-								2331
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage",
-							"word_wrap": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -1033,7 +958,7 @@
 		"cols":
 		[
 			0.0,
-			0.968434343434,
+			0.96776273372,
 			1.0
 		],
 		"rows":
@@ -1089,7 +1014,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 		"xdebug":
@@ -1143,7 +1068,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 336.0,
+	"side_bar_width": 318.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
