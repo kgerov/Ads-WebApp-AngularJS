@@ -1,5 +1,5 @@
-adsApp.controller('usersListController', ['$scope', 'userPageSize', '$location', 'userFactory',
-	function($scope, userPageSize, $location, userFactory) {
+adsApp.controller('usersListController', ['$scope', 'userPageSize', '$location', 'userFactory', '$localStorage',
+	function($scope, userPageSize, $location, userFactory, $localStorage) {
 		$scope.users = [];
 	    $scope.userCount = 0;
 	    $scope.noUsers = false;
@@ -57,11 +57,13 @@ adsApp.controller('usersListController', ['$scope', 'userPageSize', '$location',
 	  	}
 
 	  	//Edit + Delete
-	  	$scope.EditFilter = function (id) {
+	  	$scope.EditFilter = function (id, user) {
+	  		$localStorage.userToEdit = user;
 	  		$location.path('/admin/users/edit/'+ id);
 	  	}
 
-	  	$scope.DeleteFilter = function (id) {
+	  	$scope.DeleteFilter = function (id, user) {
+	  		$localStorage.userToDelete = user;
 	  		$location.path('/admin/users/delete/'+ id);
 	  	}
 
