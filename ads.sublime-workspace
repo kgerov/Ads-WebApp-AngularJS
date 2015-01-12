@@ -592,9 +592,15 @@
 	},
 	"expanded_folders":
 	[
+		"/C/xampp/htdocs/test/ads",
+		"/C/xampp/htdocs/test/ads/app",
+		"/C/xampp/htdocs/test/ads/app/controllers",
+		"/C/xampp/htdocs/test/ads/app/controllers/user"
 	],
 	"file_history":
 	[
+		"/C/xampp/htdocs/test/ads/app/app.js",
+		"/C/xampp/htdocs/test/ads/app/controllers/filters/filterController.js",
 		"/C/xampp/htdocs/test/ads/styles/main.css",
 		"/C/xampp/htdocs/test/ads/app/partials/ads/ads.html",
 		"/C/xampp/htdocs/test/ads/app/partials/user/userProfile.html",
@@ -607,7 +613,6 @@
 		"/C/xampp/htdocs/test/ads/app/partials/ads/deleteAd.html",
 		"/C/xampp/htdocs/test/ads/app/factories/modifyUserProfileService.js",
 		"/C/xampp/htdocs/test/ads/index.html",
-		"/C/xampp/htdocs/test/ads/app/app.js",
 		"/C/xampp/htdocs/test/ads/app/controllers/filtersArrange/filtersArrangeListController.js",
 		"/C/xampp/htdocs/test/ads/app/controllers/ads/adController.js",
 		"/C/xampp/htdocs/test/ads/TODO.txt",
@@ -721,8 +726,7 @@
 		"/D/OnCode/AngularJS/01.Introduction/01.StudentPage/scripts/app.ks",
 		"/D/Downloads/angular-seed-master/angular-seed-master/app/index.html",
 		"/C/xampp/htdocs/test/JSApps/index.html",
-		"/C/xampp/htdocs/test/JSApps/templates/products.html",
-		"/C/xampp/htdocs/test/JSApps/scripts/controller.js"
+		"/C/xampp/htdocs/test/JSApps/templates/products.html"
 	],
 	"find":
 	{
@@ -958,7 +962,7 @@
 		"cols":
 		[
 			0.0,
-			0.96776273372,
+			0.816077340462,
 			1.0
 		],
 		"rows":
@@ -1014,7 +1018,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 0,
+	"selected_group": 1,
 	"settings":
 	{
 		"xdebug":

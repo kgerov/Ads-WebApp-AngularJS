@@ -117,18 +117,19 @@ adsApp.controller('adController', ['$scope', 'adsFactory', 'pageSize', '$rootSco
                         handleError();
                     });
 
-                    function handleData (data) {
-                            $scope.ads = data.ads;
-                            checkNumberOfAds(data.ads.length);
-                            $scope.adsCount = data.numItems;
-                            $scope.stopSpin();
-                            $('html, body').animate({scrollTop : 0},100);
-                    }
+                    
+                }
+        function handleData (data) {
+                $scope.ads = data.ads;
+                checkNumberOfAds(data.ads.length);
+                $scope.adsCount = data.numItems;
+                $scope.stopSpin();
+                $('html, body').animate({scrollTop : 0},100);
+        }
 
-                    function handleError () {
-                        adsNoty(false, 'Connection to server lost. Please try again later');
-                    }
-    }
+        function handleError () {
+            adsNoty(false, 'Connection to server lost. Please try again later');
+        }
 
         function checkNumberOfAds (num) {
             if (num == 0) {
