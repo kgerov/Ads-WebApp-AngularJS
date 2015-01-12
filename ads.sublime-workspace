@@ -592,14 +592,15 @@
 	},
 	"expanded_folders":
 	[
-		"/C/xampp/htdocs/test/ads",
 		"/C/xampp/htdocs/test/ads/app",
 		"/C/xampp/htdocs/test/ads/app/controllers",
+		"/C/xampp/htdocs/test/ads/app/controllers/ads",
 		"/C/xampp/htdocs/test/ads/app/controllers/user"
 	],
 	"file_history":
 	[
 		"/C/xampp/htdocs/test/ads/app/app.js",
+		"/C/xampp/htdocs/test/ads/app/controllers/ads/adController.js",
 		"/C/xampp/htdocs/test/ads/app/controllers/filters/filterController.js",
 		"/C/xampp/htdocs/test/ads/styles/main.css",
 		"/C/xampp/htdocs/test/ads/app/partials/ads/ads.html",
@@ -614,7 +615,6 @@
 		"/C/xampp/htdocs/test/ads/app/factories/modifyUserProfileService.js",
 		"/C/xampp/htdocs/test/ads/index.html",
 		"/C/xampp/htdocs/test/ads/app/controllers/filtersArrange/filtersArrangeListController.js",
-		"/C/xampp/htdocs/test/ads/app/controllers/ads/adController.js",
 		"/C/xampp/htdocs/test/ads/TODO.txt",
 		"/C/xampp/htdocs/test/ads/app/partials/adminUserList",
 		"/C/xampp/htdocs/test/ads/app/partials/ads/listAds.html",
