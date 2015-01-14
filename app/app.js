@@ -139,5 +139,5 @@ adsApp.run(function($location, $rootScope, authService) {
 adsApp.constant("pageSize", 3);
 adsApp.constant('filterPageSize', 6);
 adsApp.constant('userPageSize', 10);
-adsApp.constant('baseUrl', 'http://softuni-ads.azurewebsites.net/api/');
-//adsApp.constant('baseUrl', 'http://localhost:1337/api/');
+//adsApp.constant('baseUrl', 'http://softuni-ads.azurewebsites.net/api/');
+adsApp.constant('baseUrl', 'http://localhost:1337/api/');

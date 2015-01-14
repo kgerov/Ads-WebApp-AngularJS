@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-md-3 col-sm-12 col-xs-12 align-ad">
 				<div class="text-center">
-					<img ng-src="{{ad.imageDataUrl | validImg }}" alt="" onerror="this.onerror=null;this.src='https://cdn0.iconfinder.com/data/icons/very-basic-android-l-lollipop-icon-pack/24/cancel-2-128.png';">
+					<img ng-src="{{ad.imageDataUrl | validImg }}" alt="" onerror="this.onerror=null;this.src='images/noimg.png';">
 				</div>
 				<div class="text-center" ng-show="$parent.inUserAds || $parent.inAdminAds">
 					<label id="ad-status" ng-show="ad.status != 'WaitingApproval'">{{ad.status}}</label>

@@ -592,18 +592,18 @@
 	},
 	"expanded_folders":
 	[
+		"/C/xampp/htdocs/test/ads",
 		"/C/xampp/htdocs/test/ads/app",
-		"/C/xampp/htdocs/test/ads/app/controllers",
-		"/C/xampp/htdocs/test/ads/app/controllers/ads",
-		"/C/xampp/htdocs/test/ads/app/controllers/user"
+		"/C/xampp/htdocs/test/ads/app/partials"
 	],
 	"file_history":
 	[
 		"/C/xampp/htdocs/test/ads/app/app.js",
+		"/C/xampp/htdocs/test/ads/app/partials/ads/ads.html",
+		"/C/xampp/htdocs/test/ads/app/filters/validImgFilter.js",
 		"/C/xampp/htdocs/test/ads/app/controllers/ads/adController.js",
 		"/C/xampp/htdocs/test/ads/app/controllers/filters/filterController.js",
 		"/C/xampp/htdocs/test/ads/styles/main.css",
-		"/C/xampp/htdocs/test/ads/app/partials/ads/ads.html",
 		"/C/xampp/htdocs/test/ads/app/partials/user/userProfile.html",
 		"/C/xampp/htdocs/test/ads/app/controllers/User/userProfileEditorController.js",
 		"/C/xampp/htdocs/test/ads/app/factories/userFactory.js",
@@ -725,8 +725,7 @@
 		"/D/OnCode/AngularJS/01.Introduction/01.StudentPage/scripts/factory.js",
 		"/D/OnCode/AngularJS/01.Introduction/01.StudentPage/scripts/app.ks",
 		"/D/Downloads/angular-seed-master/angular-seed-master/app/index.html",
-		"/C/xampp/htdocs/test/JSApps/index.html",
-		"/C/xampp/htdocs/test/JSApps/templates/products.html"
+		"/C/xampp/htdocs/test/JSApps/index.html"
 	],
 	"find":
 	{
@@ -927,11 +926,6 @@
 			"sheets":
 			[
 			]
-		},
-		{
-			"sheets":
-			[
-			]
 		}
 	],
 	"incremental_find":
@@ -951,18 +945,11 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.816077340462,
 			1.0
 		],
 		"rows":
@@ -1018,7 +1005,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 		"xdebug":
@@ -1072,7 +1059,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 318.0,
+	"side_bar_width": 223.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
